@@ -22,31 +22,31 @@ const Image = styled.div(props => [
 ]);
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 
-const Subheading = tw(SubheadingBase)`text-center md:text-left`;
+const Subheading = tw(SubheadingBase)`text-center md:text-left text-blue-500`;
 const Heading = tw(
   SectionHeading
-)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
+)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight text-blue-700`;
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
 
 const Statistics = tw.div`flex flex-col items-center sm:block text-center md:text-left mt-4`;
 const Statistic = tw.div`text-left sm:inline-block sm:mr-12 last:mr-0 mt-4`;
-const Value = tw.div`font-bold text-lg sm:text-xl lg:text-2xl text-secondary-500 tracking-wide`;
-const Key = tw.div`font-medium text-primary-700`;
+const Value = tw.div`font-bold text-lg sm:text-xl lg:text-2xl text-blue-500 tracking-wide`;
+const Key = tw.div`font-medium text-blue-700`;
 
-const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0`;
+const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0 bg-blue-700 text-blue-100 hocus:text-blue-500 hocus:bg-blue-200`;
 
 const DecoratorBlob = styled(SvgDotPattern)(props => [
   tw`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10`
 ]);
 
 export default ({
-  subheading = "Our Track Record",
+  subheading = "Our Credentials",
   heading = (
     <>
-      We have been doing this <wbr /> since <span tw="text-primary-500">1999.</span>
+      We keep up to date in the most <wbr /> modern <span style={{color: "#0F5AD1"}}>technology.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = "Technology moves fast, so do we.  Let us help you keep your business up to date and professional with the latest security, UI, and 'under-the-hood' developments.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",
   imageSrc = StatsIllustrationSrc,
@@ -62,16 +62,16 @@ export default ({
   //Change the statistics variable as you like, add or delete objects
   const defaultStatistics = [
     {
-      key: "Clients",
-      value: "2282+"
+      key: "Front End",
+      value: "React.js"
     },
     {
-      key: "Projects",
-      value: "3891+"
+      key: "Back End",
+      value: "Node.js | Knex"
     },
     {
-      key: "Awards",
-      value: "1000+"
+      key: "UI",
+      value: "Various Skills"
     }
   ];
 
