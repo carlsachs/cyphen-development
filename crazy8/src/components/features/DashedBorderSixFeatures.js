@@ -14,23 +14,23 @@ import ShieldIconImage from "../../images/shield-icon.svg";
 import CustomizeIconImage from "../../images/customize-icon.svg";
 import FastIconImage from "../../images/fast-icon.svg";
 import ReliableIconImage from "../../images/reliable-icon.svg";
-import SimpleIconImage from "../../images/simple-icon.svg";
+import ShopIconImage from "../../images/shop-icon.svg";
 
 const Container = tw.div`relative`;
 
 const ThreeColumnContainer = styled.div`
   ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-xl mx-auto py-20 md:py-24`}
 `;
-const Heading = tw(SectionHeading)`w-full`;
+const Heading = tw(SectionHeading)`w-full text-blue-700`;
 
 const Column = styled.div`
   ${tw`md:w-1/2 lg:w-1/3 px-6 flex`}
 `;
 
 const Card = styled.div`
-  ${tw`flex flex-col mx-auto max-w-xs items-center px-6 py-10 border-2 border-dashed border-primary-500 rounded-lg mt-12`}
+  ${tw`flex flex-col mx-auto max-w-xs items-center px-6 py-10 border-2 border-dashed border-blue-700 rounded-lg mt-12`}
   .imageContainer {
-    ${tw`border-2 border-primary-500 text-center rounded-full p-6 flex-shrink-0 relative`}
+    ${tw`border-2 border-blue-500 text-center rounded-full p-6 flex-shrink-0 relative`}
     img {
       ${tw`w-8 h-8`}
     }
@@ -41,11 +41,11 @@ const Card = styled.div`
   }
 
   .title {
-    ${tw`mt-2 font-bold text-xl leading-none text-primary-500`}
+    ${tw`mt-2 font-bold text-xl leading-none text-blue-700`}
   }
 
   .description {
-    ${tw`mt-3 font-semibold text-secondary-100 text-sm leading-loose`}
+    ${tw`mt-3 font-semibold text-blue-500 text-sm leading-loose`}
   }
 `;
 
@@ -54,31 +54,34 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
 `;
 
 export default () => {
-  /*
-   * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component):
-   *  1) imageSrc - the image shown at the top of the card
-   *  2) title - the title of the card
-   *  3) description - the description of the card
-   *  If a key for a particular card is not provided, a default value is used
-   */
 
   const cards = [
+    { imageSrc: ShopIconImage, 
+      title: "Free Logo", 
+      description: "With each order of our Boost Package and above, a quality, free, and attractive logo comes complementary to you." },
     {
       imageSrc: ShieldIconImage,
-      title: "Ads Management",
-      description: "We create and manage ads that you need, from creation to deployment. Lorem ipsum donor sit amet consicou."
+      title: "Secure",
+      description: "We create and manage our servers in some of the most secure ways possible."
     },
-    { imageSrc: SupportIconImage, title: "Video Marketing" },
-    { imageSrc: CustomizeIconImage, title: "Customer Relation" },
-    { imageSrc: ReliableIconImage, title: "Product Outreach" },
-    { imageSrc: FastIconImage, title: "PR Campaign" },
-    { imageSrc: SimpleIconImage, title: "Product Expansion" }
+    { imageSrc: SupportIconImage, 
+      title: "24/7 Support", 
+      description: "We provide 24/7 support for your team after purchase for the allocated time.  What is code without support?" },
+    { imageSrc: CustomizeIconImage, 
+      title: "Customized to You",
+      description: "We pride ourselves on delivering a product that truly portrays the environment that you have created in your business." },
+    { imageSrc: ReliableIconImage, 
+      title: "Free Marketing", 
+      description: "Each order comes complementary with free marketing on this site for the alloted time specified at purchase." },
+    { imageSrc: FastIconImage, 
+      title: "Fast Delivery", 
+      description: "We take time and efficiency very seriously.  If we are working on a project, we are doing everything we can to produce that product in a timely and efficient manner." },
   ];
 
   return (
     <Container>
       <ThreeColumnContainer>
-        <Heading>Our Professional <span tw="text-primary-500">Services</span></Heading>
+        <Heading>So, what makes us <span style={{color: "#0F5AD1"}}>different</span>?</Heading>
         {cards.map((card, i) => (
           <Column key={i}>
             <Card>
