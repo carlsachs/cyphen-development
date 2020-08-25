@@ -23,10 +23,10 @@ const Image = styled.div(props => [
 ]);
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 
-const Subheading = tw(SubheadingBase)`text-center md:text-left`;
+const Subheading = tw(SubheadingBase)`text-center md:text-left text-blue-500`;
 const Heading = tw(
   SectionHeading
-)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
+)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight text-blue-700`;
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
 
 const Features = tw.div`mt-8 max-w-sm mx-auto md:mx-0`;
@@ -46,14 +46,14 @@ const FeatureDescription = tw.div`mt-1 text-sm`;
 const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0`;
 
 export default ({
-  subheading = "Our Expertise",
+  subheading = "Our Specialty",
   heading = (
     <>
-      We have the most <span tw="text-primary-500">professional</span> marketing team.
+      We know how to create <span style={{color: "#0F5AD1"}}>impact</span>.
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  primaryButtonText = "See Our Portfolio",
+  description = "What creates a good website?  We believe a substantial website isn't cluttered with all the information about a business, but rather minimalistic with small, precise, statements.  This allows the user to roam, take in your main points, then dive deeper inwards the site.  Think about it, how did you study back in college to retain information, all at once, or in bits?",
+  primaryButtonText = "See Our Recent Work",
   primaryButtonUrl = "https://timerse.com",
   features = null,
   textOnLeft = true
