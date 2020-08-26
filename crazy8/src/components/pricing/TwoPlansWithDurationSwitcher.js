@@ -10,14 +10,14 @@ import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-6
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
 
 const HeaderContainer = tw.div`w-full flex flex-col items-center`;
-const Subheading = tw(SubheadingBase)`mb-4`;
-const Heading = tw(SectionHeading)`w-full`;
-const Description = tw(SectionDescription)`w-full text-center`;
+const Subheading = tw(SubheadingBase)`mb-4 text-blue-500`;
+const Heading = tw(SectionHeading)`w-full text-blue-700`;
+const Description = tw(SectionDescription)`w-full text-center text-blue-400`;
 
 const PlanDurationSwitcher = tw.div`block w-full max-w-xs sm:inline-block sm:w-auto border-2 rounded-full px-1 py-1 mt-8`;
 const SwitchButton = styled.button`
-  ${tw`w-1/2 sm:w-32 px-4 sm:px-8 py-3 rounded-full focus:outline-none text-sm font-bold text-gray-700 transition duration-300`}
-  ${props => props.active && tw`bg-primary-500 text-gray-100`}
+  ${tw`w-1/2 sm:w-32 px-4 sm:px-8 py-3 rounded-full focus:outline-none text-sm font-bold text-blue-500 transition duration-300`}
+  ${props => props.active && tw`bg-blue-700 text-blue-100`}
 `;
 
 const PlansContainer = tw.div`flex justify-center flex-col md:flex-row items-center md:items-start relative`;
@@ -58,7 +58,7 @@ const PlanFeatures = styled.div`
 
 const PlanAction = tw.div`px-4 pb-8`;
 const BuyNowButton = styled(PrimaryButtonBase)`
-  ${tw`rounded-full tracking-wider py-4 w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline`}
+  ${tw`rounded-full tracking-wider py-4 w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline bg-blue-700 text-blue-100 hocus:bg-blue-400 hocus:text-blue-700`}
 `;
 
 const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
@@ -70,8 +70,8 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 
 export default ({
   subheading = "Pricing",
-  heading = "Flexible Plans.",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  heading = "Time-Based Plans.",
+  description = "We belive that just passing you source code and calling it good is criminal.  We provide two packages, based on length of support and marketing after-the-fact.",
   plans = null,
   primaryButtonText = "Buy Now",
   planDurations = [
@@ -110,7 +110,7 @@ export default ({
       <ContentWithPaddingXl>
         <HeaderContainer>
           {subheading && <Subheading>{subheading}</Subheading>}
-          <Heading>{heading}</Heading>
+          <Heading style={{color: "#0F5AD1"}}>{heading}</Heading>
           {description && <Description>{description}</Description>}
         <PlanDurationSwitcher>
           {planDurations.map((planDuration, index) => (
