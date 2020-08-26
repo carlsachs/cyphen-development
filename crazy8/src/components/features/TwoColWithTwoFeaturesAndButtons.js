@@ -44,7 +44,7 @@ const FeatureText = tw.div`mt-4 md:mt-0 md:ml-4 text-center md:text-left text-bl
 const FeatureHeading = tw.div`font-bold text-lg text-blue-700`;
 const FeatureDescription = tw.div`mt-1 text-sm`;
 
-const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0 bg-blue-700`;
+const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0 bg-blue-700 hocus:bg-blue-500`;
 
 export default ({
   subheading = "Our Specialty",
