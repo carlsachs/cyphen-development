@@ -90,20 +90,20 @@ export default ({
         name: "Developer Support",
         durationPrices: ["$199", "$1499"],
         mainFeature: "Monthly Developer Support",
-        features: ["3 Revisions Per Month", "Code Refactoring", "Add 1 Page/Mo 50% OFF", "24/7 Assistance", "Unlimited Questions", "YEARLY: Unlimited Revisions"],
+        features: ["3 Revisions Per Month", "Code Refactoring", "Add 1 Page/Mo 50% OFF", "24/7 Assistance", "Feature Additions", "API Updates", "YEARLY: Unlimited Revisions"],
         featured: true
     },
     {
       name: "Marketing Consulatation",
       durationPrices: ["$149", "$1250"],
       mainFeature: "Monthly Marketing",
-      features: ["Facebook Advertising", "Instagram Advertisements", "SEO Marketing", "24/7 Assistance", "Consultation"]
+      features: ["Facebook Advertising", "Instagram Advertisements", "SEO Marketing", "24/7 Assistance", "Social Media Consultation"]
     },
     {
       name: "Financial Consulatation",
       durationPrices: ["Varies", "Varies"],
       mainFeature: "Monthly Financial Consultation",
-      features: ["Quickbooks Consultation", "Budgeting", "General Finance Processes", "Procedure Manuals", "Financial Statement Compilation"]
+      features: ["Quickbooks Consultation", "Budgeting", "General Finance Processes", "Procedure Manuals", "Financial Statement Compilation", "Data Entry", "Microsoft Excel"]
     }
   ];
 

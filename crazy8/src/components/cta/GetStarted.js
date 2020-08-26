@@ -23,7 +23,7 @@ const DecoratorBlobContainer = tw.div`absolute inset-0 overflow-hidden rounded-l
 const DecoratorBlob1 = tw(SvgDecoratorBlob1)`absolute bottom-0 left-0 w-80 h-80 transform -translate-x-20 translate-y-32 text-blue-400 opacity-50`
 const DecoratorBlob2 = tw(SvgDecoratorBlob1)`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-blue-300 opacity-50`
 export default ({
-  text = "Businesses all over the world are using Cyphen.",
+  text = "What's stopping you from taking your business to the next level?",
   primaryLinkText = "Get Started",
   primaryLinkUrl = "/",
   secondaryLinkText = "Contact Us",

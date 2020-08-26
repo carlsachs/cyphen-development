@@ -20,7 +20,7 @@ const Container = styled.div`
   background-image: url("https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80");
 `;
 
-const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-blue-400 opacity-25`;
+const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-blue-300 opacity-25`;
 
 const HeroContainer = tw.div`z-20 relative px-4 sm:px-8 max-w-screen-xl mx-auto`;
 const TwoColumn = tw.div`pt-24 pb-32 px-4 flex justify-between items-center flex-col lg:flex-row`;
@@ -85,7 +85,7 @@ export default () => {
         <StyledHeader links={navLinks} />
         <TwoColumn>
           <LeftColumn>
-            <Notification>We have now launched operations in the USA!</Notification>
+            <Notification>We have now launched operations!</Notification>
             <Heading>
               <span>A Professional Look</span>
               <br />

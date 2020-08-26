@@ -52,24 +52,24 @@ export default ({
    */
   const defaultFaqs = [
     {
-      question: "Is lunch provided free of cost ?",
+      question: "What is a web application?",
       answer:
-        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
+        "Think of a web application like a website, but it allows us to add more of an 'Interface Feel', including maybe a dashboard or a list of ecommerce products lifted from an API"
     },
     {
-      question: "Do you have 2 Bedroom suites ?",
+      question: "Can I pick my color pallete?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Yes!  In our form upon order, you will fill out a color theme section.  We recommend paletton.com.  Create a pallet, export it to HTML, and paste us the share code.  Sometimes the links break, so copy/paste the five Hex codes in the section on our form.  We recommend 5 light colors, and 5 dark for theming."
     },
     {
-      question: "Are Wi-Fi costs included in the price ?",
+      question: "Do you provide marketing consultation?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Absolutely!  We offer monthly and yearly marketing consultation.  This is just consultation.  We help you run your ads, we don't pay for them.  Contact us with any further questions regarding how we can bring your business to a brand new audience."
     },
     {
-      question: "Where can I reach you for support ?",
+      question: "What does you financial consulatation entail?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Our financial consultation ranges to many different areas of expertise.  Contact us to learn more about how we can help you reach your financial goals."
     }
   ];
 
