@@ -18,13 +18,17 @@ import GetStarted from "components/cta/GetStarted";
 import Footer from "components/footers/MiniCenteredFooter.js";
 import macball from "images/macball.svg";
 
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 export default () => (
   <AnimationRevealPage>
     <Hero />
     <MainFeature />
     <Features />
     <MainFeature2 />
-    <Pricing />
+    <Element name="pricing">
+      <Pricing />
+    </Element>
     <PricingLength />
     <FAQ
       imageSrc={macball}
@@ -38,6 +42,8 @@ export default () => (
       }
     />
     <GetStarted />
-    <Footer />
+    <Element name="social">
+      <Footer />
+    </Element>
   </AnimationRevealPage>
 );

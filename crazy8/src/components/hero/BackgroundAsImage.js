@@ -3,6 +3,8 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
 
@@ -56,6 +58,25 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
 `;
 
 export default () => {
+
+  const handleClick = () => {
+    scroller.scrollTo('pricing', {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: 100, // Scrolls to element + 100 pixels down the page
+    })
+  }
+
+  const handleClick2 = () => {
+    scroller.scrollTo('social', {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: 100, // Scrolls to element + 100 pixels down the page
+    })
+  }
+
   const navLinks = [
     <NavLinks key={1}>
       <NavLink href="#">
@@ -64,8 +85,11 @@ export default () => {
       <NavLink href="#">
         Work
       </NavLink>
-      <NavLink href="#">
+      <NavLink onClick={handleClick} style={{cursor: "pointer"}}>
         Pricing
+      </NavLink>
+      <NavLink onClick={handleClick2} style={{cursor: "pointer"}}>
+        Social
       </NavLink>
       <NavLink href="#">
         Contact Us

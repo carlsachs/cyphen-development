@@ -6,6 +6,8 @@ import logo from "../../images/logo.svg";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
+import { Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 
 const Container = tw(ContainerBase)`bg-gray-900 text-gray-100 -mx-8 -mb-8`
@@ -43,6 +45,17 @@ export const PrimaryLink = tw(NavLink)`
 
 const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-gray-600`
 export default (roundedHeaderButton = false) => {
+
+  const handleClick = () => {
+    scroller.scrollTo('pricing', {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: 100, // Scrolls to element + 100 pixels down the page
+    })
+  }
+
+
   return (
     <Container>
       <Content>
@@ -55,7 +68,7 @@ export default (roundedHeaderButton = false) => {
             <Link href="#">Home</Link>
             <Link href="#">Team</Link>
             <Link href="#">Work</Link>
-            <Link href="#">Pricing</Link>
+            <Link onClick={handleClick}>Pricing</Link>
             <Link href="#">Contact Us</Link>
           </LinksContainer>
           <SocialLinksContainer>
