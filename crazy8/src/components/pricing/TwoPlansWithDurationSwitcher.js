@@ -77,15 +77,7 @@ export default ({
   planDurations = [
     {
       text: "Job",
-      switcherText: "JumpStart",
-    },
-    {
-      text: "Job",
-      switcherText: "Boost",
-    },
-    {
-      text: "Job",
-      switcherText: "Throttle",
+      switcherText: "Plans",
     }
   ]
 }) => {
