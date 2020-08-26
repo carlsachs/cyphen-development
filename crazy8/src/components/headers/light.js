@@ -76,7 +76,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
       <NavLink href="/#" style={{color: "#2E73E0"}}>Work</NavLink>
       <NavLink href="/#" style={{color: "#2E73E0"}}>Pricing</NavLink>
       <NavLink href="/#" style={{color: "#2E73E0"}}>Contact Us</NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Hire Us</PrimaryLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Hire Our Team</PrimaryLink>
     </NavLinks>
   ];
 
@@ -86,7 +86,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
   const defaultLogoLink = (
     <LogoLink href="/">
       <img src={logo} alt="logo" />
-      Crazy8
+      Cyphen
     </LogoLink>
   );
 

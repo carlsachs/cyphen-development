@@ -87,9 +87,9 @@ export default () => {
           <LeftColumn>
             <Notification>We have now launched operations in the USA!</Notification>
             <Heading>
-              <span>Give Your Business</span>
+              <span>A Professional Look</span>
               <br />
-              <SlantedBackground>a Crazy Professional Feel</SlantedBackground>
+              <SlantedBackground>You Deserve</SlantedBackground>
             </Heading>
             <PrimaryAction>Get Pricing</PrimaryAction>
           </LeftColumn>

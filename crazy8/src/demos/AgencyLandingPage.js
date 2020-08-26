@@ -13,7 +13,8 @@ import Blog from "components/blogs/ThreeColSimpleWithImageAndDashedBorder.js";
 import Pricing from "components/pricing/TwoPlansWithDurationSwitcher";
 import PricingLength from "components/pricing/TwoPlansWithDurationSwitcherTime";
 import FAQ from "components/faqs/SimpleWithSideImage.js";
-import ContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
+// import ContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
+import GetStarted from "components/cta/GetStarted";
 import Footer from "components/footers/MiniCenteredFooter.js";
 import macball from "images/macball.svg";
 
@@ -36,7 +37,7 @@ export default () => (
         </>
       }
     />
-    <ContactUsForm />
+    <GetStarted />
     <Footer />
   </AnimationRevealPage>
 );

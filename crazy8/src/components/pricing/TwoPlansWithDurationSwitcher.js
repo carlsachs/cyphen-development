@@ -94,7 +94,7 @@ export default ({
       name: "JumpStart",
       durationPrices: ["$199", "$199"],
       mainFeature: "1 Day Delivery",
-      features: ["1 Page", "Full Source Code", "Content Upload", "1 Month Free Support", "1 Form Max"]
+      features: ["1 Page", "Full Source Code", "Content Upload", "1 Month Free Support", "15 Day Free Marketing", "1 Form Max"]
     },
     {
       name: "Boost",
