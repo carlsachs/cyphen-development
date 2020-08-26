@@ -21,26 +21,26 @@ const Image = styled.div(props => [
 ]);
 
 const FAQContent = tw.div`lg:ml-12`;
-const Subheading = tw(SubheadingBase)`mb-4 text-center lg:text-left`;
-const Heading = tw(SectionHeading)`lg:text-left`;
-const Description = tw.p`max-w-xl text-center mx-auto lg:mx-0 lg:text-left lg:max-w-none leading-relaxed text-sm sm:text-base lg:text-lg font-medium mt-4 text-secondary-100`;
+const Subheading = tw(SubheadingBase)`mb-4 text-center lg:text-left text-blue-500`;
+const Heading = tw(SectionHeading)`lg:text-left text-blue-700`;
+const Description = tw.p`max-w-xl text-center mx-auto lg:mx-0 lg:text-left lg:max-w-none leading-relaxed text-sm sm:text-base lg:text-lg font-medium mt-4 text-blue-400`;
 
 const FAQSContainer = tw.dl`mt-12`;
 const FAQ = tw.div`cursor-pointer mt-8 select-none border lg:border-0 px-8 py-4 lg:p-0 rounded-lg lg:rounded-none`;
-const Question = tw.dt`flex justify-between items-center`;
-const QuestionText = tw.span`text-lg lg:text-xl font-semibold`;
+const Question = tw.dt`flex justify-between items-center text-blue-700`;
+const QuestionText = tw.span`text-lg lg:text-xl font-semibold text-blue-700`;
 const QuestionToggleIcon = styled.span`
-  ${tw`ml-2 bg-primary-500 text-gray-100 p-1 rounded-full group-hover:bg-primary-700 group-hover:text-gray-200 transition duration-300`}
+  ${tw`ml-2 bg-blue-800 text-blue-100 p-1 rounded-full group-hover:bg-blue-500 group-hover:text-blue-200 transition duration-300`}
   svg {
     ${tw`w-4 h-4`}
   }
 `;
-const Answer = motion.custom(tw.dd`pointer-events-none text-sm sm:text-base leading-relaxed`);
+const Answer = motion.custom(tw.dd`pointer-events-none text-sm sm:text-base leading-relaxed text-blue-400`);
 
 export default ({
   subheading = "",
   heading = "Questions",
-  description = "Here are some frequently asked questions about our hotels from our loving customers. Should you have any other questions, feel free to reach out via the contact form below.",
+  description = "Here are some frequently asked questions about our business that we think is vital information for you to know before going further.",
   imageSrc = "https://images.unsplash.com/photo-1579427421635-a0015b804b2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
   imageContain = false,
   imageShadow = true,

@@ -9,7 +9,7 @@ import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
-    ${tw`text-gray-100 hover:border-blue-500 hover:text-blue-400`}
+    ${tw`text-gray-100 hover:border-blue-500 hover:text-blue-200`}
   }
   ${NavToggle}.closed {
     ${tw`text-gray-100 hover:text-primary-500`}
@@ -17,10 +17,10 @@ const StyledHeader = styled(Header)`
 `;
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover`}
-  background-image: url("https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+  background-image: url("https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80");
 `;
 
-const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-blue-200 opacity-25`;
+const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-blue-400 opacity-25`;
 
 const HeroContainer = tw.div`z-20 relative px-4 sm:px-8 max-w-screen-xl mx-auto`;
 const TwoColumn = tw.div`pt-24 pb-32 px-4 flex justify-between items-center flex-col lg:flex-row`;
@@ -58,16 +58,16 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
 export default () => {
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="#" style={{color: "#2E73E0"}}>
+      <NavLink href="#">
         Team
       </NavLink>
-      <NavLink href="#" style={{color: "#2E73E0"}}>
+      <NavLink href="#">
         Work
       </NavLink>
-      <NavLink href="#" style={{color: "#2E73E0"}}>
+      <NavLink href="#">
         Pricing
       </NavLink>
-      <NavLink href="#" style={{color: "#2E73E0"}}>
+      <NavLink href="#">
         Contact Us
     </NavLink>
     </NavLinks>,
