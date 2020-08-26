@@ -6,7 +6,7 @@ import { SectionHeading, Subheading as SubheadingBase } from "components/misc/He
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
 import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
-import TeamIllustrationSrc from "images/team-illustration-2.svg";
+import Mac from "images/mac.svg";
 import {ReactComponent as Check} from "images/checkbox-circle.svg";
 
 const Container = tw.div`relative`;
@@ -74,7 +74,7 @@ export default ({
     {
       Icon: MoneyIcon,
       title: "Affordable",
-      description: "We are building out our professional portfolio, take advantage of our low prices compared to industry standards."
+      description: "We are building out our professional portfolio, take advantage of our low prices compared to industry standards.  Lower costs help you get more for your business."
     }
   ];
 
@@ -84,7 +84,7 @@ export default ({
     <Container>
       <TwoColumn>
         <ImageColumn>
-          <Image imageSrc={TeamIllustrationSrc} />
+          <Image imageSrc={Mac} />
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
