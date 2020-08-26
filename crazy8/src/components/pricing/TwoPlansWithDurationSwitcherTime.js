@@ -87,17 +87,23 @@ export default ({
 }) => {
   const defaultPlans = [
     {
-        name: "Support",
-        durationPrices: ["$99", "$899"],
+        name: "Developer Support",
+        durationPrices: ["$199", "$1499"],
         mainFeature: "Monthly Developer Support",
-        features: ["3 Revisions Per Month", "Code Updating", "Add 1 Page/Mo 50% OFF", "24/7 Assistance", "Unlimited Questions", "YEARLY: Unlimited:", "Revisions"],
+        features: ["3 Revisions Per Month", "Code Refactoring", "Add 1 Page/Mo 50% OFF", "24/7 Assistance", "Unlimited Questions", "YEARLY: Unlimited Revisions"],
         featured: true
     },
     {
-      name: "Marketing",
-      durationPrices: ["$899", "$8599"],
+      name: "Marketing Consulatation",
+      durationPrices: ["$149", "$1250"],
       mainFeature: "Monthly Marketing",
-      features: ["Facebook Advertising", "Instagram Advertisements", "SEO Marketing", "24/7 Assistance"]
+      features: ["Facebook Advertising", "Instagram Advertisements", "SEO Marketing", "24/7 Assistance", "Consultation"]
+    },
+    {
+      name: "Financial Consulatation",
+      durationPrices: ["Varies", "Varies"],
+      mainFeature: "Monthly Financial Consultation",
+      features: ["Quickbooks Consultation", "Budgeting", "General Finance Processes", "Procedure Manuals", "Financial Statement Compilation"]
     }
   ];
 

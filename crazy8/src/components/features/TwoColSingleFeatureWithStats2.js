@@ -91,9 +91,9 @@ export default ({
             <Description>{description}</Description>
             <Statistics>
               {statistics.map((statistic, index) => (
-                <Statistic key={index}>
-                  <Value>{statistic.value}</Value>
-                  <Key>{statistic.key}</Key>
+                <Statistic key={index} style={{justifyContent: "center"}}>
+                  <Value style={{textAlign: "center"}}>{statistic.value}</Value>
+                  <Key style={{textAlign: "center"}}>{statistic.key}</Key>
                 </Statistic>
               ))}
             </Statistics>
