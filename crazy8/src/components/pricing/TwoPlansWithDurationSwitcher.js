@@ -107,7 +107,7 @@ export default ({
       name: "Throttle",
       durationPrices: ["$1250", "$1250"],
       mainFeature: "7 Day Delivery",
-      features: ["10 Pages", "Full Source Code", "Free Logo", "Custom Graphics", "Content Upload", "3 Months Free Support", "1 Year Free Marketing", "Unlimited Forms"],
+      features: ["10 Pages", "Full Source Code", "Free Business Animated Video", "Free Logo", "Custom Graphics", "Content Upload", "3 Months Free Support", "1 Year Free Marketing", "Unlimited Forms"],
       featured: true
     }
   ];

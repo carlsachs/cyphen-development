@@ -69,15 +69,15 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 `;
 
 export default ({
-  subheading = "Pricing",
-  heading = "Time-Based Plans.",
+  subheading = "Time-Based Plan Pricing",
+  heading = "Ex Post Facto Plans",
   description = "We belive that just passing you source code and calling it good is criminal.  We provide two packages, based on length of support and marketing after-the-fact.",
   plans = null,
-  primaryButtonText = "Buy Now",
+  primaryButtonText = "Add To Cart",
   planDurations = [
     {
-      text: "JumpStart Package",
-      switcherText: "JumpStart Package",
+      text: "Month",
+      switcherText: "Monthly",
     },
     {
       text: "Year",
@@ -87,17 +87,17 @@ export default ({
 }) => {
   const defaultPlans = [
     {
-      name: "Free Plan",
-      durationPrices: ["$0", "$0"],
-      mainFeature: "For Personal Blogs",
-      features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"]
+        name: "Support",
+        durationPrices: ["$99", "$899"],
+        mainFeature: "Monthly Developer Support",
+        features: ["3 Revisions Per Month", "Code Updating", "Add 1 Page/Mo 50% OFF", "24/7 Assistance", "Unlimited Questions", "YEARLY: Unlimited:", "Revisions"],
+        featured: true
     },
     {
-      name: "Pro Plan",
-      durationPrices: ["$49", "$499"],
-      mainFeature: "Suited for Production Websites",
-      features: ["60 Templates", "8 Landing Pages", "22 Internal Pages", "Priority Assistance", "Lifetime Updates"],
-      featured: true
+      name: "Marketing",
+      durationPrices: ["$899", "$8599"],
+      mainFeature: "Monthly Marketing",
+      features: ["Facebook Advertising", "Instagram Advertisements", "SEO Marketing", "24/7 Assistance"]
     }
   ];
 
