@@ -11,6 +11,7 @@ import MainFeature2 from "components/features/TwoColWithTwoFeaturesAndButtons.js
 import Blog from "components/blogs/ThreeColSimpleWithImageAndDashedBorder.js";
 // import Testimonial from "components/testimonials/TwoColumnWithImageAndProfilePictureReview.js";
 import Pricing from "components/pricing/TwoPlansWithDurationSwitcher";
+import PricingLength from "components/pricing/TwoPlansWithDurationSwitcherTime";
 import FAQ from "components/faqs/SimpleWithSideImage.js";
 import ContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
@@ -23,6 +24,7 @@ export default () => (
     <Features />
     <MainFeature2 />
     <Pricing />
+    <PricingLength />
     <FAQ
       imageSrc={macball}
       imageContain={true}

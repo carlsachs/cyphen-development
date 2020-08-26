@@ -69,45 +69,34 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 `;
 
 export default ({
-  subheading = "Package Pricing",
-  heading = "MVP Plans.",
-  description = "We think that when ordering through us, you leave satisfied, and continue business with us in coming months, forming a business relationship.",
+  subheading = "Pricing",
+  heading = "Time-Based Plans.",
+  description = "We belive that just passing you source code and calling it good is criminal.  We provide two packages, based on length of support and marketing after-the-fact.",
   plans = null,
-  primaryButtonText = "Add To Cart",
+  primaryButtonText = "Buy Now",
   planDurations = [
     {
-      text: "Job",
-      switcherText: "JumpStart",
+      text: "JumpStart Package",
+      switcherText: "JumpStart Package",
     },
     {
-      text: "Job",
-      switcherText: "Boost",
-    },
-    {
-      text: "Job",
-      switcherText: "Throttle",
+      text: "Year",
+      switcherText: "Yearly",
     }
   ]
 }) => {
   const defaultPlans = [
     {
-      name: "JumpStart",
-      durationPrices: ["$199", "$199"],
-      mainFeature: "1 Day Delivery",
-      features: ["1 Page", "Full Source Code", "Content Upload", "1 Month Free Support", "1 Form Max"]
+      name: "Free Plan",
+      durationPrices: ["$0", "$0"],
+      mainFeature: "For Personal Blogs",
+      features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"]
     },
     {
-      name: "Boost",
-      durationPrices: ["$575", "$575"],
-      mainFeature: "3 Day Delivery",
-      features: ["5 Pages", "Full Source Code", "Free Logo", "Custom Graphics", "Content Upload", "1 Month Free Support", "1 Month Free Marketing", "Unlimited Forms"],
-      featured: true
-    },
-    {
-      name: "Throttle",
-      durationPrices: ["$1250", "$1250"],
-      mainFeature: "7 Day Delivery",
-      features: ["10 Pages", "Full Source Code", "Free Logo", "Custom Graphics", "Content Upload", "3 Months Free Support", "1 Year Free Marketing", "Unlimited Forms"],
+      name: "Pro Plan",
+      durationPrices: ["$49", "$499"],
+      mainFeature: "Suited for Production Websites",
+      features: ["60 Templates", "8 Landing Pages", "22 Internal Pages", "Priority Assistance", "Lifetime Updates"],
       featured: true
     }
   ];
