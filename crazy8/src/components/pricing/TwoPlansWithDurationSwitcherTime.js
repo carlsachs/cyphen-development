@@ -69,46 +69,35 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 `;
 
 export default ({
-  subheading = "Package Pricing",
-  heading = "MVP Plans.",
-  description = "We think that when ordering through us, you leave satisfied, and continue business with us in coming months, forming a business relationship.",
+  subheading = "Time-Based Plan Pricing",
+  heading = "Ex Post Facto Plans",
+  description = "We belive that just passing you source code and calling it good is criminal.  We provide two packages, based on length of support and marketing after-the-fact.",
   plans = null,
   primaryButtonText = "Add To Cart",
   planDurations = [
     {
-      text: "Job",
-      switcherText: "JumpStart",
+      text: "Month",
+      switcherText: "Monthly",
     },
     {
-      text: "Job",
-      switcherText: "Boost",
-    },
-    {
-      text: "Job",
-      switcherText: "Throttle",
+      text: "Year",
+      switcherText: "Yearly",
     }
   ]
 }) => {
   const defaultPlans = [
     {
-      name: "JumpStart",
-      durationPrices: ["$199", "$199"],
-      mainFeature: "1 Day Delivery",
-      features: ["1 Page", "Full Source Code", "Content Upload", "1 Month Free Support", "15 Day Free Marketing", "1 Form Max"]
+        name: "Support",
+        durationPrices: ["$99", "$899"],
+        mainFeature: "Monthly Developer Support",
+        features: ["3 Revisions Per Month", "Code Updating", "Add 1 Page/Mo 50% OFF", "24/7 Assistance", "Unlimited Questions", "YEARLY: Unlimited:", "Revisions"],
+        featured: true
     },
     {
-      name: "Boost",
-      durationPrices: ["$575", "$575"],
-      mainFeature: "3 Day Delivery",
-      features: ["5 Pages", "Full Source Code", "Free Logo", "Custom Graphics", "Content Upload", "1 Month Free Support", "1 Month Free Marketing", "Unlimited Forms"],
-      featured: true
-    },
-    {
-      name: "Throttle",
-      durationPrices: ["$1250", "$1250"],
-      mainFeature: "7 Day Delivery",
-      features: ["10 Pages", "Full Source Code", "Free Business Animated Video", "Free Logo", "Custom Graphics", "Content Upload", "3 Months Free Support", "1 Year Free Marketing", "Unlimited Forms"],
-      featured: true
+      name: "Marketing",
+      durationPrices: ["$899", "$8599"],
+      mainFeature: "Monthly Marketing",
+      features: ["Facebook Advertising", "Instagram Advertisements", "SEO Marketing", "24/7 Assistance"]
     }
   ];
 

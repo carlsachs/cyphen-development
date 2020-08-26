@@ -6,7 +6,8 @@ import { SectionHeading, Subheading as SubheadingBase } from "components/misc/He
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
 import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
-import TeamIllustrationSrc from "images/team-illustration-2.svg";
+import Mac from "images/mac.svg";
+import {ReactComponent as Check} from "images/checkbox-circle.svg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -23,38 +24,38 @@ const Image = styled.div(props => [
 ]);
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 
-const Subheading = tw(SubheadingBase)`text-center md:text-left`;
+const Subheading = tw(SubheadingBase)`text-center md:text-left text-blue-500`;
 const Heading = tw(
   SectionHeading
-)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
-const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
+)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight text-blue-700`;
+const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-blue-400`;
 
 const Features = tw.div`mt-8 max-w-sm mx-auto md:mx-0`;
 const Feature = tw.div`mt-8 flex items-start flex-col md:flex-row`;
 
 const FeatureIconContainer = styled.div`
-  ${tw`mx-auto inline-block border border-primary-500 text-center rounded-full p-2 flex-shrink-0`}
+  ${tw`mx-auto inline-block border border-blue-500 text-center rounded-full p-2 flex-shrink-0`}
   svg {
     ${tw`w-5 h-5 text-primary-500`}
   }
 `;
 
-const FeatureText = tw.div`mt-4 md:mt-0 md:ml-4 text-center md:text-left`;
-const FeatureHeading = tw.div`font-bold text-lg text-primary-500`;
+const FeatureText = tw.div`mt-4 md:mt-0 md:ml-4 text-center md:text-left text-blue-500`;
+const FeatureHeading = tw.div`font-bold text-lg text-blue-700`;
 const FeatureDescription = tw.div`mt-1 text-sm`;
 
-const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0`;
+const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0 bg-blue-700 hocus:bg-blue-500`;
 
 export default ({
-  subheading = "Our Expertise",
+  subheading = "Our Specialty",
   heading = (
     <>
-      We have the most <span tw="text-primary-500">professional</span> marketing team.
+      We know how to create <span style={{color: "#0F5AD1"}}>impact</span>.
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  primaryButtonText = "See Our Portfolio",
-  primaryButtonUrl = "https://timerse.com",
+  description = "What creates a good website?  We believe a substantial website isn't cluttered with all the information about a business, but rather minimalistic with small, precise, statements.  This allows the user to roam, take in your main points, then dive deeper inwards the site.  Think about it, how did you study back in college to retain information, all at once, or in bits?",
+  primaryButtonText = "See Our Recent Work",
+  primaryButtonUrl = "/",
   features = null,
   textOnLeft = true
 }) => {
@@ -66,14 +67,14 @@ export default ({
    */
   const defaultFeatures = [
     {
-      Icon: BriefcaseIcon,
-      title: "Professionalism",
-      description: "We have the best professional marketing people across the globe just to work with you."
+      Icon: Check,
+      title: "Brief",
+      description: "Keeping a message brief and to-the-point is important, we'll help you do just that."
     },
     {
       Icon: MoneyIcon,
       title: "Affordable",
-      description: "We promise to offer you the best rate we can - at par with the industry standard."
+      description: "We are building out our professional portfolio, take advantage of our low prices compared to industry standards.  Lower costs help you get more for your business."
     }
   ];
 
@@ -83,7 +84,7 @@ export default ({
     <Container>
       <TwoColumn>
         <ImageColumn>
-          <Image imageSrc={TeamIllustrationSrc} />
+          <Image imageSrc={Mac} />
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>

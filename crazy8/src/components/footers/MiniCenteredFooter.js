@@ -28,22 +28,35 @@ const SocialLink = styled.a`
   }
 `;
 
+export const NavLink = tw.a`
+  text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+  font-semibold tracking-wide transition duration-300
+  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
+`;
+
+export const PrimaryLink = tw(NavLink)`
+  lg:mx-0
+  px-8 py-3 rounded bg-blue-700 text-blue-100
+  hocus:bg-blue-500 hocus:text-white focus:shadow-outline
+  border-b-0
+`;
+
 const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-gray-600`
-export default () => {
+export default (roundedHeaderButton = false) => {
   return (
     <Container>
       <Content>
         <Row>
           <LogoContainer>
             <LogoImg src={logo} />
-            <LogoText>Treact</LogoText>
+            <LogoText>Cyphen</LogoText>
           </LogoContainer>
           <LinksContainer>
             <Link href="#">Home</Link>
-            <Link href="#">About</Link>
+            <Link href="#">Team</Link>
+            <Link href="#">Work</Link>
+            <Link href="#">Pricing</Link>
             <Link href="#">Contact Us</Link>
-            <Link href="#">Blog</Link>
-            <Link href="#">Reviews</Link>
           </LinksContainer>
           <SocialLinksContainer>
             <SocialLink href="https://facebook.com">
@@ -56,6 +69,9 @@ export default () => {
               <YoutubeIcon />
             </SocialLink>
           </SocialLinksContainer>
+          <LinksContainer>
+            <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Hire Our Team</PrimaryLink>
+          </LinksContainer>
           <CopyrightText>
             &copy; Copyright 2020, Treact Inc. All Rights Reserved.
           </CopyrightText>
