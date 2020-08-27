@@ -66,7 +66,7 @@ class AdminNavbar extends React.Component {
                     <span className="avatar avatar-sm rounded-circle">
                       <img
                         alt="..."
-                        src={require("assets/img/theme/profile.jpg")}
+                        src={require("../../assets/img/theme/profile.jpg")}
                       />
                     </span>
                     <Media className="ml-2 d-none d-lg-block">

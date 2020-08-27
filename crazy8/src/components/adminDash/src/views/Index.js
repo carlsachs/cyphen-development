@@ -8,6 +8,8 @@ import Chart from "chart.js";
 import { Line, Bar } from "react-chartjs-2";
 
 import "../assets/scss/argon-dashboard-react.scss";
+
+import Header2 from "components/headers/light";
 // reactstrap components
 import {
   Button,
@@ -47,6 +49,7 @@ import {
 } from "../variables/charts.js";
 
 import Header from "../components/Headers/Header.js";
+import Sidebar from "../layouts/Admin";
 
 class Index extends React.Component {
   constructor(props){
@@ -70,8 +73,8 @@ class Index extends React.Component {
   render() {
     return (
       <>
+        <Header2 />
         <Header />
-        {/* Page content */}
         <Container className="mt--7" fluid>
           <Row>
             <Col className="mb-5 mb-xl-0" xl="8">
