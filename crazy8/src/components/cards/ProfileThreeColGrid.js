@@ -8,6 +8,10 @@ import {SectionDescription} from "components/misc/Typography";
 import { ReactComponent as TwitterIcon} from "images/twitter-icon.svg";
 import { ReactComponent as LinkedinIcon} from "images/linkedin-icon.svg";
 import { ReactComponent as GithubIcon } from "images/github-icon.svg";
+import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
+
+import Carl from "../../images/profile.jpg";
+import Will from "../../images/Professional.jpg"
 
 const HeadingContainer = tw.div``
 const Heading = tw(SectionHeading)``
@@ -46,8 +50,8 @@ export default ({
   description = "A group of highly-dedicated, educated, and reliable members who think outside of the box 110% of the time.",
   cards = [
     {
-      imageSrc: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=2.95&w=512&h=512&q=80",
-      position: "Co-Founder",
+      imageSrc: Carl,
+      position: "Co-Founder / Dev",
       name: "Carl Sachs",
       links: [
         {
@@ -55,36 +59,36 @@ export default ({
           icon: TwitterIcon,
         },
         {
-          url: "https://linkedin.com",
+          url: "https://www.linkedin.com/in/carl-sachs/",
           icon: LinkedinIcon,
         },
         {
-          url: "https://github.com",
+          url: "https://github.com/carlsachs",
+          icon: GithubIcon,
+        },
+      ],
+    },
+    {
+      imageSrc: Will,
+      position: "Co-Founder / Dev",
+      name: "Will Ryan",
+      links: [
+        {
+          url: "https://www.facebook.com/billythecid/",
+          icon: FacebookIcon,
+        },
+        {
+          url: "https://www.linkedin.com/in/william-ryan-34a1981a1/",
+          icon: LinkedinIcon,
+        },
+        {
+          url: "https://github.com/William-Ryan",
           icon: GithubIcon,
         },
       ],
     },
     {
       imageSrc: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=2.95&w=512&h=512&q=80",
-      position: "Co-Founder",
-      name: "Will Ryan",
-      links: [
-        {
-          url: "https://twitter.com",
-          icon: TwitterIcon,
-        },
-        {
-          url: "https://linkedin.com",
-          icon: LinkedinIcon,
-        },
-        {
-          url: "https://github.com",
-          icon: GithubIcon,
-        },
-      ],
-    },
-    {
-      imageSrc: "https://images.unsplash.com/photo-1517070208541-6ddc4d3efbcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=2.95&w=512&h=512&q=80",
       position: "Financial Advisor",
       name: "Kirsten Wolfe",
       links: [
@@ -115,7 +119,7 @@ export default ({
         <Cards>
           {cards.map((card, index) => (
             <Card key={index}>
-              <CardImage imageSrc={card.imageSrc} />
+              <CardImage imageSrc={card.imageSrc} style={{backgroundSize: "cover"}} />
               <CardContent>
                 <span className="position">{card.position}</span>
                 <span className="name">{card.name}</span>
