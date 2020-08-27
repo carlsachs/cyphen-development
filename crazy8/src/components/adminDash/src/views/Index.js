@@ -119,7 +119,6 @@ class Index extends React.Component {
                   </Row>
                 </CardHeader>
                 <CardBody>
-                  {/* Chart */}
                   <div className="chart">
                     <Line
                       data={chartExample1[this.state.chartExample1Data]}

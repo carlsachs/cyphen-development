@@ -196,7 +196,7 @@ function chartOptions() {
             borderCapStyle: "rounded"
           },
           rectangle: {
-            backgroundColor: colors.theme["warning"]
+            backgroundColor: colors.theme["info"]
           },
           arc: {
             backgroundColor: colors.theme["primary"],
@@ -285,7 +285,7 @@ function parseOptions(parent, options) {
   }
 }
 
-// Example 1 of Chart inside src/views/Index.js (Sales value - Card)
+// Example 1 of Chart inside src/views/Index.js (M/M perfornance - Card)
 let chartExample1 = {
   options: {
     scales: {
@@ -382,7 +382,7 @@ let chartExample2 = {
     labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     datasets: [
       {
-        label: "Sales",
+        label: "Orders",
         data: [25, 20, 30, 22, 17, 29],
         maxBarThickness: 10
       }
