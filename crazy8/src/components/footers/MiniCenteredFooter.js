@@ -5,7 +5,7 @@ import {Container as ContainerBase } from "components/misc/Layouts.js"
 import logo from "../../images/logo.svg";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
-import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
+import { ReactComponent as LinkedinIcon } from "../../images/linkedin-icon.svg";
 import { Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
@@ -17,7 +17,7 @@ const Row = tw.div`flex items-center justify-center flex-col px-8`
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
 const LogoImg = tw.img`w-8`;
-const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider hocus:text-blue-500`;
+const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider text-blue-500 hocus:text-blue-200`;
 
 const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`
 const Link = tw.a`border-b-2 border-transparent hocus:text-blue-200 hocus:border-blue-500 pb-1 transition duration-300 mt-2 mx-4 text-blue-500`;
@@ -71,7 +71,7 @@ export default (roundedHeaderButton = false) => {
         <Row>
           <LogoContainer>
             <LogoImg src={logo} />
-            <LogoText style={{color: "#abe3ff"}}>Cyphen</LogoText>
+            <LogoText onClick="#order">Cyphen</LogoText>
           </LogoContainer>
           <LinksContainer>
             <Link href="/">Home</Link>
@@ -88,8 +88,8 @@ export default (roundedHeaderButton = false) => {
             <SocialLink href="https://twitter.com">
               <TwitterIcon />
             </SocialLink>
-            <SocialLink href="https://youtube.com">
-              <YoutubeIcon />
+            <SocialLink href="https://linkedin.com">
+              <LinkedinIcon />
             </SocialLink>
           </SocialLinksContainer>
           <LinksContainer>

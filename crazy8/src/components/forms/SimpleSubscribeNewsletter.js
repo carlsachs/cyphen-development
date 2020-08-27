@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import tw from "twin.macro";
 import {ReactComponent as EmailNewsletterIconBase } from "../../images/email-newsletter-icon.svg"
 import {Container as ContainerBase } from "components/misc/Layouts.js"
 import {SectionHeading} from "components/misc/Headings.js";
 import {PrimaryButton} from "components/misc/Buttons.js";
+
+import axios from "axios";
 
 
 const Container = tw(ContainerBase)`bg-secondary-800 -mx-8`
@@ -24,6 +26,31 @@ const Button = tw(PrimaryButton)`w-full sm:w-auto mt-6 sm:mt-0 sm:rounded-l-none
 
 
 export default () => {
+
+  const [subscriber, setSubscriber] = useState({
+    email: ""
+  });
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setSubscriber({
+      ...subscriber,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post(`https://cyphen-main.herokuapp.com/api/form/newsletter`, subscriber)
+    .then(res => {
+      alert("Awesome! You'll be up to date, and the first to know EVERYTHING!")
+    })
+    .catch(err => {
+      console.log(err)
+      alert("Something went wrong! Please try again!")
+    })
+  }
+
   return (
     <Container>
       <Content>
