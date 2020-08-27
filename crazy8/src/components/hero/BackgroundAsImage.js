@@ -103,7 +103,7 @@ export default () => {
       <NavLink onClick={handleClick2} style={{cursor: "pointer"}}>
         Social
       </NavLink>
-      <NavLink href="#">
+      <NavLink href="/contact">
         Contact Us
     </NavLink>
     </NavLinks>,
