@@ -25,13 +25,13 @@ export const NavLinks = tw.div`inline-block`;
 export const NavLink = tw.a`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
-  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
+  pb-1 border-b-2 border-transparent text-blue-500 hover:border-blue-500 hocus:text-blue-700
 `;
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
-  px-8 py-3 rounded bg-blue-700 text-blue-100
-  hocus:bg-blue-500 hocus:text-white focus:shadow-outline
+  px-8 py-3 rounded bg-blue-500 text-blue-100
+  hocus:bg-blue-300 hocus:text-blue-500 focus:shadow-outline
   border-b-0
 `;
 
@@ -61,32 +61,13 @@ export const DesktopNavLinks = tw.nav`
 export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
 
 
-  const handleClick = () => {
-    scroller.scrollTo('pricing', {
-      duration: 1500,
-      delay: 100,
-      smooth: true,
-      offset: 100, // Scrolls to element + 100 pixels down the page
-    })
-  }
-
-  const handleClick2 = () => {
-    scroller.scrollTo('social', {
-      duration: 1500,
-      delay: 100,
-      smooth: true,
-      offset: 100, // Scrolls to element + 100 pixels down the page
-    })
-  }
-
-
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/team" style={{color: "#2E73E0"}}>Team</NavLink>
-      <NavLink href="/#" style={{color: "#2E73E0"}}>Work</NavLink>
-      <NavLink onClick={handleClick} style={{color: "#2E73E0", cursor: "pointer"}}>Pricing</NavLink>
-      <NavLink href="/contact" style={{color: "#2E73E0"}}>Contact Us</NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/adminlogin">Hire Our Team</PrimaryLink>
+      <NavLink href="/team">Team</NavLink>
+      <NavLink href="/#">Work</NavLink>
+      <NavLink href="" style={{cursor: "pointer"}}>Pricing</NavLink>
+      <NavLink href="/contact">Contact Us</NavLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/adminlogin">Order Now</PrimaryLink>
     </NavLinks>
   ];
 

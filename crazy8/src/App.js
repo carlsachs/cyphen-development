@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Admin from "./components/adminDash/src/views/Index";
 import AdminAuth from "./components/adminDash/src/views/examples/Login";
 import Team from "./pages/Team.js";
+import Pricing from "./pages/Pricing.js";
 
 export default function App() {
 
@@ -30,6 +31,9 @@ export default function App() {
         </Route>
         <Route exact path="/team">
           <Team />
+        </Route>
+        <Route exact path="/pricing">
+          <Pricing />
         </Route>
       </Switch>
     </Router>
