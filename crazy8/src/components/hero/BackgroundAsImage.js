@@ -88,7 +88,7 @@ export default () => {
 
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="#">
+      <NavLink href="/team">
         Team
       </NavLink>
       <NavLink href="#">

@@ -82,12 +82,11 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#" style={{color: "#2E73E0"}}>Team</NavLink>
+      <NavLink href="/team" style={{color: "#2E73E0"}}>Team</NavLink>
       <NavLink href="/#" style={{color: "#2E73E0"}}>Work</NavLink>
       <NavLink onClick={handleClick} style={{color: "#2E73E0", cursor: "pointer"}}>Pricing</NavLink>
-      <NavLink onClick={handleClick2} style={{color: "#2E73E0", cursor: "pointer"}}>Social</NavLink>
-      <NavLink href="/#" style={{color: "#2E73E0"}}>Contact Us</NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Hire Our Team</PrimaryLink>
+      <NavLink href="/contact" style={{color: "#2E73E0"}}>Contact Us</NavLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/adminlogin">Hire Our Team</PrimaryLink>
     </NavLinks>
   ];
 
