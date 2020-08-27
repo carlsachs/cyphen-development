@@ -93,7 +93,7 @@ export default (roundedHeaderButton = false) => {
             </SocialLink>
           </SocialLinksContainer>
           <LinksContainer>
-            <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Order Now</PrimaryLink>
+            <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/adminlogin">Order Now</PrimaryLink>
           </LinksContainer>
           <CopyrightText>
             &copy; Copyright 2020, Cyphen Development. All Rights Reserved.
