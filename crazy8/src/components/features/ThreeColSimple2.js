@@ -78,7 +78,7 @@ export default ({
   imageContainerCss = null,
   imageCss = null
 }) => {
-
+ 
   return (
     <Container>
       <ContentWithPaddingXl>

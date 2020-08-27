@@ -5,11 +5,10 @@ import styled from "styled-components"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
 import Header from "components/headers/light.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
-import MainFeature1 from "components/features/TwoColWithButton.js";
-
-import Newsletter from "components/forms/SimpleSubscribeNewsletter";
-
+import Pricing from "components/pricing/TwoPlansWithDurationSwitcher2";
+import PricingLength from "components/pricing/TwoPlansWithDurationSwitcherTime2";
 import Features from "components/features/ThreeColSimple.js";
+import Features2 from "components/features/ThreeColSimple2.js";
 import TeamCardGrid from "components/cards/ProfileThreeColGrid.js";
 
 import SupportIconImage from "images/support-icon.svg";
@@ -22,28 +21,53 @@ export default () => {
     <AnimationRevealPage>
       <Header />
       <Features
-        subheading={<Subheading>Packages</Subheading>}
-        heading="The Blood of our Agency."
-        description="Without following these core values, we would not be able to efficiently deliver the stellar services as we do now."
+        subheading={<Subheading>Pricing</Subheading>}
+        heading="Three Core Packages"
+        description="Our web development services come in three core packages, with additional services, support, and features available upon request.  If you don't see something you need, message us!"
         cards={[
           {
             imageSrc: SupportIconImage,
-            title: "Reliability",
-            description: "As a client, you will rely on us for 24/7 support for any needs you or your business may have."
+            title: "Jumpstart",
+            description: "A package perfect for a startup on a budget but looking to create a professional and trustworthy web presence."
           },
           {
             imageSrc: ShieldIconImage,
-            title: "Security",
-            description: "Technology is advancing quickly.  It is important to us to keep all data and customer information safe on your site.  We stay consistently up-to-date on industry releases."
+            title: "Boost",
+            description: "Take advantage of a multiple-page layout to create a complex web app attracting your target audience to your ideas."
           },
           {
             imageSrc: Fast,
-            title: "Efficiency",
-            description: "Anyone can create a website, but a web application that looks great, feels great, runs smooth, and is accessible?  Makes all the difference in the world.  We pride outselves on this."
+            title: "Throttle",
+            description: "Use CyphenBoard to manage and track user data, business operations, and future tasks all in one interface.  Great for e-commerce and SAAS."
           },
         ]}
         linkText=""
       />
+      <Pricing />
+      <Features2 
+        subheading={<Subheading>Ex Post Facto</Subheading>}
+        heading="Additional Services"
+        description="Aside from web development, we offer additional services to help you reach your business goals.  If you don't see a service or feature you need, message us!"
+        cards={[
+          {
+            imageSrc: SupportIconImage,
+            title: "Jumpstart",
+            description: "A package perfect for a startup on a budget but looking to create a professional and trustworthy web presence."
+          },
+          {
+            imageSrc: ShieldIconImage,
+            title: "Boost",
+            description: "Take advantage of a multiple-page layout to create a complex web app attracting your target audience to your ideas."
+          },
+          {
+            imageSrc: Fast,
+            title: "Throttle",
+            description: "Use CyphenBoard to manage and track user data, business operations, and future tasks all in one interface.  Great for e-commerce and SAAS."
+          },
+        ]}
+        linkText=""
+      />
+      <PricingLength />
       <Footer />
     </AnimationRevealPage>
   );
