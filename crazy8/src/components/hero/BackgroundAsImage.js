@@ -64,7 +64,7 @@ export default () => {
       duration: 1500,
       delay: 100,
       smooth: true,
-      offset: 100, // Scrolls to element + 100 pixels down the page
+      offset: 430, // Scrolls to element + 100 pixels down the page
     })
   }
 
@@ -74,6 +74,15 @@ export default () => {
       delay: 100,
       smooth: true,
       offset: 100, // Scrolls to element + 100 pixels down the page
+    })
+  }
+
+  const handleClick3 = () => {
+    scroller.scrollTo('consultation', {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: 430, // Scrolls to element + 100 pixels down the page
     })
   }
 
@@ -88,6 +97,9 @@ export default () => {
       <NavLink onClick={handleClick} style={{cursor: "pointer"}}>
         Pricing
       </NavLink>
+      <NavLink onClick={handleClick3} style={{cursor: "pointer"}}>
+        Consultation
+      </NavLink>
       <NavLink onClick={handleClick2} style={{cursor: "pointer"}}>
         Social
       </NavLink>
@@ -96,7 +108,7 @@ export default () => {
     </NavLink>
     </NavLinks>,
     <NavLinks key={2} style={{display: "flex", justifyContent: "space-evenly", width: "25%"}}>
-    <PrimaryLink href="/#">
+    <PrimaryLink href="/admin">
         Place Order
       </PrimaryLink>
     </NavLinks>
@@ -115,7 +127,7 @@ export default () => {
               <br />
               <SlantedBackground>You Deserve</SlantedBackground>
             </Heading>
-            <PrimaryAction>Get Pricing</PrimaryAction>
+            <PrimaryAction onClick={handleClick}>Get Pricing</PrimaryAction>
           </LeftColumn>
           <RightColumn>
             <StyledResponsiveVideoEmbed

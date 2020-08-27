@@ -51,7 +51,16 @@ export default (roundedHeaderButton = false) => {
       duration: 1500,
       delay: 100,
       smooth: true,
-      offset: 100, // Scrolls to element + 100 pixels down the page
+      offset: 430, // Scrolls to element + 100 pixels down the page
+    })
+  }
+
+  const handleClick2 = () => {
+    scroller.scrollTo('consultation', {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: 430, // Scrolls to element + 100 pixels down the page
     })
   }
 
@@ -69,6 +78,7 @@ export default (roundedHeaderButton = false) => {
             <Link href="#">Team</Link>
             <Link href="#">Work</Link>
             <Link onClick={handleClick}>Pricing</Link>
+            <Link onClick={handleClick2}>Consultation</Link>
             <Link href="#">Contact Us</Link>
           </LinksContainer>
           <SocialLinksContainer>

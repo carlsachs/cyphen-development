@@ -29,7 +29,9 @@ export default () => (
     <Element name="pricing">
       <Pricing />
     </Element>
-    <PricingLength />
+    <Element name="consultation">
+      <PricingLength />
+    </Element>
     <FAQ
       imageSrc={macball}
       imageContain={true}
