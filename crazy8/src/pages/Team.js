@@ -29,8 +29,8 @@ export default () => {
         imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
       />
       <MainFeature1
-        subheading={<Subheading>Our Vision</Subheading>}
-        heading="We aim to disrupt the desgin space."
+        subheading={<Subheading>Our Mission</Subheading>}
+        heading="We'll bring your vision to reality."
         buttonRounded={false}
         primaryButtonText="Contact Us"
         imageSrc="https://images.unsplash.com/3/doctype-hi-res.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"
