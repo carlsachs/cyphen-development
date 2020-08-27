@@ -59,15 +59,6 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
 
 export default () => {
 
-  const handleClick = () => {
-    scroller.scrollTo('pricing', {
-      duration: 1500,
-      delay: 100,
-      smooth: true,
-      offset: 430, // Scrolls to element + 100 pixels down the page
-    })
-  }
-
   const handleClick2 = () => {
     scroller.scrollTo('social', {
       duration: 1500,
@@ -94,7 +85,7 @@ export default () => {
       <NavLink href="#">
         Work
       </NavLink>
-      <NavLink onClick={handleClick} style={{cursor: "pointer"}}>
+      <NavLink href="/pricing">
         Pricing
       </NavLink>
       <NavLink onClick={handleClick3} style={{cursor: "pointer"}}>
@@ -127,7 +118,7 @@ export default () => {
               <br />
               <SlantedBackground>You Deserve</SlantedBackground>
             </Heading>
-            <PrimaryAction onClick={handleClick}>Get Pricing</PrimaryAction>
+            <PrimaryAction onClick={() => window.open("/pricing")}>Get Pricing</PrimaryAction>
           </LeftColumn>
           <RightColumn>
             <StyledResponsiveVideoEmbed

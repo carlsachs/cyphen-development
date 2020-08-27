@@ -73,7 +73,7 @@ export default ({
   heading = "MVP Plans.",
   description = "We think that when ordering through us, you leave satisfied, and continue business with us in coming months, forming a business relationship.",
   plans = null,
-  primaryButtonText = "Add To Cart",
+  primaryButtonText = "Get Started",
   planDurations = [
     {
       text: "Job",
@@ -115,11 +115,6 @@ export default ({
           {subheading && <Subheading>{subheading}</Subheading>}
           <Heading style={{color: "#0F5AD1"}}>{heading}</Heading>
           {description && <Description>{description}</Description>}
-        <PlanDurationSwitcher>
-          {planDurations.map((planDuration, index) => (
-            <SwitchButton active={activeDurationIndex === index} key={index} onClick={() => setActiveDurationIndex(index)}>{planDuration.switcherText}</SwitchButton>
-          ))}
-        </PlanDurationSwitcher>
         </HeaderContainer>
         <PlansContainer>
           {plans.map((plan, index) => (
