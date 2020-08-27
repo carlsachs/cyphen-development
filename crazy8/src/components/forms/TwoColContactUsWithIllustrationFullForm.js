@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import EmailIllustrationSrc from "images/email-illustration.svg";
+import ContactIllustration from "images/contact.svg";
 
 import axios from "axios";
 
@@ -38,7 +38,7 @@ const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`
 export default ({
   subheading = "Get in Touch",
   heading = <>Want to <span style={{color: "#0F5AD1"}}>reach out</span><wbr/> ?</>,
-  description = "Whether a question, inquiry, concern, or just to say 'Hello', feel free to reach out and our team will respond promptly.",
+  description = "Whether you have a question, inquiry, concern, or just want to say 'Hello', feel free to reach out and our team will respond promptly.",
   submitButtonText = "Send",
   formAction = "#",
   formMethod = "get",
@@ -79,7 +79,7 @@ export default ({
     <Container>
       <TwoColumn>
         <ImageColumn>
-          <Image imageSrc={EmailIllustrationSrc} />
+          <Image imageSrc={ContactIllustration} />
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
