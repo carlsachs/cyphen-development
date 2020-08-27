@@ -97,7 +97,7 @@ export default ({
                   <FeatureIconContainer>{<feature.Icon />}</FeatureIconContainer>
                   <FeatureText>
                     <FeatureHeading>{feature.title}</FeatureHeading>
-                    <FeatureDescription>{feature.description}</FeatureDescription>
+                    <FeatureDescription style={{fontSize: "1rem"}}>{feature.description}</FeatureDescription>
                   </FeatureText>
                 </Feature>
               ))}
