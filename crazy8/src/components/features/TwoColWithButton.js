@@ -49,7 +49,7 @@ export default ({
   ),
   description = "Whether starting a new business idea from scratch, looking to rebrand your business, bring a more modern and appealing feel to your online livelihood, we have the tools and experience to help you succeed.",
   primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
+  primaryButtonUrl = "/",
   imageSrc = TeamIllustrationSrc,
   buttonRounded = true,
   imageRounded = true,
