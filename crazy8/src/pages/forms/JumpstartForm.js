@@ -1,12 +1,11 @@
 import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 import tw from "twin.macro"; //eslint-disable-line
 import styled from "styled-components";
+import axios from "axios";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Header from "components/headers/light";
-import Color from "components/forms/JumpstartInputs1";
-import Brand from "components/forms/JumpstartInputs2";
-import Upload from "components/forms/JumpstartInputs3";
 import Footer from "components/footers/MiniCenteredFooter";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { ContentWithPaddingXl } from "components/misc/Layouts.js";
@@ -66,6 +65,7 @@ export default () => {
   background: rgb(136,64,212);
   background: linear-gradient(90deg, rgba(136,64,212,0.9094012605042017) 0%, rgba(94,14,180,0.8981967787114846) 100%);
   `
+    let history = useHistory();
 
     const [jumpstart, setJumpstart] = useState({
       colors: "",
@@ -75,15 +75,32 @@ export default () => {
       brandName: "",
       brandSlogan: "",
       brandDescription: "",
+      comments: "",
       logoLink: "",
       addedContent: "",
-      comments: "",
       extra: "",
     })
 
     const handleChange = (e) => {
       e.preventDefault();
-      setJumpstart()
+      setJumpstart({
+        ...jumpstart,
+        [e.target.name]: e.target.value
+      })
+    }
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      axios.post(``, jumpstart)
+      .then(res => {
+        alert("post successful")
+        setTimeout(() => {
+          history.push("/additional")
+          }, 1000)
+      })
+      .catch(err => {
+        alert("posting error")
+      })
     }
 
     return (
@@ -110,21 +127,21 @@ export default () => {
                       <Column>
                         <InputContainer>
                           <Label htmlFor="colors-input">Colors (Hex Values)</Label>
-                          <Input id="colors-input" type="text" name="colors" placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
+                          <Input id="colors-input" type="text" name="colors" onChange={handleChange} placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
                         </InputContainer>
                         <InputContainer>
                           <Label htmlFor="scheme-input">Light Vs. Dark Scheme</Label>
-                          <Input id="scheme-input" type="text" name="scheme" placeholder="Ex: Light Scheme" />
+                          <Input id="scheme-input" type="text" name="scheme" onChange={handleChange} placeholder="Ex: Light Scheme" />
                         </InputContainer>
                         <InputContainer tw="flex-1">
                           <Label htmlFor="blacklist-input">Blacklisted Colors</Label>
-                          <Input id="blacklist-input" type="text" name="blacklisted" placeholder="Ex: No Red" />
+                          <Input id="blacklist-input" type="text" name="blacklistColors" onChange={handleChange} placeholder="Ex: No Red" />
                         </InputContainer>
                       </Column>
                       <Column>
                         <InputContainer tw="flex-1">
                           <Label htmlFor="blacklist-input">Anything else related to color/scheme?</Label>
-                          <TextArea id="blacklist-input" type="text" name="extra" placeholder="Ex: Make sure all the buttons start off as the secondary color, then switch to the primary color on hover." />
+                          <TextArea id="blacklist-input" type="text" name="content" onChange={handleChange} placeholder="Ex: Make sure all the buttons start off as the secondary color, then switch to the primary color on hover." />
                         </InputContainer>
                       </Column>
                     </TwoColumn>
@@ -149,21 +166,21 @@ export default () => {
                     <Column>
                       <InputContainer>
                         <Label htmlFor="brandName-input">Brand Name</Label>
-                        <Input id="brandName-input" type="text" name="brandName" placeholder="Ex: Cyphen Development" />
+                        <Input id="brandName-input" type="text" name="brandName" onChange={handleChange} placeholder="Ex: Cyphen Development" />
                       </InputContainer>
                       <InputContainer>
                         <Label htmlFor="slogan-input">Brand Slogan</Label>
-                        <Input id="slogan-input" type="text" name="slogan" placeholder="Ex: The Professional Look You Deserve" />
+                        <Input id="slogan-input" type="text" name="brandSlogan" onChange={handleChange} placeholder="Ex: The Professional Look You Deserve" />
                       </InputContainer>
                       <InputContainer tw="flex-1">
                         <Label htmlFor="summary-input">Brand Summary</Label>
-                        <TextArea id="summary-input" type="text" name="brandDescription" placeholder="Ex: We use the most modern technologies to produce web applications delivering efficient and secure business interfaces to clients around the world." />
+                        <TextArea id="summary-input" type="text" name="brandDescription" onChange={handleChange} placeholder="Ex: We use the most modern technologies to produce web applications delivering efficient and secure business interfaces to clients around the world." />
                       </InputContainer>
                     </Column>
                     <Column>
                       <InputContainer tw="flex-1">
                         <Label htmlFor="blacklist-input">Anything else related to your brand?</Label>
-                        <TextArea id="blacklist-input" type="text" name="extra" placeholder="Ex: Our brand takes pride in a simple, modern look.  Please implement that feel into our interface." />
+                        <TextArea id="blacklist-input" type="text" name="comments" onChange={handleChange} placeholder="Ex: Our brand takes pride in a simple, modern look.  Please implement that feel into our interface." />
                       </InputContainer>
                     </Column>
                   </TwoColumn>
@@ -188,21 +205,21 @@ export default () => {
                   <Column>
                     <InputContainer>
                       <Label htmlFor="logo-input">Logo</Label>
-                      <Input id="logo-input" type="text" name="logo" placeholder="Link to Logo" />
+                      <Input id="logo-input" type="text" name="logoLink" onChange={handleChange} placeholder="Link to Logo" />
                     </InputContainer>
                     <InputContainer>
                       <Label htmlFor="pictures-input">Pictures</Label>
-                      <Input id="pictures-input" type="text" name="pictures" placeholder="Ex: Link/Upload pictures here" />
+                      <Input id="pictures-input" type="text" name="pictures" onChange={handleChange} placeholder="Ex: Link/Upload pictures here" />
                     </InputContainer>
                     <InputContainer tw="flex-1">
                       <Label htmlFor="other-input">Other Content Upload</Label>
-                      <TextArea id="other-input" type="text" name="othercontent" placeholder="Ex: Link to other content" />
+                      <TextArea id="other-input" type="text" name="addedContent" onChange={handleChange} placeholder="Ex: Link to other content" />
                     </InputContainer>
                   </Column>
                   <Column>
                     <InputContainer tw="flex-1">
                       <Label htmlFor="-input">Anything else related to your content?</Label>
-                      <TextArea id="-input" type="text" name="extra" placeholder="Ex: I prefer to have picture 1 and 3 on separate pages." />
+                      <TextArea id="-input" type="text" name="extra" onChange={handleChange} placeholder="Ex: I prefer to have picture 1 and 3 on separate pages." />
                     </InputContainer>
                   </Column>
                 </TwoColumn>
@@ -210,6 +227,9 @@ export default () => {
             </div>
             <SvgDotPattern1 />
           </FormContainer>
+          <div>
+              <SubmitButton type="submit" onClick={handleSubmit}>Continue</SubmitButton>
+          </div>
         </Content>
       </Container>
         </Content>
