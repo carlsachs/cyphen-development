@@ -61,7 +61,7 @@ export default () => {
     name: "",
     email: "",
     phone: "",
-    emailPref: true,
+    emailPref: false,
     phonePref: false,
     accept: false
   });
@@ -81,7 +81,10 @@ export default () => {
       alert("Posted is working")
       setTimeout(() => {
         history.push("/order")
-        }, 2000)
+        }, 1000)
+    })
+    .catch(err => {
+      alert("there was an error check it out")
     })
   }
 
@@ -93,7 +96,7 @@ export default () => {
             <h2 style={{
               color: "white"
             }}>Your Information</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
               <TwoColumn>
                 <Column>
                   <InputContainer>
@@ -123,7 +126,7 @@ export default () => {
                   <div style={{
                     width: "35%"
                   }}>
-                    <SubmitButton type="submit" value="Submit">Continue</SubmitButton>
+                    <SubmitButton type="submit" value="Submit" onClick={handleSubmit}>Continue</SubmitButton>
                   </div>
                   </div>
                 </Column>
@@ -142,7 +145,7 @@ export default () => {
                     }}>Of Contact</h3>
                   </div>
                   <div>
-                    <Box2 onClick={() => setUserData({emailPref: true, phonePref: false})} style={{
+                    <Box2 onClick={() => setUserData({...userData, emailPref: true, phonePref: false})} style={{
                       border: "1px solid white",
                       borderRadius: "10px",
                       height: "100px",
@@ -161,7 +164,7 @@ export default () => {
                       }}/>
                     </div>
                     </Box2>
-                    <Box1 onClick={() => setUserData({phonePref: true, emailPref: false})} style={{
+                    <Box1 onClick={() => setUserData({...userData, phonePref: true, emailPref: false})} style={{
                       border: "1px solid white",
                       borderRadius: "10px",
                       height: "100px"
