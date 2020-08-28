@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
+
+//styling
 import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -50,7 +53,26 @@ const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform
 
 export default () => {
 
+  //initiating useHistory
   let history = useHistory();
+
+  //setting state for user form
+  const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    emailPref: true,
+    phonePref: false,
+    accept: false
+  });
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setUserData({
+      ...userData,
+      [e.target.name]: e.target.value
+    })
+  }
 
   return (
     <Container>
@@ -65,15 +87,21 @@ export default () => {
                 <Column>
                   <InputContainer>
                     <Label htmlFor="name-input">Your Name</Label>
-                    <Input id="name-input" type="text" name="name" placeholder="Ex: Jane " />
+                    <Input id="name-input" type="text" name="name" onChange={handleChange} placeholder="Ex: Jane " />
                   </InputContainer>
                   <InputContainer>
                     <Label htmlFor="email-input">Your Email Address</Label>
-                    <Input id="email-input" type="email" name="email" placeholder="E.g. john@mail.com" />
+                    <Input id="email-input" type="email" name="email" onChange={handleChange} placeholder="E.g. john@mail.com" />
                   </InputContainer>
                   <InputContainer tw="flex-1">
                     <Label htmlFor="phone-input">Your Phone Number</Label>
-                    <Input id="phone-input" type="tel" name="phone" placeholder="Phone (Optional)" />
+                    <Input id="phone-input" type="tel" name="phone" onChange={handleChange} placeholder="Phone (Optional)" />
+                  </InputContainer>
+                  <InputContainer>
+                    <Label htmlFor="terms-input">Do you accept our terms and agreements?</Label>
+                    <div>
+                    <Input id="terms-input" type="checkbox" name="accept" />
+                    </div>
                   </InputContainer>
                 </Column>
                 <Column>
@@ -91,7 +119,7 @@ export default () => {
                     }}>Of Contact</h3>
                   </div>
                   <div>
-                    <Box2 style={{
+                    <Box2 onClick={() => setUserData({emailPref: true, phonePref: false})} style={{
                       border: "1px solid white",
                       borderRadius: "10px",
                       height: "100px",
@@ -110,7 +138,7 @@ export default () => {
                       }}/>
                     </div>
                     </Box2>
-                    <Box1 style={{
+                    <Box1 onClick={() => setUserData({phonePref: true, emailPref: false})} style={{
                       border: "1px solid white",
                       borderRadius: "10px",
                       height: "100px"

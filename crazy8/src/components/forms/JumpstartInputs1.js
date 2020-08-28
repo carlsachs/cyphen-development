@@ -64,8 +64,8 @@ export default () => {
               <TwoColumn>
                 <Column>
                   <InputContainer>
-                    <Label htmlFor="name-input">Your Name</Label>
-                    <Input id="name-input" type="text" name="name" placeholder="Ex: Jane " />
+                    <Label htmlFor="colors-input">Colors (Hex Values)</Label>
+                    <Input id="colors-input" type="text" name="colors" placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
                   </InputContainer>
                   <InputContainer>
                     <Label htmlFor="email-input">Your Email Address</Label>
@@ -85,10 +85,10 @@ export default () => {
                   }}>
                     <h2 style={{
                       color: "white",
-                    }}>Preferred Method</h2>
+                    }}>Content</h2>
                     <h3 style={{
                       color: "white"
-                    }}>Of Contact</h3>
+                    }}>for filling your site/application!</h3>
                   </div>
                   <div>
                     <Box2 style={{
