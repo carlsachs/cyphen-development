@@ -9,7 +9,15 @@ import {ReactComponent as EmailIcon} from "../../images/emailmethod.svg"
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 const Box1 = styled.div`
-  
+  :hover{
+    background: #7ab9f0;
+  }
+`;
+
+const Box2 = styled.div`
+  :hover{
+    background: #7ab9f0
+  }
 `;
 
 const FormContainer = styled.div`
@@ -79,7 +87,7 @@ export default () => {
                     }}>Of Contact</h3>
                   </div>
                   <div>
-                    <div style={{
+                    <Box2 style={{
                       border: "1px solid white",
                       borderRadius: "10px",
                       height: "100px",
@@ -97,7 +105,7 @@ export default () => {
                         fill: "white",
                       }}/>
                     </div>
-                    </div>
+                    </Box2>
                     <Box1 style={{
                       border: "1px solid white",
                       borderRadius: "10px",
@@ -120,7 +128,7 @@ export default () => {
                 </Column>
               </TwoColumn>
 
-              <SubmitButton type="submit" value="Submit">Submit</SubmitButton>
+              <SubmitButton type="submit" value="Submit">Continue</SubmitButton>
             </form>
           </div>
           <SvgDotPattern1 />
