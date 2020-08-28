@@ -74,6 +74,17 @@ export default () => {
     })
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post(`https://cyphen-main.herokuapp.com/api/form/orders`, userData)
+    .then(res => {
+      alert("Posted is working")
+      setTimeout(() => {
+        history.push("/order")
+        }, 2000)
+    })
+  }
+
   return (
     <Container>
       <Content>
@@ -98,11 +109,23 @@ export default () => {
                     <Input id="phone-input" type="tel" name="phone" onChange={handleChange} placeholder="Phone (Optional)" />
                   </InputContainer>
                   <InputContainer>
-                    <Label htmlFor="terms-input">Do you accept our terms and agreements?</Label>
-                    <div>
-                    <Input id="terms-input" type="checkbox" name="accept" />
-                    </div>
+                  <div>
+                    <Label htmlFor="terms-input" style={{
+                      width: "100%",
+                      textAlign: "center"
+                    }}>By continuing, you acknowledge you have Read and Accept the Terms of Agreement</Label>
+                  </div>
                   </InputContainer>
+                  <div style={{
+                    display: "flex",
+                    justifyContent: "center"
+                  }}>
+                  <div style={{
+                    width: "35%"
+                  }}>
+                    <SubmitButton type="submit" value="Submit">Continue</SubmitButton>
+                  </div>
+                  </div>
                 </Column>
                 <Column>
                 <div style={{
@@ -159,8 +182,6 @@ export default () => {
                   </div>
                 </Column>
               </TwoColumn>
-
-              <SubmitButton type="submit" value="Submit" onClick={() => history.push("/order")}>Continue</SubmitButton>
             </form>
           </div>
           <SvgDotPattern1 />
