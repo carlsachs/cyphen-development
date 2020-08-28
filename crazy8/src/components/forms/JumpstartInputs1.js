@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -48,6 +49,9 @@ const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-gray-100 text-blue-50
 const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-blue-500 fill-current w-24`
 
 export default () => {
+
+  let history = useHistory();
+
   return (
     <Container>
       <Content>
@@ -55,7 +59,7 @@ export default () => {
           <div tw="mx-auto max-w-4xl">
             <h2 style={{
               color: "white"
-            }}>Your Information</h2>
+            }}>Color Scheme</h2>
             <form>
               <TwoColumn>
                 <Column>
@@ -128,7 +132,7 @@ export default () => {
                 </Column>
               </TwoColumn>
 
-              <SubmitButton type="submit" value="Submit">Continue</SubmitButton>
+              <SubmitButton type="submit" value="Submit" onClick={() => history.push("/jumpstart")}>Continue</SubmitButton>
             </form>
           </div>
           <SvgDotPattern1 />

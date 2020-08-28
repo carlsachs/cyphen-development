@@ -3,7 +3,7 @@ import tw from "twin.macro"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Header from "components/headers/light";
-import Top from "components/forms/SimpleContactUs";
+import Top from "components/forms/UserInputs";
 import Footer from "components/footers/MiniCenteredFooter";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 

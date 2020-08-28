@@ -98,7 +98,7 @@ export default ({
       duration: "Base Fee",
       mainFeature: "Suited for Single-Page Apps",
       features: ["1 Page", "1 Form", "Content Upload", "1 Month Free Dev Support"],
-      url: "/userinfo"
+      url: "/jumpstart"
       
     },
     {

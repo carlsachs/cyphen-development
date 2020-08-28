@@ -99,7 +99,7 @@ export default () => {
     </NavLink>
     </NavLinks>,
     <NavLinks key={2} style={{display: "flex", justifyContent: "space-evenly", width: "25%"}}>
-    <PrimaryLink href="/order">
+    <PrimaryLink href="/userinfo">
         Place Order
       </PrimaryLink>
     </NavLinks>
