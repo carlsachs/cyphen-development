@@ -13,6 +13,7 @@ import Team from "./pages/Team.js";
 import Pricing from "./pages/Pricing.js";
 import OrderForm from "./pages/OrderFormStart.js";
 import StepTwo from "./pages/OrderFormStepTwo.js";
+import JumpstartForm from "./pages/forms/UserForm.js";
 
 export default function App() {
 
@@ -42,6 +43,9 @@ export default function App() {
         </Route>
         <Route exact path="/additional">
           <StepTwo />
+        </Route>
+        <Route exact path="/jumpstart">
+          <JumpstartForm />
         </Route>
       </Switch>
     </Router>
