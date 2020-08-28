@@ -7,10 +7,11 @@ import LandingPage from "pages/LandingPage.js";
 import Contact from "pages/ContactUs";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Admin from "./components/adminDash/src/views/Index";
-import AdminAuth from "./components/adminDash/src/views/examples/Login";
+import Admin from "./components/adminDash/src/views/Index.js";
+import AdminAuth from "./components/adminDash/src/views/examples/Login.js";
 import Team from "./pages/Team.js";
 import Pricing from "./pages/Pricing.js";
+import OrderForm from "./pages/OrderFormStart.js";
 
 export default function App() {
 
@@ -34,6 +35,9 @@ export default function App() {
         </Route>
         <Route exact path="/pricing">
           <Pricing />
+        </Route>
+        <Route exact path="/order">
+          <OrderForm />
         </Route>
       </Switch>
     </Router>

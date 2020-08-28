@@ -63,8 +63,8 @@ export default () => {
             </HeadingInfoContainer>
           </TextColumn>
           <FormColumn>
-          <Form>
-            <Input name="newsletter" type="email" placeholder="Your Email Address" />
+          <Form onSubmit={handleSubmit}>
+            <Input name="newsletter" type="email" placeholder="Your Email Address" onChange={handleChange} />
             <Button type="submit">Subscribe</Button>
           </Form>
           </FormColumn>

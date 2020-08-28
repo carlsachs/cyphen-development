@@ -25,9 +25,9 @@ const DecoratorBlob2 = tw(SvgDecoratorBlob1)`absolute top-0 right-0 w-80 h-80 tr
 export default ({
   text = "What's stopping you from taking your business to the next level?",
   primaryLinkText = "Get Started",
-  primaryLinkUrl = "/",
+  primaryLinkUrl = "/order",
   secondaryLinkText = "Contact Us",
-  secondaryLinkUrl = "/",
+  secondaryLinkUrl = "/contact",
   pushDownFooter = true
 }) => {
   return (

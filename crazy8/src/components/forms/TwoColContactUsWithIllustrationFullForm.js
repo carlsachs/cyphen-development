@@ -87,11 +87,11 @@ export default ({
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
             <Form onSubmit={handleSubmit}>
-              <Input type="text" name="name" placeholder="Full Name" onChange={handleChange} style={{paddingLeft: "5%"}}/>
-              <Input type="email" name="email" placeholder="Your Email Address" onChange={handleChange} style={{paddingLeft: "5%"}}/>
-              <Input type="tel" name="phone" placeholder="Phone (Optional)" onChange={handleChange} style={{paddingLeft: "5%"}}/>
-              <Input type="text" name="subject" placeholder="Subject" onChange={handleChange} style={{paddingLeft: "5%"}}/>
-              <Textarea name="message" placeholder="Your Message Here" onChange={handleChange} style={{paddingLeft: "5%"}}/>
+              <Input type="text" name="name" placeholder="Full Name" onChange={handleChange} style={{paddingLeft: "5%", borderRadius: "10px"}}/>
+              <Input type="email" name="email" placeholder="Your Email Address" onChange={handleChange} style={{paddingLeft: "5%", borderRadius: "10px"}}/>
+              <Input type="tel" name="phone" placeholder="Phone (Optional)" onChange={handleChange} style={{paddingLeft: "5%", borderRadius: "10px"}}/>
+              <Input type="text" name="subject" placeholder="Subject" onChange={handleChange} style={{paddingLeft: "5%", borderRadius: "10px"}}/>
+              <Textarea name="message" placeholder="Your Message Here" onChange={handleChange} style={{paddingLeft: "5%", borderRadius: "10px"}}/>
               <SubmitButton type="submit">Send</SubmitButton>
             </Form>
           </TextContent>

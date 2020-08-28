@@ -10,8 +10,8 @@ import { ReactComponent as SvgDecoratorBlob } from "images/svg-decorator-blob-6.
 
 const HeaderContainer = tw.div`mt-10 w-full flex flex-col items-center`;
 const Subheading = tw(SubheadingBase)`mb-4`;
-const Heading = tw(SectionHeading)`w-full`;
-const Description = tw(SectionDescription)`w-full text-center`;
+const Heading = tw(SectionHeading)`w-full text-blue-800`;
+const Description = tw(SectionDescription)`w-full text-center text-blue-600`;
 
 const PlansContainer = tw.div`flex justify-between flex-col lg:flex-row items-center lg:items-stretch relative`;
 const Plan = styled.div`
@@ -23,12 +23,12 @@ const Plan = styled.div`
   ${props =>
     props.featured &&
     css`
-      background: rgb(100,21,255);
-      background: linear-gradient(135deg, rgba(100,21,255,1) 0%, rgba(128,64,252,1) 100%);
-background: rgb(85,60,154);
-background: linear-gradient(135deg, rgba(85,60,154,1) 0%, rgba(128,90,213,1) 100%);
-background: rgb(76,81,191);
-background: linear-gradient(135deg, rgba(76,81,191,1) 0%, rgba(102,126,234,1) 100%);
+    background: rgb(25,27,108);
+    background: linear-gradient(90deg, rgba(25,27,108,0.8785889355742297) 0%, rgba(96,33,186,0.7805497198879552) 100%);
+    background: rgb(25,27,108);
+    background: linear-gradient(90deg, rgba(25,27,108,0.8785889355742297) 0%, rgba(96,33,186,0.7805497198879552) 100%);
+    background: rgb(25,27,108);
+    background: linear-gradient(90deg, rgba(25,27,108,0.8785889355742297) 0%, rgba(96,33,186,0.7805497198879552) 100%);
       ${tw`bg-primary-500 text-gray-100`}
       .planHighlight {
         ${tw`hidden`}
@@ -91,7 +91,7 @@ export default ({
 }) => {
   const defaultPlans = [
     {
-      name: "Personal",
+      name: "Jumpstart",
       price: "$17.99",
       duration: "Monthly",
       mainFeature: "Suited for Personal Blogs",
@@ -118,16 +118,16 @@ export default ({
 
   const highlightGradientsCss = [
     css`
-      background: rgb(56, 178, 172);
-      background: linear-gradient(115deg, rgba(56, 178, 172, 1) 0%, rgba(129, 230, 217, 1) 100%);
+      background: rgb(173,142,221);
+      background: linear-gradient(90deg, rgba(173,142,221,0.8785889355742297) 0%, rgba(117,33,186,0.7805497198879552) 100%);
     `,
     css`
-      background: rgb(56, 178, 172);
-      background-image: linear-gradient(115deg, #6415ff, #7431ff, #8244ff, #8e56ff, #9a66ff);
+      background: rgb(32,0,82);
+      background: linear-gradient(90deg, rgba(32,0,82,1) 0%, rgba(169,66,255,1) 100%);
     `,
     css`
-      background: rgb(245, 101, 101);
-      background: linear-gradient(115deg, rgba(245, 101, 101, 1) 0%, rgba(254, 178, 178, 1) 100%);
+      background: rgb(25,27,108);
+      background: linear-gradient(90deg, rgba(25,27,108,0.8785889355742297) 0%, rgba(33,138,186,0.7805497198879552) 100%);
     `
   ];
 

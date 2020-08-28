@@ -65,9 +65,9 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
     <NavLinks key={1}>
       <NavLink href="/team">Team</NavLink>
       <NavLink href="/#">Work</NavLink>
-      <NavLink href="" style={{cursor: "pointer"}}>Pricing</NavLink>
+      <NavLink href="/pricing">Pricing</NavLink>
       <NavLink href="/contact">Contact Us</NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/adminlogin">Order Now</PrimaryLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} onClick={() => window.open("/order")}>Order Now</PrimaryLink>
     </NavLinks>
   ];
 

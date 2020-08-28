@@ -118,7 +118,7 @@ export default () => {
               <br />
               <SlantedBackground>You Deserve</SlantedBackground>
             </Heading>
-            <PrimaryAction onClick={() => window.open("/pricing")}>Get Pricing</PrimaryAction>
+            <PrimaryAction onClick={() => window.open("/order")}>Get Started</PrimaryAction>
           </LeftColumn>
           <RightColumn>
             <StyledResponsiveVideoEmbed
