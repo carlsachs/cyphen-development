@@ -99,7 +99,7 @@ export default ({
       name: "Throttle",
       durationPrices: ["$1250", "$1250"],
       mainFeature: "7 Day Delivery",
-      features: ["20 Pages", "Cyphen Admin Dashboard", "Full Source Code", "Free Business Animated Video", "Free Logo", "Custom Graphics", "Content Upload", "1 Year Dev Support"],
+      features: ["15 Pages", "Cyphen Admin Dashboard", "Full Source Code", "Free Business Animated Video", "Free Logo", "Custom Graphics", "Content Upload", "1 Year Dev Support"],
       featured: true
     }
   ];
