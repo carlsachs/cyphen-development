@@ -84,38 +84,38 @@ const DecoratorBlob = styled(SvgDecoratorBlob)`
 
 
 export default ({
-  subheading = "Step One",
-  heading = "Choose Your Core Plan",
+  subheading = "Step Two",
+  heading = "Choose Your Additional Services",
   description = "",
   plans = null,
-  primaryButtonText = "Select"
+  primaryButtonText = "Add"
 }) => {
   const defaultPlans = [
     {
-      name: "Jumpstart",
-      price: "$199",
-      duration: "Base Fee",
-      mainFeature: "Suited for Single-Page Apps",
-      features: ["1 Page", "1 Form", "Content Upload", "1 Month Free Dev Support"],
-      url: "/additional"
+      name: "Financial Consulting",
+      price: "Varies",
+      duration: "Monthly",
+      mainFeature: "Features",
+      features: ["Quickbooks", "Budgeting", "General Finance Processes", "Finance Statement Compilation"],
+      url: "/"
       
     },
     {
-      name: "Throttle",
-      price: "$1249",
-      duration: "Base Fee",
-      mainFeature: "Suited for Complex Websites",
-      features: ["15 Pages", "CyphenBoard", "Free Logo/Graphics", "Free 30s Business Animated Video"],
+      name: "Developer Support",
+      price: "$199",
+      duration: "Monthly",
+      mainFeature: "Features",
+      features: ["3 Revisions / Month", "Code Refactoring", "24/7 Assistance", "50% off 1 Additional Page / Month"],
       featured: true,
-      url: "/additional"
+      url: "/"
     },
     {
-      name: "Boost",
-      price: "$575",
-      duration: "Base Fee",
-      mainFeature: "Suited for Startups",
-      features: ["5 Pages", "Free Logo/Graphics", "Unlimited Forms", "3 Months Dev Support"],
-      url: "/additional"
+      name: "Marketing Consultation",
+      price: "$149",
+      duration: "Monthly",
+      mainFeature: "Features",
+      features: ["Facebook Advertising", "Social Media Management", "SEO Consultation", "24/7 Assistance"],
+      url: "/"
     },
   ];
 

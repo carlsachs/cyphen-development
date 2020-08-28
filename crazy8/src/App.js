@@ -12,6 +12,7 @@ import AdminAuth from "./components/adminDash/src/views/examples/Login.js";
 import Team from "./pages/Team.js";
 import Pricing from "./pages/Pricing.js";
 import OrderForm from "./pages/OrderFormStart.js";
+import StepTwo from "./pages/OrderFormStepTwo.js";
 
 export default function App() {
 
@@ -38,6 +39,9 @@ export default function App() {
         </Route>
         <Route exact path="/order">
           <OrderForm />
+        </Route>
+        <Route exact path="/additional">
+          <StepTwo />
         </Route>
       </Switch>
     </Router>
