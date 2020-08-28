@@ -108,7 +108,7 @@ export default ({
       mainFeature: "Suited for Complex Websites",
       features: ["15 Pages", "CyphenBoard", "Free Logo/Graphics", "Free 30s Business Animated Video"],
       featured: true,
-      url: "/userinfo"
+      url: "/throttle"
     },
     {
       name: "Boost",

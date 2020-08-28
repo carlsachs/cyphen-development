@@ -15,6 +15,7 @@ import OrderForm from "./pages/OrderFormStart.js";
 import StepTwo from "./pages/OrderFormStepTwo.js";
 import JumpstartForm from "./pages/forms/JumpstartForm.js";
 import BoostForm from "./pages/forms/BoostForm.js";
+import ThrottleForm from "./pages/forms/ThrottleForm.js";
 import UserForm from "./pages/forms/UserForm.js";
 
 export default function App() {
@@ -55,6 +56,9 @@ export default function App() {
         <Route exact path="/boost">
           <BoostForm />
         </Route>
+        <Route exact path="/boost">
+          <ThrottleForm />
+      </Route>
       </Switch>
     </Router>
   );

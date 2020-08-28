@@ -116,9 +116,9 @@ export default () => {
     
         <Header />
         <HeaderContainer>
-            <Subheading><span style={{color: "#3086ff"}}>Step</span><span style={{color: "#7a1be0"}}> 3</span></Subheading>
-            <Heading style={{color: "#3086ff"}}>Build your <span style={{color: "#7a1be0"}}>Boost</span> Package</Heading>
-            <Description style={{color: "#31075e"}}>Envision what you want your online presence to feel like, and tell us everything!  This helps us make your vision a reality!</Description>
+            <Subheading><span style={{color: "#3086ff"}}>Step</span><span style={{color: "#0556bf"}}> 3</span></Subheading>
+            <Heading style={{color: "#3086ff"}}>Build your <span style={{color: "#0556bf"}}>Boost</span> Package</Heading>
+            <Description style={{color: "#002350"}}>Envision what you want your online presence to feel like, and tell us everything!  This helps us make your vision a reality!</Description>
         </HeaderContainer>
         <Content>
             <Container>
