@@ -10,7 +10,7 @@ import { ReactComponent as SvgDecoratorBlob } from "images/svg-decorator-blob-6.
 
 const HeaderContainer = tw.div`mt-10 w-full flex flex-col items-center`;
 const Subheading = tw(SubheadingBase)`mb-4`;
-const Heading = tw(SectionHeading)`w-full text-blue-800`;
+const Heading = tw(SectionHeading)`w-full text-blue-700`;
 const Description = tw(SectionDescription)`w-full text-center text-blue-600`;
 
 const PlansContainer = tw.div`flex justify-between flex-col lg:flex-row items-center lg:items-stretch relative`;
@@ -84,8 +84,8 @@ const DecoratorBlob = styled(SvgDecoratorBlob)`
 
 export default ({
   subheading = "Pricing",
-  heading = "Flexible Plans.",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  heading = "Choose Your Core Plan",
+  description = "",
   plans = null,
   primaryButtonText = "Buy Now"
 }) => {
@@ -95,14 +95,14 @@ export default ({
       price: "$199",
       duration: "Base Fee",
       mainFeature: "Suited for Single-Page Apps",
-      features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"],
+      features: ["1 Page", "1 Form", "Content Upload", "1 Month Free Dev Support"],
     },
     {
-      name: "Throtlle",
+      name: "Throttle",
       price: "$1249",
       duration: "Base Fee",
       mainFeature: "Suited for Complex Websites",
-      features: ["60 Templates", "8 Landing Pages", "22 Internal Pages", "Priority Assistance"],
+      features: ["15 Pages", "CyphenBoard", "Free Logo/Graphics", "Free 30s Business Animated Video"],
       featured: true,
     },
     {
@@ -110,7 +110,7 @@ export default ({
       price: "$575",
       duration: "Base Fee",
       mainFeature: "Suited for Startups",
-      features: ["90 Templates", "9 Landing Pages", "37 Internal Pages", "Personal Assistance"],
+      features: ["5 Pages", "Free Logo/Graphics", "Unlimited Forms", "3 Months Dev Support"],
     },
   ];
 

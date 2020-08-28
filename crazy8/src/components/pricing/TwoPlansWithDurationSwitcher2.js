@@ -86,20 +86,20 @@ export default ({
       name: "JumpStart",
       durationPrices: ["$199", "$199"],
       mainFeature: "1 Day Delivery",
-      features: ["1 Page", "Full Source Code", "Content Upload", "1 Month Free Support", "15 Day Free Marketing", "1 Form Max"]
+      features: ["1 Page", "Full Source Code", "Content Upload", "1 Month Free Support", "1 Form Max"]
     },
     {
       name: "Boost",
       durationPrices: ["$575", "$575"],
       mainFeature: "3 Day Delivery",
-      features: ["5 Pages", "Full Source Code", "Free Logo", "Custom Graphics", "Content Upload", "1 Month Free Support", "1 Month Free Marketing", "Unlimited Forms"],
+      features: ["5 Pages", "Full Source Code", "Free Logo", "Custom Graphics", "Content Upload", "3 Months Free Support", "Unlimited Forms"],
       featured: true
     },
     {
       name: "Throttle",
       durationPrices: ["$1250", "$1250"],
       mainFeature: "7 Day Delivery",
-      features: ["15 Pages", "Cyphen Admin Dashboard", "Full Source Code", "Free Business Animated Video", "Free Logo", "Custom Graphics", "Content Upload", "3 Months Free Support", "1 Year Free Marketing", "Unlimited Forms"],
+      features: ["20 Pages", "Cyphen Admin Dashboard", "Full Source Code", "Free Business Animated Video", "Free Logo", "Custom Graphics", "Content Upload", "1 Year Dev Support"],
       featured: true
     }
   ];
