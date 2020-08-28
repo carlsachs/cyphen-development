@@ -27,8 +27,8 @@ const Input = tw.input``;
 const TextArea = tw.textarea`h-24 sm:h-full resize-none`;
 const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-blue-800 text-blue-100 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-blue-200 hover:text-blue-800 hocus:-translate-y-px hocus:shadow-xl`;
 
-const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-blue-500 fill-current w-24`
-const SvgDotPattern2 = tw(SvgDotPatternIcon)`absolute bottom-0 left-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-blue-500 fill-current w-24`
+const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-green-500 fill-current w-24`
+const SvgDotPattern2 = tw(SvgDotPatternIcon)`absolute bottom-0 left-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-green-500 fill-current w-24`
 
 const FormContainer = styled.div`
   ${tw`p-10 sm:p-12 md:p-16 bg-blue-500 text-gray-100 rounded-lg relative`}
@@ -71,13 +71,13 @@ export default () => {
   `
 
   const gradientBg5green = css`
-  background: rgb(9,82,162);
-  background: linear-gradient(90deg, rgba(9,82,162,0.9094012605042017) 0%, rgba(4,38,97,0.8981967787114846) 100%);
+  background: rgb(47,191,128);
+  background: linear-gradient(90deg, rgba(47,191,128,0.9094012605042017) 0%, rgba(0,37,17,0.8729866946778712) 100%);
   `
 
   const gradientBg6green = css`
-  background: rgb(9,82,162);
-  background: linear-gradient(90deg, rgba(9,82,162,0.9094012605042017) 0%, rgba(4,38,97,0.8981967787114846) 100%);
+  background: rgb(19,116,74);
+  background: linear-gradient(90deg, rgba(19,116,74,0.9094012605042017) 0%, rgba(1,46,21,0.8729866946778712) 100%);
   `
 
     let history = useHistory();
@@ -96,6 +96,10 @@ export default () => {
       logoIdea: "",
       addedContent: "",
       extra: "",
+      cyphenBoardColor: "",
+      adminUsername: "",
+      adminTempPassword: "",
+      animationConcept: "",
     })
 
     const handleChange = (e) => {
@@ -126,9 +130,9 @@ export default () => {
     
         <Header />
         <HeaderContainer>
-            <Subheading><span style={{color: "#3086ff"}}>Step</span><span style={{color: "#7a1be0"}}> 3</span></Subheading>
-            <Heading style={{color: "#3086ff"}}>Build your <span style={{color: "#7a1be0"}}>Throttle</span> Package</Heading>
-            <Description style={{color: "#31075e"}}>Envision what you want your online presence to feel like, and tell us everything!  This helps us make your vision a reality!</Description>
+            <Subheading><span style={{color: "#0e9973"}}>Step</span><span style={{color: "#076a4e"}}> 3</span></Subheading>
+            <Heading style={{color: "#0e9973"}}>Build your <span style={{color: "#076a4e"}}>Throttle</span> Package</Heading>
+            <Description style={{color: "#012813"}}>Envision what you want your online presence to feel like, and tell us everything!  This helps us make your vision a reality!</Description>
         </HeaderContainer>
         <Content>
             <Container>
@@ -182,23 +186,20 @@ export default () => {
                     <TwoColumn>
                       <Column>
                         <InputContainer>
-                          <Label htmlFor="colors-input">Colors (Hex Values)</Label>
-                          <Input id="colors-input" type="text" name="colors" onChange={handleChange} placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
+                          <Label htmlFor="cyphen-color-input">CyphenBoard Color</Label>
+                          <Input id="cyphen-color-input" type="text" name="cyphenBoardColor" onChange={handleChange} placeholder="Ex: Primary" />
                         </InputContainer>
                         <InputContainer>
-                          <Label htmlFor="scheme-input">Light Vs. Dark Scheme</Label>
-                          <Input id="scheme-input" type="text" name="scheme" onChange={handleChange} placeholder="Ex: Light Scheme" />
+                          <Label htmlFor="scheme-board-input">CyphenScheme</Label>
+                          <Input id="scheme-board-input" type="text" name="cyphenScheme" onChange={handleChange} placeholder="Ex: Light Scheme" />
                         </InputContainer>
                         <InputContainer tw="flex-1">
                           <Label htmlFor="blacklist-input">Blacklisted Colors</Label>
-                          <Input id="blacklist-input" type="text" name="blacklistColors" onChange={handleChange} placeholder="Ex: No Red" />
+                          <Input id="blacklist-input" type="text" name="blacklistColorsBoard" onChange={handleChange} placeholder="Ex: No Red" />
                         </InputContainer>
                       </Column>
                       <Column>
-                        <InputContainer tw="flex-1">
-                          <Label htmlFor="blacklist-input">Anything else related to color/scheme?</Label>
-                          <TextArea id="blacklist-input" type="text" name="content" onChange={handleChange} placeholder="Ex: Make sure all the buttons start off as the secondary color, then switch to the primary color on hover." />
-                        </InputContainer>
+                        
                       </Column>
                     </TwoColumn>
                   </form>
@@ -236,7 +237,7 @@ export default () => {
                   <Column>
                     <InputContainer tw="flex-1">
                       <Label htmlFor="blacklist-input">Anything else related to color/scheme?</Label>
-                      <TextArea id="blacklist-input" type="text" name="content" onChange={handleChange} placeholder="Ex: Make sure all the buttons start off as the secondary color, then switch to the primary color on hover." />
+                      <TextArea id="blacklist-input" type="text" name="addedContent" onChange={handleChange} placeholder="Ex: Make sure all the buttons start off as the secondary color, then switch to the primary color on hover." />
                     </InputContainer>
                   </Column>
                 </TwoColumn>
@@ -296,28 +297,12 @@ export default () => {
                     textAlign: "center"
                   }}>Animated Video</h2>
                   <form>
-                    <TwoColumn>
                       <Column>
                         <InputContainer>
-                          <Label htmlFor="colors-input">Colors (Hex Values)</Label>
-                          <Input id="colors-input" type="text" name="colors" onChange={handleChange} placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
-                        </InputContainer>
-                        <InputContainer>
-                          <Label htmlFor="scheme-input">Light Vs. Dark Scheme</Label>
-                          <Input id="scheme-input" type="text" name="scheme" onChange={handleChange} placeholder="Ex: Light Scheme" />
-                        </InputContainer>
-                        <InputContainer tw="flex-1">
-                          <Label htmlFor="blacklist-input">Blacklisted Colors</Label>
-                          <Input id="blacklist-input" type="text" name="blacklistColors" onChange={handleChange} placeholder="Ex: No Red" />
+                          <Label htmlFor="animation-input">Animated Concept</Label>
+                          <Input id="animation-input" type="text" name="animationConcept" onChange={handleChange} placeholder="Ex: Our business description explains it." />
                         </InputContainer>
                       </Column>
-                      <Column>
-                        <InputContainer tw="flex-1">
-                          <Label htmlFor="blacklist-input">Anything else related to color/scheme?</Label>
-                          <TextArea id="blacklist-input" type="text" name="content" onChange={handleChange} placeholder="Ex: Make sure all the buttons start off as the secondary color, then switch to the primary color on hover." />
-                        </InputContainer>
-                      </Column>
-                    </TwoColumn>
                   </form>
                 </div>
                 <SvgDotPattern2 />
@@ -338,8 +323,8 @@ export default () => {
                 <TwoColumn>
                   <Column>
                     <InputContainer>
-                      <Label htmlFor="logo-input">Logo</Label>
-                      <Input id="logo-input" type="text" name="logoLink" onChange={handleChange} placeholder="Link to Logo" />
+                      <Label htmlFor="logo-input">Logo (BYO)</Label>
+                      <Input id="logo-input" type="text" name="logoProvided" onChange={handleChange} placeholder="Link to Logo" />
                     </InputContainer>
                     <InputContainer>
                       <Label htmlFor="pictures-input">Pictures</Label>
@@ -347,7 +332,7 @@ export default () => {
                     </InputContainer>
                     <InputContainer tw="flex-1">
                       <Label htmlFor="other-input">Other Content Upload</Label>
-                      <TextArea id="other-input" type="text" name="addedContent" onChange={handleChange} placeholder="Ex: Link to other content" />
+                      <TextArea id="other-input" type="text" name="contentExtra" onChange={handleChange} placeholder="Ex: Link to other content" />
                     </InputContainer>
                   </Column>
                   <Column>
