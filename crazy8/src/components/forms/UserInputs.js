@@ -13,14 +13,17 @@ import {ReactComponent as EmailIcon} from "../../images/emailmethod.svg"
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 const Box1 = styled.div`
+
   :hover{
     background: #7ab9f0;
+    cursor: pointer;
   }
 `;
 
 const Box2 = styled.div`
   :hover{
-    background: #7ab9f0
+    background: #7ab9f0;
+    cursor: pointer;
   }
 `;
 
@@ -63,7 +66,7 @@ export default () => {
     phone: "",
     emailPref: false,
     phonePref: false,
-    accept: false
+    accept: true
   });
 
   const handleChange = (e) => {
@@ -144,30 +147,32 @@ export default () => {
                       color: "white"
                     }}>Of Contact</h3>
                   </div>
-                  <div>
                     <Box2 onClick={() => setUserData({...userData, emailPref: true, phonePref: false})} style={{
                       border: "1px solid white",
                       borderRadius: "10px",
                       height: "100px",
+                      width: "100%",
                       marginTop: "5%",
-                      marginBottom: "5%"
+                      marginBottom: "5%",
                     }}>
                     <div style={{
                       display: "flex",
                       justifyContent: "center",
-                      marginTop: "6.5%"
                     }}>
                       <EmailIcon style={{
                         height: "50px",
                         width: "50px",
                         fill: "white",
+                        marginTop: "6.5%"
                       }}/>
                     </div>
                     </Box2>
+
                     <Box1 onClick={() => setUserData({...userData, phonePref: true, emailPref: false})} style={{
                       border: "1px solid white",
                       borderRadius: "10px",
-                      height: "100px"
+                      height: "100px",
+                      width: "100%",
                     }}>
                     <div style={{
                       display: "flex",
@@ -179,9 +184,8 @@ export default () => {
                       width: "50px",
                       fill: "white"
                     }}/>
-                    </div>
-                      </Box1>
                       </div>
+                    </Box1>
                   </div>
                 </Column>
               </TwoColumn>
