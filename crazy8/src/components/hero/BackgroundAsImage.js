@@ -120,12 +120,6 @@ export default () => {
             </Heading>
             <PrimaryAction onClick={() => window.open("/pricing")}>Get Started</PrimaryAction>
           </LeftColumn>
-          <RightColumn>
-            <StyledResponsiveVideoEmbed
-              url="https://www.youtube.com/embed/ZFd7jVc7x2g"
-              background="transparent"
-            />
-          </RightColumn>
         </TwoColumn>
       </HeroContainer>
     </Container>
