@@ -14,6 +14,7 @@ import Pricing from "./pages/Pricing.js";
 import OrderForm from "./pages/OrderFormStart.js";
 import StepTwo from "./pages/OrderFormStepTwo.js";
 import JumpstartForm from "./pages/forms/JumpstartForm.js";
+import UserForm from "./pages/forms/UserForm.js";
 
 export default function App() {
 
@@ -44,6 +45,9 @@ export default function App() {
         <Route exact path="/additional">
           <StepTwo />
         </Route>
+        <Route exact path="/userinfo">
+          <UserForm />
+        </Route>
         <Route exact path="/jumpstart">
           <JumpstartForm />
         </Route>
@@ -51,5 +55,3 @@ export default function App() {
     </Router>
   );
 }
-
-// export default AgencyLandingPage;

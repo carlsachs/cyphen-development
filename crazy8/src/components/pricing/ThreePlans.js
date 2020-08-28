@@ -98,7 +98,7 @@ export default ({
       duration: "Base Fee",
       mainFeature: "Suited for Single-Page Apps",
       features: ["1 Page", "1 Form", "Content Upload", "1 Month Free Dev Support"],
-      url: "/jumpstart"
+      url: "/userinfo"
       
     },
     {
@@ -108,7 +108,7 @@ export default ({
       mainFeature: "Suited for Complex Websites",
       features: ["15 Pages", "CyphenBoard", "Free Logo/Graphics", "Free 30s Business Animated Video"],
       featured: true,
-      url: "/additional"
+      url: "/userinfo"
     },
     {
       name: "Boost",
@@ -116,7 +116,7 @@ export default ({
       duration: "Base Fee",
       mainFeature: "Suited for Startups",
       features: ["5 Pages", "Free Logo/Graphics", "Unlimited Forms", "3 Months Dev Support"],
-      url: "/additional"
+      url: "/userinfo"
     },
   ];
 

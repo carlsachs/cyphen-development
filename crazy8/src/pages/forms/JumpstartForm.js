@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
+import Header from "components/headers/light";
 
 const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(SectionHeading)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight text-blue-600`;
@@ -25,6 +26,7 @@ export default ({
   }) => {
     return(
     <Container>
+    <Header />
         <HeaderContainer>
           {subheading && <Subheading>{subheading}</Subheading>}
           <Heading>{heading}</Heading>
