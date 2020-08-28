@@ -116,7 +116,7 @@ export default ({
       duration: "Base Fee",
       mainFeature: "Suited for Startups",
       features: ["5 Pages", "Free Logo/Graphics", "Unlimited Forms", "3 Months Dev Support"],
-      url: "/userinfo"
+      url: "/boost"
     },
   ];
 

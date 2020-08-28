@@ -14,6 +14,7 @@ import Pricing from "./pages/Pricing.js";
 import OrderForm from "./pages/OrderFormStart.js";
 import StepTwo from "./pages/OrderFormStepTwo.js";
 import JumpstartForm from "./pages/forms/JumpstartForm.js";
+import BoostForm from "./pages/forms/BoostForm.js";
 import UserForm from "./pages/forms/UserForm.js";
 
 export default function App() {
@@ -50,6 +51,9 @@ export default function App() {
         </Route>
         <Route exact path="/jumpstart">
           <JumpstartForm />
+        </Route>
+        <Route exact path="/boost">
+          <BoostForm />
         </Route>
       </Switch>
     </Router>

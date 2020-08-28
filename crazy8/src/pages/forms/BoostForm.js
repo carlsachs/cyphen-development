@@ -25,7 +25,7 @@ const InputContainer = tw.div`relative py-5 mt-6`;
 const Label = tw.label`absolute top-0 left-0 tracking-wide font-semibold text-sm`;
 const Input = tw.input``;
 const TextArea = tw.textarea`h-24 sm:h-full resize-none`;
-const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-gray-100 text-blue-500 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-blue-900 hover:text-blue-100 hocus:-translate-y-px hocus:shadow-xl`;
+const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-blue-800 text-blue-100 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-blue-200 hover:text-blue-800 hocus:-translate-y-px hocus:shadow-xl`;
 
 const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-purple-500 fill-current w-24`
 const SvgDotPattern2 = tw(SvgDotPatternIcon)`absolute bottom-0 left-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-purple-500 fill-current w-24`
@@ -51,23 +51,29 @@ const FormContainer = styled.div`
 
 export default () => {
 
-  const gradientBg = css`
-    background: rgb(153,100,209);
-    background: linear-gradient(90deg, rgba(153,100,209,0.9094012605042017) 0%, rgba(122,27,224,0.8981967787114846) 100%);
+  const gradientBgblue = css`
+  background: rgb(81,203,255);
+  background: linear-gradient(90deg, rgba(81,203,255,0.9094012605042017) 0%, rgba(48,134,255,0.8981967787114846) 100%);
   `
 
-  const gradientBg3 = css`
-  background: rgb(90,13,171);
-  background: linear-gradient(90deg, rgba(90,13,171,0.9094012605042017) 0%, rgba(53,4,106,0.8981967787114846) 100%);
+  const gradientBg2blue = css`
+  background: rgb(33,133,176);
+  background: linear-gradient(90deg, rgba(33,133,176,0.9094012605042017) 0%, rgba(12,93,207,0.8981967787114846) 100%);
   `
 
-  const gradientBg2 = css`
-  background: rgb(139,62,218);
-background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(66,14,147,0.8981967787114846) 100%);
+  const gradientBg3blue = css`
+  background: rgb(17,136,215);
+  background: linear-gradient(90deg, rgba(17,136,215,0.9094012605042017) 0%, rgba(8,67,149,0.8981967787114846) 100%);
   `
+
+  const gradientBg4blue = css`
+  background: rgb(9,82,162);
+  background: linear-gradient(90deg, rgba(9,82,162,0.9094012605042017) 0%, rgba(4,38,97,0.8981967787114846) 100%);
+  `
+
     let history = useHistory();
 
-    const [jumpstart, setJumpstart] = useState({
+    const [boost, setBoost] = useState({
       colors: "",
       scheme: "",
       blacklistColors: "",
@@ -76,22 +82,24 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
       brandSlogan: "",
       brandDescription: "",
       comments: "",
-      logoLink: "",
+      logoScheme: "",
+      logoColor: "",
+      logoIdea: "",
       addedContent: "",
       extra: "",
     })
 
     const handleChange = (e) => {
       e.preventDefault();
-      setJumpstart({
-        ...jumpstart,
+      setBoost({
+        ...boost,
         [e.target.name]: e.target.value
       })
     }
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      axios.post(``, jumpstart)
+      axios.post(``, boost)
       .then(res => {
         alert("post successful")
         setTimeout(() => {
@@ -109,14 +117,14 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
     
         <Header />
         <HeaderContainer>
-            <Subheading><span style={{color: "#9964d1"}}>Step</span><span style={{color: "#7a1be0"}}> 3</span></Subheading>
-            <Heading style={{color: "#9964d1"}}>Build your <span style={{color: "#7a1be0"}}>JumpStart</span> Package</Heading>
+            <Subheading><span style={{color: "#3086ff"}}>Step</span><span style={{color: "#7a1be0"}}> 3</span></Subheading>
+            <Heading style={{color: "#3086ff"}}>Build your <span style={{color: "#7a1be0"}}>Boost</span> Package</Heading>
             <Description style={{color: "#31075e"}}>Envision what you want your online presence to feel like, and tell us everything!  This helps us make your vision a reality!</Description>
         </HeaderContainer>
         <Content>
             <Container>
             <Content>
-              <FormContainer css={gradientBg}>
+              <FormContainer css={gradientBgblue}>
                 <div tw="mx-auto max-w-4xl">
                   <h2 style={{
                     color: "white",
@@ -153,9 +161,48 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
           </Container>
         </Content>
         <Content>
+        <Container>
+        <Content>
+          <FormContainer css={gradientBg2blue}>
+            <div tw="mx-auto max-w-4xl">
+              <h2 style={{
+                color: "white",
+                textAlign: "center"
+              }}>Logo Design</h2>
+              <form>
+                <TwoColumn>
+                  <Column>
+                    <InputContainer>
+                      <Label htmlFor="idea-input">Logo Idea</Label>
+                      <TextArea id="idea-input" type="text" name="logoIdea" onChange={handleChange} placeholder="Ex: I want two 'C' letter joined in some way." />
+                    </InputContainer>
+                    <InputContainer>
+                      <Label htmlFor="logoScheme-input">Light Vs. Dark Scheme</Label>
+                      <Input id="logoScheme-input" type="text" name="logoScheme" onChange={handleChange} placeholder="Ex: Dark Scheme" />
+                    </InputContainer>
+                    <InputContainer tw="flex-1">
+                      <Label htmlFor="logoColor-input">Blacklisted Colors</Label>
+                      <Input id="logoColor-input" type="text" name="logoColor" onChange={handleChange} placeholder="Ex: No Red" />
+                    </InputContainer>
+                  </Column>
+                  <Column>
+                    <InputContainer tw="flex-1">
+                      <Label htmlFor="blacklist-input">Anything else related to color/scheme?</Label>
+                      <TextArea id="blacklist-input" type="text" name="content" onChange={handleChange} placeholder="Ex: Make sure all the buttons start off as the secondary color, then switch to the primary color on hover." />
+                    </InputContainer>
+                  </Column>
+                </TwoColumn>
+              </form>
+            </div>
+            <SvgDotPattern1 />
+          </FormContainer>
+        </Content>
+      </Container>
+    </Content>
+        <Content>
             <Container>
           <Content>
-            <FormContainer css={gradientBg2}>
+            <FormContainer css={gradientBg3blue}>
               <div tw="mx-auto max-w-4xl">
                 <h2 style={{
                   color: "white",
@@ -194,7 +241,7 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
         <Content>
         <Container>
         <Content>
-          <FormContainer css={gradientBg3}>
+          <FormContainer css={gradientBg4blue}>
             <div tw="mx-auto max-w-4xl">
               <h2 style={{
                 color: "white",
