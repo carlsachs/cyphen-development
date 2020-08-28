@@ -99,7 +99,7 @@ export default () => {
     </NavLink>
     </NavLinks>,
     <NavLinks key={2} style={{display: "flex", justifyContent: "space-evenly", width: "25%"}}>
-    <PrimaryLink href="/adminlogin">
+    <PrimaryLink href="/order">
         Place Order
       </PrimaryLink>
     </NavLinks>
@@ -118,7 +118,7 @@ export default () => {
               <br />
               <SlantedBackground>You Deserve</SlantedBackground>
             </Heading>
-            <PrimaryAction onClick={() => window.open("/order")}>Get Started</PrimaryAction>
+            <PrimaryAction onClick={() => window.open("/pricing")}>Get Started</PrimaryAction>
           </LeftColumn>
           <RightColumn>
             <StyledResponsiveVideoEmbed

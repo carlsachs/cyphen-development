@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -87,7 +88,7 @@ export default ({
   heading = "Choose Your Core Plan",
   description = "",
   plans = null,
-  primaryButtonText = "Buy Now"
+  primaryButtonText = "Select"
 }) => {
   const defaultPlans = [
     {
@@ -96,6 +97,8 @@ export default ({
       duration: "Base Fee",
       mainFeature: "Suited for Single-Page Apps",
       features: ["1 Page", "1 Form", "Content Upload", "1 Month Free Dev Support"],
+      url: "/"
+      
     },
     {
       name: "Throttle",
@@ -104,6 +107,7 @@ export default ({
       mainFeature: "Suited for Complex Websites",
       features: ["15 Pages", "CyphenBoard", "Free Logo/Graphics", "Free 30s Business Animated Video"],
       featured: true,
+      url: "/"
     },
     {
       name: "Boost",
@@ -111,6 +115,7 @@ export default ({
       duration: "Base Fee",
       mainFeature: "Suited for Startups",
       features: ["5 Pages", "Free Logo/Graphics", "Unlimited Forms", "3 Months Dev Support"],
+      url: "/"
     },
   ];
 
@@ -130,6 +135,8 @@ export default ({
       background: linear-gradient(90deg, rgba(25,27,108,0.8785889355742297) 0%, rgba(33,138,186,0.7805497198879552) 100%);
     `
   ];
+
+  const history = useHistory();
 
   return (
     <Container>
@@ -157,7 +164,7 @@ export default ({
                 ))}
               </PlanFeatures>
               <PlanAction>
-                <BuyNowButton css={!plan.featured && highlightGradientsCss[index]}>{primaryButtonText}</BuyNowButton>
+                <BuyNowButton onClick={() => history.push(plan.url)} css={!plan.featured && highlightGradientsCss[index]}>{primaryButtonText}</BuyNowButton>
               </PlanAction>
             </Plan>
           ))}
