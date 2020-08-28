@@ -24,12 +24,12 @@ const Plan = styled.div`
   ${props =>
     props.featured &&
     css`
-    background: rgb(25,27,108);
-    background: linear-gradient(90deg, rgba(25,27,108,0.8785889355742297) 0%, rgba(96,33,186,0.7805497198879552) 100%);
-    background: rgb(25,27,108);
-    background: linear-gradient(90deg, rgba(25,27,108,0.8785889355742297) 0%, rgba(96,33,186,0.7805497198879552) 100%);
-    background: rgb(25,27,108);
-    background: linear-gradient(90deg, rgba(25,27,108,0.8785889355742297) 0%, rgba(96,33,186,0.7805497198879552) 100%);
+    background: rgb(59,199,140);
+    background: linear-gradient(90deg, rgba(59,199,140,0.9094012605042017) 0%, rgba(4,97,33,0.8729866946778712) 100%);;
+    background: rgb(59,199,140);
+    background: linear-gradient(90deg, rgba(59,199,140,0.9094012605042017) 0%, rgba(4,97,33,0.8729866946778712) 100%);
+    background: rgb(59,199,140);
+    background: linear-gradient(90deg, rgba(59,199,140,0.9094012605042017) 0%, rgba(4,97,33,0.8729866946778712) 100%);
       ${tw`bg-primary-500 text-gray-100`}
       .planHighlight {
         ${tw`hidden`}
@@ -38,13 +38,13 @@ const Plan = styled.div`
         ${tw`text-gray-200!`}
       }
       ${PlanFeatures} {
-        ${tw`border-indigo-500`}
+        ${tw`border-green-200`}
       }
       .feature:not(.mainFeature) {
         ${tw`text-gray-300!`}
       }
       ${BuyNowButton} {
-        ${tw`bg-gray-100 text-primary-500 hocus:bg-gray-300 hocus:text-primary-800`}
+        ${tw`bg-green-100 text-green-500 hocus:bg-green-800 hocus:text-white`}
     `}
 `;
 

@@ -50,29 +50,39 @@ const FormContainer = styled.div`
 
 export default () => {
 
-  const gradientBgblue = css`
+  const gradientBggreen = css`
   background: rgb(81,203,255);
   background: linear-gradient(90deg, rgba(81,203,255,0.9094012605042017) 0%, rgba(48,134,255,0.8981967787114846) 100%);
   `
 
-  const gradientBg2blue = css`
+  const gradientBg2green = css`
   background: rgb(33,133,176);
   background: linear-gradient(90deg, rgba(33,133,176,0.9094012605042017) 0%, rgba(12,93,207,0.8981967787114846) 100%);
   `
 
-  const gradientBg3blue = css`
+  const gradientBg3green = css`
   background: rgb(17,136,215);
   background: linear-gradient(90deg, rgba(17,136,215,0.9094012605042017) 0%, rgba(8,67,149,0.8981967787114846) 100%);
   `
 
-  const gradientBg4blue = css`
+  const gradientBg4green = css`
+  background: rgb(9,82,162);
+  background: linear-gradient(90deg, rgba(9,82,162,0.9094012605042017) 0%, rgba(4,38,97,0.8981967787114846) 100%);
+  `
+
+  const gradientBg5green = css`
+  background: rgb(9,82,162);
+  background: linear-gradient(90deg, rgba(9,82,162,0.9094012605042017) 0%, rgba(4,38,97,0.8981967787114846) 100%);
+  `
+
+  const gradientBg6green = css`
   background: rgb(9,82,162);
   background: linear-gradient(90deg, rgba(9,82,162,0.9094012605042017) 0%, rgba(4,38,97,0.8981967787114846) 100%);
   `
 
     let history = useHistory();
 
-    const [boost, setBoost] = useState({
+    const [throttle, setThrottle] = useState({
       colors: "",
       scheme: "",
       blacklistColors: "",
@@ -90,15 +100,15 @@ export default () => {
 
     const handleChange = (e) => {
       e.preventDefault();
-      setBoost({
-        ...boost,
+      setThrottle({
+        ...throttle,
         [e.target.name]: e.target.value
       })
     }
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      axios.post(``, boost)
+      axios.post(``, throttle)
       .then(res => {
         alert("post successful")
         setTimeout(() => {
@@ -117,13 +127,13 @@ export default () => {
         <Header />
         <HeaderContainer>
             <Subheading><span style={{color: "#3086ff"}}>Step</span><span style={{color: "#7a1be0"}}> 3</span></Subheading>
-            <Heading style={{color: "#3086ff"}}>Build your <span style={{color: "#7a1be0"}}>Boost</span> Package</Heading>
+            <Heading style={{color: "#3086ff"}}>Build your <span style={{color: "#7a1be0"}}>Throttle</span> Package</Heading>
             <Description style={{color: "#31075e"}}>Envision what you want your online presence to feel like, and tell us everything!  This helps us make your vision a reality!</Description>
         </HeaderContainer>
         <Content>
             <Container>
             <Content>
-              <FormContainer css={gradientBgblue}>
+              <FormContainer css={gradientBggreen}>
                 <div tw="mx-auto max-w-4xl">
                   <h2 style={{
                     color: "white",
@@ -162,7 +172,7 @@ export default () => {
         <Content>
         <Container>
         <Content>
-          <FormContainer css={gradientBg2blue}>
+          <FormContainer css={gradientBg2green}>
             <div tw="mx-auto max-w-4xl">
               <h2 style={{
                 color: "white",
@@ -201,7 +211,7 @@ export default () => {
         <Content>
             <Container>
           <Content>
-            <FormContainer css={gradientBg3blue}>
+            <FormContainer css={gradientBg3green}>
               <div tw="mx-auto max-w-4xl">
                 <h2 style={{
                   color: "white",
@@ -240,7 +250,7 @@ export default () => {
         <Content>
         <Container>
         <Content>
-          <FormContainer css={gradientBg4blue}>
+          <FormContainer css={gradientBg4green}>
             <div tw="mx-auto max-w-4xl">
               <h2 style={{
                 color: "white",
@@ -273,17 +283,16 @@ export default () => {
             </div>
             <SvgDotPattern1 />
           </FormContainer>
-          <div>
-          <div style={{
-            display: "flex",
-            justifyContent: "center"
-          }}>
-              <SubmitButton type="submit" onClick={handleSubmit}>Continue</SubmitButton>
-          </div>
-          </div>
         </Content>
       </Container>
         </Content>
+          <div style={{
+          display: "flex",
+          justifyContent: "center"
+        }}>
+            <SubmitButton type="submit" onClick={handleSubmit}>Continue</SubmitButton>
+        </div>
+        
         <Footer />
     </AnimationRevealPage>
 
