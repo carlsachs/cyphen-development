@@ -15,9 +15,9 @@ const Input = tw.input`border-2 px-5 py-3 rounded focus:outline-none font-medium
 const SubmitButton = tw(PrimaryButtonBase)`inline-block lg:ml-6 mt-6 lg:mt-0`;
 
 export default ({
-    subheading = "Help Us",
-    heading = "Get to Know You",
-    description = "We use this data to provide adequate support.  Your data is secure and will not be shared with anyone.",
+    subheading = "Build Your",
+    heading = "Jumpstart Package",
+    description = "Give us every last detail about what you envision for your new website.  Contact us if you have further questions.",
     submitButtonText = "Continue",
     formAction = "#",
     formMethod = "get",
@@ -40,7 +40,8 @@ export default ({
             }}>
             <div style={{
               display: "flex",
-              flexDirection: "column"
+              flexDirection: "column",
+              paddingTop: "3%"
             }}>
                 <Input placeholder="Full Name" name="name" required />
             </div>

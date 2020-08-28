@@ -13,7 +13,7 @@ import Team from "./pages/Team.js";
 import Pricing from "./pages/Pricing.js";
 import OrderForm from "./pages/OrderFormStart.js";
 import StepTwo from "./pages/OrderFormStepTwo.js";
-import JumpstartForm from "./pages/forms/UserForm.js";
+import JumpstartForm from "./pages/forms/JumpstartForm.js";
 
 export default function App() {
 
