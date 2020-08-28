@@ -71,7 +71,7 @@ export default () => {
                 <Column>
                   <InputContainer>
                     <Label htmlFor="colors-input">Colors (Hex Values)</Label>
-                    <Input id="colors-input" type="text" name="color" placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
+                    <Input id="colors-input" type="text" name="colors" placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
                   </InputContainer>
                   <InputContainer>
                     <Label htmlFor="scheme-input">Light Vs. Dark Scheme</Label>

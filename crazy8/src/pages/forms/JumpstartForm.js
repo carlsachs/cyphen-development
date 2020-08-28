@@ -5,6 +5,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Header from "components/headers/light";
 import Color from "components/forms/JumpstartInputs1";
 import Brand from "components/forms/JumpstartInputs2";
+import Upload from "components/forms/JumpstartInputs3";
 import Footer from "components/footers/MiniCenteredFooter";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 
@@ -23,10 +24,11 @@ export default () => {
         <Header />
         <HeaderContainer>
             <Subheading><span style={{color: "#9964d1"}}>Step</span><span style={{color: "#7a1be0"}}> 3</span></Subheading>
-            <Heading style={{color: "#9964d1"}}>Build your <span style={{color: "#7a1be0"}}>JumpStart</span></Heading>
+            <Heading style={{color: "#9964d1"}}>Build your <span style={{color: "#7a1be0"}}>JumpStart</span> Package</Heading>
             <Description style={{color: "#31075e"}}>Envision what you want your online presence to feel like, and tell us everything!  This helps us make your vision a reality!</Description>
         </HeaderContainer>
         <Color />
+        <Upload />
         <Brand />
         <Footer />
     

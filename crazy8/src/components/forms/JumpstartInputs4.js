@@ -51,8 +51,8 @@ const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 left-0 transform 
 export default () => {
 
   const gradientBg = css`
-    background: rgb(136,64,212);
-    background: linear-gradient(90deg, rgba(136,64,212,0.9094012605042017) 0%, rgba(94,14,180,0.8981967787114846) 100%);
+    background: rgb(90,13,171);
+    background: linear-gradient(90deg, rgba(90,13,171,0.9094012605042017) 0%, rgba(53,4,106,0.8981967787114846) 100%);
   `
 
   let history = useHistory();
@@ -65,27 +65,27 @@ export default () => {
             <h2 style={{
               color: "white",
               textAlign: "center"
-            }}>Branding</h2>
+            }}></h2>
             <form>
               <TwoColumn>
                 <Column>
                   <InputContainer>
-                    <Label htmlFor="brandName-input">Brand Name</Label>
-                    <Input id="brandName-input" type="text" name="brandName" placeholder="Ex: Cyphen Development" />
+                    <Label htmlFor="logo-input">Logo</Label>
+                    <Input id="logo-input" type="text" name="logo" placeholder="Link to Logo" />
                   </InputContainer>
                   <InputContainer>
-                    <Label htmlFor="slogan-input">Brand Slogan</Label>
-                    <Input id="slogan-input" type="text" name="slogan" placeholder="Ex: The Professional Look You Deserve" />
+                    <Label htmlFor="pictures-input">Pictures</Label>
+                    <Input id="pictures-input" type="text" name="pictures" placeholder="Ex: Link/Upload pictures here" />
                   </InputContainer>
                   <InputContainer tw="flex-1">
-                    <Label htmlFor="summary-input">Brand Summary</Label>
-                    <TextArea id="summary-input" type="text" name="brandDescription" placeholder="Ex: We use the most modern technologies to produce web applications delivering efficient and secure business interfaces to clients around the world." />
+                    <Label htmlFor="other-input">Other Content Upload</Label>
+                    <TextArea id="other-input" type="text" name="othercontent" placeholder="Ex: Link to other content" />
                   </InputContainer>
                 </Column>
                 <Column>
                   <InputContainer tw="flex-1">
-                    <Label htmlFor="blacklist-input">Anything else related to your brand?</Label>
-                    <TextArea id="blacklist-input" type="text" name="extra" placeholder="Ex: Our brand takes pride in a simple, modern look.  Please implement that feel into our interface." />
+                    <Label htmlFor="-input">Anything else related to your content?</Label>
+                    <TextArea id="-input" type="text" name="extra" placeholder="Ex: I prefer to have picture 1 and 3 on separate pages." />
                   </InputContainer>
                 </Column>
               </TwoColumn>
