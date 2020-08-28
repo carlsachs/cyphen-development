@@ -84,7 +84,7 @@ const DecoratorBlob = styled(SvgDecoratorBlob)`
 
 
 export default ({
-  subheading = "Step One",
+  subheading = "Step Two",
   heading = "Choose Your Core Plan",
   description = "",
   plans = null,

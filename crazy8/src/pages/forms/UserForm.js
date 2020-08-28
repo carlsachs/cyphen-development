@@ -21,7 +21,7 @@ export default () => {
     
         <Header />
         <HeaderContainer>
-            <Subheading>Help Us</Subheading>
+            <Subheading>Step 1</Subheading>
             <Heading>Get to Know Our New Partner</Heading>
             <Description>Your data is secure, will not be shared with anyone, and is solely for the purpose of getting to know you and tracking your order!</Description>
         </HeaderContainer>
