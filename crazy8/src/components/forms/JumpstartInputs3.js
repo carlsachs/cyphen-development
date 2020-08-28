@@ -51,8 +51,8 @@ const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 left-0 transform 
 export default () => {
 
   const gradientBg = css`
-    background: rgb(90,13,171);
-    background: linear-gradient(90deg, rgba(90,13,171,0.9094012605042017) 0%, rgba(53,4,106,0.8981967787114846) 100%);
+  background: rgb(136,64,212);
+  background: linear-gradient(90deg, rgba(136,64,212,0.9094012605042017) 0%, rgba(94,14,180,0.8981967787114846) 100%);
   `
 
   let history = useHistory();

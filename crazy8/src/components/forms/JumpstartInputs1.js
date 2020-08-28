@@ -55,8 +55,6 @@ export default () => {
     background: linear-gradient(90deg, rgba(153,100,209,0.9094012605042017) 0%, rgba(122,27,224,0.8981967787114846) 100%);
   `
 
-  let history = useHistory();
-
   return (
     <Container>
       <Content>

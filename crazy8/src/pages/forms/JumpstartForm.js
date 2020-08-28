@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import tw from "twin.macro"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
@@ -16,6 +16,24 @@ const HeaderContainer = tw.div`mt-10 w-full flex flex-col items-center`;
 
 
 export default () => {
+
+    const [jumpstart, setJumpstart] = useState({
+      colors: "",
+      scheme: "",
+      blacklistColors: "",
+      content: "",
+      brandName: "",
+      brandSlogan: "",
+      brandDescription: "",
+      logoLink: "",
+      addedContent: "",
+      comments: "";
+      extra: "",
+    })
+
+    const handleChange = (e) => {
+      e.preventDefault();
+    }
 
     return (
 
