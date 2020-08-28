@@ -81,9 +81,10 @@ export default () => {
     e.preventDefault();
     axios.post(`https://cyphen-main.herokuapp.com/api/form/orders`, userData)
     .then(res => {
-      setTimeout(() => {
-        history.push("/order")
-        }, 1000)
+      console.log(res)
+      // setTimeout(() => {
+      //   history.push("/order")
+      //   }, 1000)
     })
     .catch(err => {
       alert("Uh Oh! Something went wrong.  If the issue persists, email us as cyphensupport@protonmail.com.")

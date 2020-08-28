@@ -98,7 +98,7 @@ export default () => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      axios.post(``, boost)
+      axios.post(`https://cyphen-main.herokuapp.com/api/package/boost`, boost)
       .then(res => {
         alert("post successful")
         setTimeout(() => {

@@ -108,7 +108,7 @@ export default () => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      axios.post(``, throttle)
+      axios.post(`https://cyphen-main.herokuapp.com/api/package/throttle`, throttle)
       .then(res => {
         alert("post successful")
         setTimeout(() => {
@@ -172,7 +172,7 @@ export default () => {
         <Content>
             <Container>
             <Content>
-              <FormContainer css={gradientBggreen}>
+              <FormContainer css={gradientBg2green}>
                 <div tw="mx-auto max-w-4xl">
                   <h2 style={{
                     color: "white",
@@ -211,7 +211,7 @@ export default () => {
         <Content>
         <Container>
         <Content>
-          <FormContainer css={gradientBg2green}>
+          <FormContainer css={gradientBg3green}>
             <div tw="mx-auto max-w-4xl">
               <h2 style={{
                 color: "white",
@@ -250,7 +250,7 @@ export default () => {
         <Content>
             <Container>
           <Content>
-            <FormContainer css={gradientBg3green}>
+            <FormContainer css={gradientBg4green}>
               <div tw="mx-auto max-w-4xl">
                 <h2 style={{
                   color: "white",
@@ -289,7 +289,7 @@ export default () => {
         <Content>
             <Container>
             <Content>
-              <FormContainer css={gradientBggreen}>
+              <FormContainer css={gradientBg5green}>
                 <div tw="mx-auto max-w-4xl">
                   <h2 style={{
                     color: "white",
@@ -328,7 +328,7 @@ export default () => {
         <Content>
         <Container>
         <Content>
-          <FormContainer css={gradientBg4green}>
+          <FormContainer css={gradientBg6green}>
             <div tw="mx-auto max-w-4xl">
               <h2 style={{
                 color: "white",

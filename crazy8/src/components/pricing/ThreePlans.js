@@ -95,7 +95,7 @@ export default ({
     {
       name: "Jumpstart",
       price: "$199",
-      duration: "Base Fee",
+      duration: "2 Day Delivery",
       mainFeature: "Suited for Single-Page Apps",
       features: ["1 Page", "1 Form", "Content Upload", "1 Month Free Dev Support"],
       url: "/jumpstart"
@@ -104,7 +104,7 @@ export default ({
     {
       name: "Throttle",
       price: "$1249",
-      duration: "Base Fee",
+      duration: "14 Day Delivery",
       mainFeature: "Suited for Complex Websites",
       features: ["15 Pages", "CyphenBoard", "Free Logo/Graphics", "Free 30s Business Animated Video"],
       featured: true,
@@ -113,7 +113,7 @@ export default ({
     {
       name: "Boost",
       price: "$575",
-      duration: "Base Fee",
+      duration: "7 Day Delivery",
       mainFeature: "Suited for Startups",
       features: ["5 Pages", "Free Logo/Graphics", "Unlimited Forms", "3 Months Dev Support"],
       url: "/boost"
