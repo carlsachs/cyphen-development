@@ -56,7 +56,7 @@ export default function App() {
         <Route exact path="/boost">
           <BoostForm />
         </Route>
-        <Route exact path="/boost">
+        <Route exact path="/throttle">
           <ThrottleForm />
       </Route>
       </Switch>

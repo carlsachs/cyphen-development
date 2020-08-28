@@ -51,23 +51,23 @@ const FormContainer = styled.div`
 export default () => {
 
   const gradientBggreen = css`
-  background: rgb(81,203,255);
-  background: linear-gradient(90deg, rgba(81,203,255,0.9094012605042017) 0%, rgba(48,134,255,0.8981967787114846) 100%);
+  background: rgb(119,242,190);
+  background: linear-gradient(90deg, rgba(119,242,190,0.9094012605042017) 0%, rgba(18,164,81,0.8729866946778712) 100%);
   `
 
   const gradientBg2green = css`
-  background: rgb(33,133,176);
-  background: linear-gradient(90deg, rgba(33,133,176,0.9094012605042017) 0%, rgba(12,93,207,0.8981967787114846) 100%);
+  background: rgb(68,221,155);
+  background: linear-gradient(90deg, rgba(68,221,155,0.9094012605042017) 0%, rgba(7,181,79,0.8729866946778712) 100%);
   `
 
   const gradientBg3green = css`
-  background: rgb(17,136,215);
-  background: linear-gradient(90deg, rgba(17,136,215,0.9094012605042017) 0%, rgba(8,67,149,0.8981967787114846) 100%);
+  background: rgb(20,173,107);
+  background: linear-gradient(90deg, rgba(20,173,107,0.9094012605042017) 0%, rgba(0,113,47,0.8729866946778712) 100%);
   `
 
   const gradientBg4green = css`
-  background: rgb(9,82,162);
-  background: linear-gradient(90deg, rgba(9,82,162,0.9094012605042017) 0%, rgba(4,38,97,0.8981967787114846) 100%);
+  background: rgb(8,107,64);
+  background: linear-gradient(90deg, rgba(8,107,64,0.9094012605042017) 0%, rgba(0,48,20,0.8729866946778712) 100%);
   `
 
   const gradientBg5green = css`
@@ -139,6 +139,45 @@ export default () => {
                     color: "white",
                     textAlign: "center"
                   }}>Color Scheme</h2>
+                  <form>
+                    <TwoColumn>
+                      <Column>
+                        <InputContainer>
+                          <Label htmlFor="colors-input">Colors (Hex Values)</Label>
+                          <Input id="colors-input" type="text" name="colors" onChange={handleChange} placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
+                        </InputContainer>
+                        <InputContainer>
+                          <Label htmlFor="scheme-input">Light Vs. Dark Scheme</Label>
+                          <Input id="scheme-input" type="text" name="scheme" onChange={handleChange} placeholder="Ex: Light Scheme" />
+                        </InputContainer>
+                        <InputContainer tw="flex-1">
+                          <Label htmlFor="blacklist-input">Blacklisted Colors</Label>
+                          <Input id="blacklist-input" type="text" name="blacklistColors" onChange={handleChange} placeholder="Ex: No Red" />
+                        </InputContainer>
+                      </Column>
+                      <Column>
+                        <InputContainer tw="flex-1">
+                          <Label htmlFor="blacklist-input">Anything else related to color/scheme?</Label>
+                          <TextArea id="blacklist-input" type="text" name="content" onChange={handleChange} placeholder="Ex: Make sure all the buttons start off as the secondary color, then switch to the primary color on hover." />
+                        </InputContainer>
+                      </Column>
+                    </TwoColumn>
+                  </form>
+                </div>
+                <SvgDotPattern2 />
+              </FormContainer>
+            </Content>
+          </Container>
+        </Content>
+        <Content>
+            <Container>
+            <Content>
+              <FormContainer css={gradientBggreen}>
+                <div tw="mx-auto max-w-4xl">
+                  <h2 style={{
+                    color: "white",
+                    textAlign: "center"
+                  }}>CyphenBoard</h2>
                   <form>
                     <TwoColumn>
                       <Column>
@@ -248,6 +287,45 @@ export default () => {
         </Container>
         </Content>
         <Content>
+            <Container>
+            <Content>
+              <FormContainer css={gradientBggreen}>
+                <div tw="mx-auto max-w-4xl">
+                  <h2 style={{
+                    color: "white",
+                    textAlign: "center"
+                  }}>Animated Video</h2>
+                  <form>
+                    <TwoColumn>
+                      <Column>
+                        <InputContainer>
+                          <Label htmlFor="colors-input">Colors (Hex Values)</Label>
+                          <Input id="colors-input" type="text" name="colors" onChange={handleChange} placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
+                        </InputContainer>
+                        <InputContainer>
+                          <Label htmlFor="scheme-input">Light Vs. Dark Scheme</Label>
+                          <Input id="scheme-input" type="text" name="scheme" onChange={handleChange} placeholder="Ex: Light Scheme" />
+                        </InputContainer>
+                        <InputContainer tw="flex-1">
+                          <Label htmlFor="blacklist-input">Blacklisted Colors</Label>
+                          <Input id="blacklist-input" type="text" name="blacklistColors" onChange={handleChange} placeholder="Ex: No Red" />
+                        </InputContainer>
+                      </Column>
+                      <Column>
+                        <InputContainer tw="flex-1">
+                          <Label htmlFor="blacklist-input">Anything else related to color/scheme?</Label>
+                          <TextArea id="blacklist-input" type="text" name="content" onChange={handleChange} placeholder="Ex: Make sure all the buttons start off as the secondary color, then switch to the primary color on hover." />
+                        </InputContainer>
+                      </Column>
+                    </TwoColumn>
+                  </form>
+                </div>
+                <SvgDotPattern2 />
+              </FormContainer>
+            </Content>
+          </Container>
+        </Content>
+        <Content>
         <Container>
         <Content>
           <FormContainer css={gradientBg4green}>
@@ -283,16 +361,15 @@ export default () => {
             </div>
             <SvgDotPattern1 />
           </FormContainer>
+          <div style={{
+            display: "flex",
+            justifyContent: "center"
+          }}>
+              <SubmitButton type="submit" onClick={handleSubmit}>Continue</SubmitButton>
+          </div>
         </Content>
       </Container>
-        </Content>
-          <div style={{
-          display: "flex",
-          justifyContent: "center"
-        }}>
-            <SubmitButton type="submit" onClick={handleSubmit}>Continue</SubmitButton>
-        </div>
-        
+        </Content>      
         <Footer />
     </AnimationRevealPage>
 
