@@ -5,8 +5,8 @@ import styled from "styled-components";
 import axios from "axios";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
-import Header from "components/headers/light";
-import Footer from "components/footers/MiniCenteredFooter";
+import Header from "components/headers/lightJump";
+import Footer from "components/footers/MiniCenteredFooterJump";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { ContentWithPaddingXl } from "components/misc/Layouts.js";
 import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg"
