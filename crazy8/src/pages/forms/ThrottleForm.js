@@ -25,7 +25,7 @@ const InputContainer = tw.div`relative py-5 mt-6`;
 const Label = tw.label`absolute top-0 left-0 tracking-wide font-semibold text-sm`;
 const Input = tw.input``;
 const TextArea = tw.textarea`h-24 sm:h-full resize-none`;
-const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-blue-800 text-blue-100 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-blue-200 hover:text-blue-800 hocus:-translate-y-px hocus:shadow-xl`;
+const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-green-600 text-green-200 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-green-400 hover:text-green-800 hocus:-translate-y-px hocus:shadow-xl`;
 
 const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-green-500 fill-current w-24`
 const SvgDotPattern2 = tw(SvgDotPatternIcon)`absolute bottom-0 left-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-green-500 fill-current w-24`
@@ -137,7 +137,7 @@ export default () => {
         <Content>
             <Container>
             <Content>
-              <FormContainer css={gradientBggreen}>
+              <FormContainer css={gradientBg2green}>
                 <div tw="mx-auto max-w-4xl">
                   <h2 style={{
                     color: "white",
@@ -212,7 +212,7 @@ export default () => {
         <Content>
         <Container>
         <Content>
-          <FormContainer css={gradientBg3green}>
+          <FormContainer css={gradientBg2green}>
             <div tw="mx-auto max-w-4xl">
               <h2 style={{
                 color: "white",
@@ -251,7 +251,7 @@ export default () => {
         <Content>
             <Container>
           <Content>
-            <FormContainer css={gradientBg4green}>
+            <FormContainer css={gradientBg2green}>
               <div tw="mx-auto max-w-4xl">
                 <h2 style={{
                   color: "white",
@@ -290,7 +290,7 @@ export default () => {
         <Content>
             <Container>
             <Content>
-              <FormContainer css={gradientBg5green}>
+              <FormContainer css={gradientBg2green}>
                 <div tw="mx-auto max-w-4xl">
                   <h2 style={{
                     color: "white",
@@ -299,8 +299,8 @@ export default () => {
                   <form>
                       <Column>
                         <InputContainer>
-                          <Label htmlFor="animation-input">Animated Concept</Label>
-                          <Input id="animation-input" type="text" name="animationConcept" onChange={handleChange} placeholder="Ex: Our business description explains it." />
+                          <Label htmlFor="animation-input">Animated Video Description</Label>
+                          <TextArea id="animation-input" type="text" name="animationConcept" onChange={handleChange} placeholder="Explain your business concept here for the complementary video." />
                         </InputContainer>
                       </Column>
                   </form>
@@ -313,7 +313,7 @@ export default () => {
         <Content>
         <Container>
         <Content>
-          <FormContainer css={gradientBg6green}>
+          <FormContainer css={gradientBg2green}>
             <div tw="mx-auto max-w-4xl">
               <h2 style={{
                 color: "white",

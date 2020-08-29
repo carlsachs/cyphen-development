@@ -30,14 +30,14 @@ const LeftColumn = tw.div`flex flex-col items-center lg:block`;
 const RightColumn = tw.div`w-full sm:w-5/6 lg:w-1/2 mt-16 lg:mt-0 lg:pl-8`;
 
 const Heading = styled.h1`
-  ${tw`text-3xl text-center lg:text-left sm:text-4xl lg:text-5xl xl:text-6xl font-black text-blue-100 leading-none`}
+  ${tw`text-3xl text-center lg:text-left sm:text-4xl lg:text-5xl xl:text-6xl font-black text-blue-800 leading-none`}
   span {
     ${tw`inline-block mt-2`}
   }
 `;
 
 const SlantedBackground = styled.span`
-  ${tw`relative text-blue-200 px-4 -mx-4 py-2`}
+  ${tw`relative text-white px-4 -mx-4 py-2`}
   &::before {
     content: "";
     ${tw`absolute inset-0 bg-blue-800 transform -skew-x-12 -z-10`}
@@ -47,15 +47,6 @@ const SlantedBackground = styled.span`
 const Notification = tw.span`inline-block my-4 pl-3 py-1 text-gray-100 border-l-4 border-blue-500 font-medium text-sm`;
 
 const PrimaryAction = tw.button`px-8 py-3 mt-10 text-sm sm:text-base sm:mt-16 sm:px-8 sm:py-4 bg-blue-100 text-blue-500 font-bold rounded shadow transition duration-300 hocus:bg-blue-800 hocus:text-blue-100 focus:shadow-outline`;
-
-const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
-  padding-bottom: 56.25% !important;
-  padding-top: 0px !important;
-  ${tw`rounded`}
-  iframe {
-    ${tw`rounded bg-black shadow-xl`}
-  }
-`;
 
 export default () => {
 
@@ -114,7 +105,7 @@ export default () => {
           <LeftColumn>
             <Notification>We have now launched operations!</Notification>
             <Heading>
-              <span>A Professional Look</span>
+              <span>A <span style={{color: "#5bb2ff"}}>Professional</span> Look</span>
               <br />
               <SlantedBackground>You Deserve</SlantedBackground>
             </Heading>
