@@ -34,19 +34,19 @@ const Plan = styled.div`
 const PlanHeader = styled.div`
   ${tw`flex flex-col leading-relaxed py-8 -mx-8 bg-gray-100 rounded-t-lg`}
   .name {
-    ${tw`font-bold text-xl`}
+    ${tw`font-bold text-xl text-blue-800`}
   }
   .price {
-    ${tw`font-bold text-4xl sm:text-5xl my-1`}
+    ${tw`font-bold text-4xl sm:text-5xl my-1 text-blue-500`}
   }
   .slash {
-    ${tw`text-xl text-gray-500`}
+    ${tw`text-xl text-blue-800`}
   }
   .duration {
-    ${tw`lowercase text-gray-500 font-medium tracking-widest`}
+    ${tw`lowercase text-blue-400 font-medium tracking-widest`}
   }
   .mainFeature {
-    ${tw`text-gray-500 text-sm font-medium tracking-wide`}
+    ${tw`text-blue-600 text-sm font-medium tracking-wide`}
   }
 `;
 const PlanFeatures = styled.div`

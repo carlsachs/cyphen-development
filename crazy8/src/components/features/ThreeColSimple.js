@@ -22,7 +22,7 @@ const Column = styled.div`
 `;
 
 const Card = styled.a`
-  ${tw`flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105 `}
+  ${tw`flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 transform hover:scale-105 `}
   .imageContainer {
     ${tw`text-center rounded-full p-4 bg-gray-100`}
     img {
@@ -44,10 +44,6 @@ const Card = styled.a`
       ${tw`ml-2 w-4`}
     }
   }
-`;
-
-const DecoratorBlob = styled(SvgDecoratorBlob3)`
-  ${tw`pointer-events-none absolute left-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-40`}
 `;
 
 export default ({
