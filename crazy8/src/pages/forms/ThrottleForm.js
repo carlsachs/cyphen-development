@@ -139,7 +139,7 @@ export default () => {
               <FormContainer css={gradientBg2green}>
                 <div tw="mx-auto max-w-4xl">
                   <h2 style={{
-                    color: "#b0ffd7",
+                    color: "#126b3e",
                     textAlign: "center"
                   }}>Color Scheme</h2>
                   <form>
@@ -178,7 +178,7 @@ export default () => {
               <FormContainer css={gradientBg2green}>
                 <div tw="mx-auto max-w-4xl">
                   <h2 style={{
-                    color: "#b0ffd7",
+                    color: "#126b3e",
                     textAlign: "center"
                   }}>CyphenBoard</h2>
                   <form>
@@ -214,7 +214,7 @@ export default () => {
           <FormContainer css={gradientBg2green}>
             <div tw="mx-auto max-w-4xl">
               <h2 style={{
-                color: "#b0ffd7",
+                color: "#126b3e",
                 textAlign: "center"
               }}>Logo Design</h2>
               <form>
@@ -253,7 +253,7 @@ export default () => {
             <FormContainer css={gradientBg2green}>
               <div tw="mx-auto max-w-4xl">
                 <h2 style={{
-                  color: "#b0ffd7",
+                  color: "#126b3e",
                   textAlign: "center"
                 }}>Branding</h2>
                 <form>
@@ -292,7 +292,7 @@ export default () => {
               <FormContainer css={gradientBg2green}>
                 <div tw="mx-auto max-w-4xl">
                   <h2 style={{
-                    color: "#b0ffd7",
+                    color: "#126b3e",
                     textAlign: "center"
                   }}>Animated Video</h2>
                   <form>
@@ -315,7 +315,7 @@ export default () => {
           <FormContainer css={gradientBg2green}>
             <div tw="mx-auto max-w-4xl">
               <h2 style={{
-                color: "#b0ffd7",
+                color: "#126b3e",
                 textAlign: "center"
               }}>Content</h2>
               <form>
