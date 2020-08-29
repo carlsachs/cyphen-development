@@ -5,10 +5,9 @@ import styled from "styled-components";
 import axios from "axios";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
-import Header from "components/headers/light";
-import Footer from "components/footers/MiniCenteredFooter";
+import Header from "components/headers/lightGreen";
+import Footer from "components/footers/MiniCenteredFooterGreen";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
-import { ContentWithPaddingXl } from "components/misc/Layouts.js";
 import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg"
 
 const Container = tw.div`relative`;
@@ -223,7 +222,7 @@ export default () => {
                   <Column>
                     <InputContainer>
                       <Label htmlFor="idea-input">Logo Idea</Label>
-                      <TextArea id="idea-input" type="text" name="logoIdea" onChange={handleChange} placeholder="Ex: I want two 'C' letter joined in some way." />
+                      <TextArea id="idea-input" type="text" name="logoIdea" onChange={handleChange} placeholder="Ex: I want two 'C' letters joined in some way." />
                     </InputContainer>
                     <InputContainer>
                       <Label htmlFor="logoScheme-input">Light Vs. Dark Scheme</Label>

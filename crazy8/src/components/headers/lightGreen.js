@@ -6,7 +6,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
-import logo from "../../images/logo.png";
+import logo from "../../images/logoGreen.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
@@ -25,14 +25,7 @@ export const NavLinks = tw.div`inline-block`;
 export const NavLink = tw.a`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
-  pb-1 border-b-2 border-transparent text-blue-500 hover:border-blue-500 hocus:text-blue-700
-`;
-
-export const PrimaryLink = tw(NavLink)`
-  lg:mx-0
-  px-8 py-3 rounded bg-blue-800 text-blue-100
-  hocus:bg-blue-100 hocus:text-blue-100 focus:shadow-outline
-  border-b-0
+  pb-1 border-b-2 border-transparent text-green-500 hover:border-green-500 hocus:text-green-700
 `;
 
 export const LogoLink = styled(NavLink)`
@@ -67,7 +60,6 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
       <NavLink href="/#">Work</NavLink>
       <NavLink href="/pricing">Pricing</NavLink>
       <NavLink href="/contact">Contact Us</NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} style={{ cursor: "pointer" }} onClick={() => window.open("/userinfo")}>Order Now</PrimaryLink>
     </NavLinks>
   ];
 
