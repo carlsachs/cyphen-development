@@ -171,26 +171,30 @@ export default () => {
                     </Box1>
                   </div>
                 </Column>
-                <InputContainer>
-                <div>
-                  <Label htmlFor="terms-input" style={{
-                    width: "100%",
-                    textAlign: "center"
-                  }}>By continuing, you acknowledge you have Read and Accept the Terms of Agreement</Label>
-                </div>
-                </InputContainer>
-                <div style={{
-                  display: "flex",
-                  justifyContent: "center"
-                }}>
-                <div style={{
-                  width: "35%"
-                }}>
-                  <SubmitButton type="submit" value="Submit" onClick={handleSubmit}>Continue</SubmitButton>
-                </div>
-                </div>
               </TwoColumn>
             </form>
+            <div>
+            <InputContainer>
+            <div>
+              <Label htmlFor="terms-input" style={{
+                width: "100%",
+                textAlign: "center"
+              }}>By continuing, you acknowledge you have Read and Accept the Terms of Agreement</Label>
+            </div>
+            </InputContainer>
+            <div style={{
+              display: "flex",
+              justifyContent: "center"
+            }}>
+            <div style={{
+              width: "40%",
+              display: "flex",
+              justifyContent: "center"
+            }}>
+              <SubmitButton type="submit" value="Submit" onClick={handleSubmit}>Continue</SubmitButton>
+            </div>
+            </div>
+            </div>
           </div>
           <SvgDotPattern1 />
         </FormContainer>
