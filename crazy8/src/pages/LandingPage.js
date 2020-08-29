@@ -7,7 +7,6 @@ import Hero from "components/start/LandingTop.js";
 import Features from "components/brokenUpComps/SixFeaturedHome";
 import MainFeature from "components/brokenUpComps/MainFeature.js";
 import MainFeature2 from "components/brokenUpComps/ColIcons.js";
-import Blog from "components/blogs/ThreeColSimpleWithImageAndDashedBorder.js";
 import Pricing from "components/pricing/TwoPlansWithDurationSwitcher";
 import PricingLength from "components/pricing/TwoPlansWithDurationSwitcherTime";
 import FAQ from "components/faq/SimpleWithSideImage.js";
