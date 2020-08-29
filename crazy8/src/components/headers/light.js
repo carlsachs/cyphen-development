@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useHistory } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -60,6 +61,8 @@ export const DesktopNavLinks = tw.nav`
 
 export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
 
+  let history = useHistory();
+
 
   const defaultLinks = [
     <NavLinks key={1}>
@@ -67,7 +70,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
       <NavLink href="/#">Work</NavLink>
       <NavLink href="/pricing">Pricing</NavLink>
       <NavLink href="/contact">Contact Us</NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} style={{ cursor: "pointer", color: "white" }} onClick={() => window.open("/userinfo")}>Order Now</PrimaryLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} style={{ cursor: "pointer", color: "white" }} onClick={() => history.push("/pricing")}>Order Now</PrimaryLink>
     </NavLinks>
   ];
 

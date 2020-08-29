@@ -30,7 +30,7 @@ const LeftColumn = tw.div`flex flex-col items-center lg:block`;
 const RightColumn = tw.div`w-full sm:w-5/6 lg:w-1/2 mt-16 lg:mt-0 lg:pl-8`;
 
 const Heading = styled.h1`
-  ${tw`text-3xl text-center lg:text-left sm:text-4xl lg:text-5xl xl:text-6xl font-black text-blue-800 leading-none`}
+  ${tw`text-3xl text-center lg:text-left sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-none`}
   span {
     ${tw`inline-block mt-2`}
   }
@@ -103,9 +103,9 @@ export default () => {
         <StyledHeader links={navLinks} />
         <TwoColumn>
           <LeftColumn>
-            <Notification>We have now launched operations!</Notification>
+            <Notification>We accept both Fiat and Crypto!</Notification>
             <Heading>
-              <span>A <span style={{color: "#5bb2ff"}}>Professional</span> Look</span>
+              <span>A <span style={{color: "#d9f0ff"}}>Professional</span> Look</span>
               <br />
               <SlantedBackground>You Deserve</SlantedBackground>
             </Heading>
