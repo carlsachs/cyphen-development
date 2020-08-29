@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useHistory } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
-import logo from "../../images/logo.svg";
+import logo from "../../images/logo.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
@@ -25,13 +26,13 @@ export const NavLinks = tw.div`inline-block`;
 export const NavLink = tw.a`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
-  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
+  pb-1 border-b-2 border-transparent text-blue-500 hover:border-blue-500 hocus:text-blue-700
 `;
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
-  px-8 py-3 rounded bg-blue-700 text-blue-100
-  hocus:bg-blue-500 hocus:text-white focus:shadow-outline
+  px-8 py-3 rounded bg-blue-800 text-blue-100
+  hocus:bg-blue-500 focus:shadow-outline
   border-b-0
 `;
 
@@ -45,10 +46,10 @@ export const LogoLink = styled(NavLink)`
 
 export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
 export const NavToggle = tw.button`
-  lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
+  lg:hidden z-20 focus:outline-none hocus:text-blue-500 transition duration-300
 `;
 export const MobileNavLinks = motion.custom(styled.div`
-  ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
+  ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-blue-500 bg-white`}
   ${NavLinks} {
     ${tw`flex flex-col items-center`}
   }
@@ -60,34 +61,16 @@ export const DesktopNavLinks = tw.nav`
 
 export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
 
-
-  const handleClick = () => {
-    scroller.scrollTo('pricing', {
-      duration: 1500,
-      delay: 100,
-      smooth: true,
-      offset: 100, // Scrolls to element + 100 pixels down the page
-    })
-  }
-
-  const handleClick2 = () => {
-    scroller.scrollTo('social', {
-      duration: 1500,
-      delay: 100,
-      smooth: true,
-      offset: 100, // Scrolls to element + 100 pixels down the page
-    })
-  }
+  let history = useHistory();
 
 
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#" style={{color: "#2E73E0"}}>Team</NavLink>
-      <NavLink href="/#" style={{color: "#2E73E0"}}>Work</NavLink>
-      <NavLink onClick={handleClick} style={{color: "#2E73E0", cursor: "pointer"}}>Pricing</NavLink>
-      <NavLink onClick={handleClick2} style={{color: "#2E73E0", cursor: "pointer"}}>Social</NavLink>
-      <NavLink href="/#" style={{color: "#2E73E0"}}>Contact Us</NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Hire Our Team</PrimaryLink>
+      <NavLink href="/team">Team</NavLink>
+      <NavLink href="/#">Work</NavLink>
+      <NavLink href="/pricing">Pricing</NavLink>
+      <NavLink href="/contact">Contact Us</NavLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} style={{ cursor: "pointer", color: "white" }} onClick={() => history.push("/pricing")}>Order Now</PrimaryLink>
     </NavLinks>
   ];
 
@@ -96,7 +79,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
   const defaultLogoLink = (
     <LogoLink href="/">
-      <img src={logo} alt="logo" />
+      <img style={{width: "100px", height: "100px"}} src={logo} alt="logo" />
       Cyphen
     </LogoLink>
   );
@@ -123,12 +106,6 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
     </Header>
   );
 };
-
-/* The below code is for generating dynamic break points for navbar.
- * Using this you can specify if you want to switch
- * to the toggleable mobile navbar at "sm", "md" or "lg" or "xl" above using the collapseBreakpointClass prop
- * Its written like this because we are using macros and we can not insert dynamic variables in macros
- */
 
 const collapseBreakPointCssMap = {
   sm: {

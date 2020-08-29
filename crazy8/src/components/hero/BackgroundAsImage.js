@@ -30,14 +30,14 @@ const LeftColumn = tw.div`flex flex-col items-center lg:block`;
 const RightColumn = tw.div`w-full sm:w-5/6 lg:w-1/2 mt-16 lg:mt-0 lg:pl-8`;
 
 const Heading = styled.h1`
-  ${tw`text-3xl text-center lg:text-left sm:text-4xl lg:text-5xl xl:text-6xl font-black text-blue-500 leading-none`}
+  ${tw`text-3xl text-center lg:text-left sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-none`}
   span {
     ${tw`inline-block mt-2`}
   }
 `;
 
 const SlantedBackground = styled.span`
-  ${tw`relative text-blue-100 px-4 -mx-4 py-2`}
+  ${tw`relative text-white px-4 -mx-4 py-2`}
   &::before {
     content: "";
     ${tw`absolute inset-0 bg-blue-800 transform -skew-x-12 -z-10`}
@@ -48,25 +48,7 @@ const Notification = tw.span`inline-block my-4 pl-3 py-1 text-gray-100 border-l-
 
 const PrimaryAction = tw.button`px-8 py-3 mt-10 text-sm sm:text-base sm:mt-16 sm:px-8 sm:py-4 bg-blue-100 text-blue-500 font-bold rounded shadow transition duration-300 hocus:bg-blue-800 hocus:text-blue-100 focus:shadow-outline`;
 
-const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
-  padding-bottom: 56.25% !important;
-  padding-top: 0px !important;
-  ${tw`rounded`}
-  iframe {
-    ${tw`rounded bg-black shadow-xl`}
-  }
-`;
-
 export default () => {
-
-  const handleClick = () => {
-    scroller.scrollTo('pricing', {
-      duration: 1500,
-      delay: 100,
-      smooth: true,
-      offset: 430, // Scrolls to element + 100 pixels down the page
-    })
-  }
 
   const handleClick2 = () => {
     scroller.scrollTo('social', {
@@ -82,19 +64,19 @@ export default () => {
       duration: 1500,
       delay: 100,
       smooth: true,
-      offset: 430, // Scrolls to element + 100 pixels down the page
+      offset: 350, // Scrolls to element + 100 pixels down the page
     })
   }
 
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="#">
+      <NavLink href="/team">
         Team
       </NavLink>
       <NavLink href="#">
         Work
       </NavLink>
-      <NavLink onClick={handleClick} style={{cursor: "pointer"}}>
+      <NavLink href="/pricing">
         Pricing
       </NavLink>
       <NavLink onClick={handleClick3} style={{cursor: "pointer"}}>
@@ -108,7 +90,7 @@ export default () => {
     </NavLink>
     </NavLinks>,
     <NavLinks key={2} style={{display: "flex", justifyContent: "space-evenly", width: "25%"}}>
-    <PrimaryLink href="/admin">
+    <PrimaryLink href="/userinfo">
         Place Order
       </PrimaryLink>
     </NavLinks>
@@ -121,20 +103,14 @@ export default () => {
         <StyledHeader links={navLinks} />
         <TwoColumn>
           <LeftColumn>
-            <Notification>We have now launched operations!</Notification>
+            <Notification>We accept both Fiat and Crypto!</Notification>
             <Heading>
-              <span>A Professional Look</span>
+              <span>A <span style={{color: "#d9f0ff"}}>Professional</span> Look</span>
               <br />
               <SlantedBackground>You Deserve</SlantedBackground>
             </Heading>
-            <PrimaryAction onClick={handleClick}>Get Pricing</PrimaryAction>
+            <PrimaryAction onClick={() => window.open("/pricing")}>Get Started</PrimaryAction>
           </LeftColumn>
-          <RightColumn>
-            <StyledResponsiveVideoEmbed
-              url="https://www.youtube.com/embed/IuwxZSIS__4"
-              background="transparent"
-            />
-          </RightColumn>
         </TwoColumn>
       </HeroContainer>
     </Container>

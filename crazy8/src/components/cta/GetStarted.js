@@ -15,9 +15,9 @@ const Text = tw.h5`text-blue-100 text-2xl sm:text-3xl font-bold`;
 const LinksContainer = tw(ColumnContainer)`flex justify-center lg:justify-end mt-6 lg:mt-0 flex-col sm:flex-row`;
 
 const Link = tw.a`w-full sm:w-auto text-sm sm:text-base px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5 mt-4 first:mt-0 sm:mt-0 sm:mr-8 sm:last:mr-0 rounded-full font-bold border border-transparent tracking-wide transition duration-300 focus:outline-none focus:shadow-outline`;
-const PrimaryLink = tw(Link)`bg-blue-300 text-blue-500 shadow-lg hocus:bg-blue-600 hocus:text-blue-200`;
+const PrimaryLink = tw(Link)`bg-blue-500 text-blue-100 shadow-lg hocus:bg-blue-100 hocus:text-blue-500`;
 
-const SecondaryLink = tw(Link)`text-blue-500 border-blue-700 hover:bg-blue-600 hover:text-blue-200 hover:border-blue-200`;
+const SecondaryLink = tw(Link)`text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-blue-100 hover:border-blue-800`;
 
 const DecoratorBlobContainer = tw.div`absolute inset-0 overflow-hidden rounded-lg`
 const DecoratorBlob1 = tw(SvgDecoratorBlob1)`absolute bottom-0 left-0 w-80 h-80 transform -translate-x-20 translate-y-32 text-blue-400 opacity-50`
@@ -25,9 +25,9 @@ const DecoratorBlob2 = tw(SvgDecoratorBlob1)`absolute top-0 right-0 w-80 h-80 tr
 export default ({
   text = "What's stopping you from taking your business to the next level?",
   primaryLinkText = "Get Started",
-  primaryLinkUrl = "/",
+  primaryLinkUrl = "/order",
   secondaryLinkText = "Contact Us",
-  secondaryLinkUrl = "/",
+  secondaryLinkUrl = "/contact",
   pushDownFooter = true
 }) => {
   return (

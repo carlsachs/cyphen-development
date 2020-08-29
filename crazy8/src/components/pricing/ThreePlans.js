@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -10,8 +11,8 @@ import { ReactComponent as SvgDecoratorBlob } from "images/svg-decorator-blob-6.
 
 const HeaderContainer = tw.div`mt-10 w-full flex flex-col items-center`;
 const Subheading = tw(SubheadingBase)`mb-4`;
-const Heading = tw(SectionHeading)`w-full`;
-const Description = tw(SectionDescription)`w-full text-center`;
+const Heading = tw(SectionHeading)`w-full text-blue-700`;
+const Description = tw(SectionDescription)`w-full text-center text-blue-600`;
 
 const PlansContainer = tw.div`flex justify-between flex-col lg:flex-row items-center lg:items-stretch relative`;
 const Plan = styled.div`
@@ -23,12 +24,12 @@ const Plan = styled.div`
   ${props =>
     props.featured &&
     css`
-      background: rgb(100,21,255);
-      background: linear-gradient(135deg, rgba(100,21,255,1) 0%, rgba(128,64,252,1) 100%);
-background: rgb(85,60,154);
-background: linear-gradient(135deg, rgba(85,60,154,1) 0%, rgba(128,90,213,1) 100%);
-background: rgb(76,81,191);
-background: linear-gradient(135deg, rgba(76,81,191,1) 0%, rgba(102,126,234,1) 100%);
+    background: rgb(59,199,140);
+    background: linear-gradient(90deg, rgba(59,199,140,0.9094012605042017) 0%, rgba(4,97,33,0.8729866946778712) 100%);;
+    background: rgb(59,199,140);
+    background: linear-gradient(90deg, rgba(59,199,140,0.9094012605042017) 0%, rgba(4,97,33,0.8729866946778712) 100%);
+    background: rgb(59,199,140);
+    background: linear-gradient(90deg, rgba(59,199,140,0.9094012605042017) 0%, rgba(4,97,33,0.8729866946778712) 100%);
       ${tw`bg-primary-500 text-gray-100`}
       .planHighlight {
         ${tw`hidden`}
@@ -37,13 +38,13 @@ background: linear-gradient(135deg, rgba(76,81,191,1) 0%, rgba(102,126,234,1) 10
         ${tw`text-gray-200!`}
       }
       ${PlanFeatures} {
-        ${tw`border-indigo-500`}
+        ${tw`border-green-200`}
       }
       .feature:not(.mainFeature) {
         ${tw`text-gray-300!`}
       }
       ${BuyNowButton} {
-        ${tw`bg-gray-100 text-primary-500 hocus:bg-gray-300 hocus:text-primary-800`}
+        ${tw`bg-green-100 text-green-500 hocus:bg-green-800 hocus:text-white`}
     `}
 `;
 
@@ -83,34 +84,39 @@ const DecoratorBlob = styled(SvgDecoratorBlob)`
 
 
 export default ({
-  subheading = "Pricing",
-  heading = "Flexible Plans.",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  subheading = "Step Two",
+  heading = "Choose Your Core Plan",
+  description = "",
   plans = null,
-  primaryButtonText = "Buy Now"
+  primaryButtonText = "Select"
 }) => {
+
   const defaultPlans = [
     {
-      name: "Personal",
-      price: "$17.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Personal Blogs",
-      features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"],
+      name: "Jumpstart",
+      price: "$149",
+      duration: "2 Day Delivery",
+      mainFeature: "Suited for Single-Page Apps",
+      features: ["1 Page", "1 Form", "Content Upload", "1 Month Free Dev Support"],
+      url: "/jumpstart"
+      
     },
     {
-      name: "Business",
-      price: "$37.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Production Websites",
-      features: ["60 Templates", "8 Landing Pages", "22 Internal Pages", "Priority Assistance"],
+      name: "Throttle",
+      price: "$1349",
+      duration: "14 Day Delivery",
+      mainFeature: "Suited for Complex Websites",
+      features: ["15 Pages", "CyphenBoard", "Free Logo/Graphics", "Free 30s Business Animated Video"],
       featured: true,
+      url: "/throttle"
     },
     {
-      name: "Enterprise",
-      price: "$57.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Big Companies",
-      features: ["90 Templates", "9 Landing Pages", "37 Internal Pages", "Personal Assistance"],
+      name: "Boost",
+      price: "$549",
+      duration: "7 Day Delivery",
+      mainFeature: "Suited for Startups",
+      features: ["5 Pages", "Free Logo/Graphics", "Unlimited Forms", "3 Months Dev Support"],
+      url: "/boost"
     },
   ];
 
@@ -118,18 +124,20 @@ export default ({
 
   const highlightGradientsCss = [
     css`
-      background: rgb(56, 178, 172);
-      background: linear-gradient(115deg, rgba(56, 178, 172, 1) 0%, rgba(129, 230, 217, 1) 100%);
+      background: rgb(173,142,221);
+      background: linear-gradient(90deg, rgba(173,142,221,0.8785889355742297) 0%, rgba(117,33,186,0.7805497198879552) 100%);
     `,
     css`
-      background: rgb(56, 178, 172);
-      background-image: linear-gradient(115deg, #6415ff, #7431ff, #8244ff, #8e56ff, #9a66ff);
+      background: rgb(32,0,82);
+      background: linear-gradient(90deg, rgba(32,0,82,1) 0%, rgba(169,66,255,1) 100%);
     `,
     css`
-      background: rgb(245, 101, 101);
-      background: linear-gradient(115deg, rgba(245, 101, 101, 1) 0%, rgba(254, 178, 178, 1) 100%);
+      background: rgb(25,27,108);
+      background: linear-gradient(90deg, rgba(25,27,108,0.8785889355742297) 0%, rgba(33,138,186,0.7805497198879552) 100%);
     `
   ];
+
+  const history = useHistory();
 
   return (
     <Container>
@@ -157,13 +165,14 @@ export default ({
                 ))}
               </PlanFeatures>
               <PlanAction>
-                <BuyNowButton css={!plan.featured && highlightGradientsCss[index]}>{primaryButtonText}</BuyNowButton>
+                <BuyNowButton onClick={() => history.push(plan.url)} css={!plan.featured && highlightGradientsCss[index]}>{primaryButtonText}</BuyNowButton>
               </PlanAction>
             </Plan>
           ))}
           <DecoratorBlob/>
         </PlansContainer>
       </ContentWithPaddingXl>
+      
     </Container>
   );
 };

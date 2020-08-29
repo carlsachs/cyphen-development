@@ -11,9 +11,9 @@ import ShieldIconImage from "images/shield-icon.svg";
 import CustomizeIconImage from "images/customize-icon.svg";
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
 
-const Heading = tw(SectionHeading)``;
+const Heading = tw(SectionHeading)`text-blue-800`;
 const Subheading = tw(SubheadingBase)`text-center mb-3`;
-const Description = tw(SectionDescription)`text-center mx-auto`;
+const Description = tw(SectionDescription)`text-center mx-auto text-blue-500`;
 const ThreeColumnContainer = styled.div`
   ${tw`mt-10 flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap lg:justify-center max-w-screen-lg mx-auto`}
 `;
@@ -22,7 +22,7 @@ const Column = styled.div`
 `;
 
 const Card = styled.a`
-  ${tw`flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105 `}
+  ${tw`flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 transform hover:scale-105 `}
   .imageContainer {
     ${tw`text-center rounded-full p-4 bg-gray-100`}
     img {
@@ -46,16 +46,12 @@ const Card = styled.a`
   }
 `;
 
-const DecoratorBlob = styled(SvgDecoratorBlob3)`
-  ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-40`}
-`;
-
 export default ({
   cards = [
     {
       imageSrc: ShieldIconImage,
-      title: "Secure",
-      description: "We strictly only deal with vendors that provide top notch security.",
+      title: "Jumpstart",
+      description: "A package perfect for a startup on a budget but looking to create a professional and trustworthy web presence.",
       url: "https://timerse.com"
     },
     {
@@ -78,13 +74,7 @@ export default ({
   imageContainerCss = null,
   imageCss = null
 }) => {
-  /*
-   * This componets accepts a prop - `cards` which is an array of object denoting the cards. Each object in the cards array can have the following keys (Change it according to your need, you can also add more objects to have more cards in this feature component):
-   *  1) imageSrc - the image shown at the top of the card
-   *  2) title - the title of the card
-   *  3) description - the description of the card
-   *  4) url - the url that the card should goto on click
-   */
+
   return (
     <Container>
       <ContentWithPaddingXl>
@@ -111,7 +101,6 @@ export default ({
           ))}
         </ThreeColumnContainer>
       </ContentWithPaddingXl>
-      <DecoratorBlob />
     </Container>
   );
 };

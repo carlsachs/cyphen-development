@@ -22,12 +22,12 @@ const Image = styled.div(props => [
 
 const FAQContent = tw.div`lg:ml-12`;
 const Subheading = tw(SubheadingBase)`mb-4 text-center lg:text-left text-blue-500`;
-const Heading = tw(SectionHeading)`lg:text-left text-blue-700`;
+const Heading = tw(SectionHeading)`lg:text-left text-blue-800`;
 const Description = tw.p`max-w-xl text-center mx-auto lg:mx-0 lg:text-left lg:max-w-none leading-relaxed text-sm sm:text-base lg:text-lg font-medium mt-4 text-blue-400`;
 
 const FAQSContainer = tw.dl`mt-12`;
 const FAQ = tw.div`cursor-pointer mt-8 select-none border lg:border-0 px-8 py-4 lg:p-0 rounded-lg lg:rounded-none`;
-const Question = tw.dt`flex justify-between items-center text-blue-700`;
+const Question = tw.dt`flex justify-between items-center text-blue-800`;
 const QuestionText = tw.span`text-lg lg:text-xl font-semibold text-blue-700`;
 const QuestionToggleIcon = styled.span`
   ${tw`ml-2 bg-blue-800 text-blue-100 p-1 rounded-full group-hover:bg-blue-500 group-hover:text-blue-200 transition duration-300`}
@@ -35,7 +35,7 @@ const QuestionToggleIcon = styled.span`
     ${tw`w-4 h-4`}
   }
 `;
-const Answer = motion.custom(tw.dd`pointer-events-none text-sm sm:text-base leading-relaxed text-blue-400`);
+const Answer = motion.custom(tw.dd`pointer-events-none text-sm sm:text-base leading-relaxed text-blue-500`);
 
 export default ({
   subheading = "",
