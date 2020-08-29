@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import styled from "styled-components"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
-import Header from "components/headers/light.js";
+import Header from "components/headers/lightInner.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
 import MainFeature1 from "components/features/TwoColWithButton.js";
 
