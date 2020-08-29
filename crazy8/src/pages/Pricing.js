@@ -1,15 +1,15 @@
 import React from "react";
-import AnimationRevealPage from "helpers/AnimationRevealPage.js";
+import AnimationRevealPage from "functions/AnimationRevealPage.js";
 import tw from "twin.macro";
 import styled from "styled-components"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
-import Header from "components/headers/lightInner.js";
-import Footer from "components/footers/MiniCenteredFooter.js";
+import Header from "components/headers/headerInnerPages.js";
+import Footer from "components/footers/MainFooter.js";
 import Pricing from "components/pricing/TwoPlansWithDurationSwitcher2";
 import PricingLength from "components/pricing/TwoPlansWithDurationSwitcherTime2";
-import Features from "components/features/ThreeColSimple.js";
-import Features2 from "components/features/ThreeColSimple2.js";
-import TeamCardGrid from "components/cards/ProfileThreeColGrid.js";
+import Features from "components/brokenUpComps/ThreeCol.js";
+import Features2 from "components/brokenUpComps/ThreeCol2.js";
+import TeamCardGrid from "components/cards/MeetTheTeam.js";
 
 import SupportIconImage from "images/support-icon.svg";
 import ShieldIconImage from "images/shield-icon.svg";

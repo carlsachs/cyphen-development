@@ -1,17 +1,17 @@
 import React from "react";
-import AnimationRevealPage from "helpers/AnimationRevealPage.js";
+import AnimationRevealPage from "functions/AnimationRevealPage.js";
 import tw from "twin.macro";
 import styled from "styled-components"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
-import Header from "components/headers/lightInner.js";
-import Footer from "components/footers/MiniCenteredFooter.js";
-import MainFeature1 from "components/features/TwoColWithButton.js";
+import { SectionHeading, Subheading as SubheadingBase } from "components/basic/Headings.js";
+import Header from "components/headers/headerInnerPages.js";
+import Footer from "components/footers/MainFooter.js";
+import MainFeature1 from "components/brokenUpComps/MainFeature2.js";
 
-import Newsletter from "components/forms/SimpleSubscribeNewsletter";
+import Newsletter from "components/newsletter/Newsletter";
 
-import Features from "components/features/ThreeColSimple.js";
-import TeamCardGrid from "components/cards/ProfileThreeColGrid.js";
+import Features from "components/brokenUpComps/ThreeCol.js";
+import TeamCardGrid from "components/cards/MeetTheTeam.js";
 
 import SupportIconImage from "images/support-icon.svg";
 import ShieldIconImage from "images/shield-icon.svg";

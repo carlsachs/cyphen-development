@@ -1,11 +1,11 @@
 import React from "react";
 import tw from "twin.macro"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
-import AnimationRevealPage from "helpers/AnimationRevealPage.js";
-import Header from "components/headers/light";
-import Top from "components/forms/UserInputs";
-import Footer from "components/footers/MiniCenteredFooter";
-import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
+import AnimationRevealPage from "functions/AnimationRevealPage.js";
+import Header from "components/headers/header";
+import Top from "pages/forms/UserInputs";
+import Footer from "components/footers/MainFooter";
+import { SectionHeading, Subheading as SubheadingBase } from "components/basic/Headings.js";
 
 const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(SectionHeading)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight text-blue-600`;
