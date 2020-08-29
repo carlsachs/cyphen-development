@@ -33,11 +33,11 @@ const Textarea = styled(Input).attrs({as: "textarea"})`
   ${tw`h-24`}
 `
 
-const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`
+const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8 bg-blue-800 text-blue-100 hocus:bg-blue-500`
 
 export default ({
   subheading = "Get in Touch",
-  heading = <>Want to <span style={{color: "#0F5AD1"}}>reach out</span><wbr/> ?</>,
+  heading = <>Want to <span style={{color: "#309be3"}}>reach out</span><wbr/> ?</>,
   description = "Whether you have a question, inquiry, concern, or just want to say 'Hello', feel free to reach out and our team will respond promptly.",
   submitButtonText = "Send",
   formAction = "#",
