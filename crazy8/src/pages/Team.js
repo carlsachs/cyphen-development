@@ -3,6 +3,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import tw from "twin.macro";
 import styled from "styled-components"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
+import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import Header from "components/headers/light.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
 import MainFeature1 from "components/features/TwoColWithButton.js";
@@ -17,6 +18,8 @@ import ShieldIconImage from "images/shield-icon.svg";
 import Fast from "images/fast-icon.svg";
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
+const Heading = tw(SectionHeading)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight text-blue-600`;
+
 export default () => {
   return (
     <AnimationRevealPage>
@@ -26,7 +29,7 @@ export default () => {
         heading="We are a modern development agency."
         description="Our goal is to make you feel as secure and stress-free as you can from the web-development side of your business.  Not only do we provide clean code, but also coaching and support months ex post facto to ensure your success.  This ranges from web-development support to financial planning to marketing consultation."
         buttonRounded={false}
-        primaryButtonText="See Previous Work"
+        primaryButtonText="See Our Work"
         imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
       />
       <MainFeature1

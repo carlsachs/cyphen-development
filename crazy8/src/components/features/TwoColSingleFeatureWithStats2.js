@@ -47,8 +47,8 @@ export default ({
     </>
   ),
   description = "Technology moves fast, so do we.  Let us help you keep your business up to date and professional with the latest security, UI, and 'under-the-hood' developments.",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
+  primaryButtonText = "Meet Our Team",
+  primaryButtonUrl = "/team",
   imageSrc = Desk,
   imageCss = null,
   imageContainerCss = null,

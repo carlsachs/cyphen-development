@@ -14,9 +14,7 @@ import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3
 const Heading = tw(SectionHeading)`text-blue-800`;
 const Subheading = tw(SubheadingBase)`text-center mb-3`;
 const Description = tw(SectionDescription)`text-center mx-auto text-blue-500`;
-const ThreeColumnContainer = styled.div`
-  ${tw`mt-10 flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap lg:justify-center max-w-screen-lg mx-auto`}
-`;
+
 const Column = styled.div`
   ${tw`lg:w-1/3 max-w-xs`}
 `;
@@ -47,7 +45,7 @@ const Card = styled.a`
 `;
 
 const DecoratorBlob = styled(SvgDecoratorBlob3)`
-  ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-40`}
+  ${tw`pointer-events-none absolute left-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-40`}
 `;
 
 export default ({
@@ -85,25 +83,6 @@ export default ({
         {subheading && <Subheading>{subheading}</Subheading>}
         {heading && <Heading>{heading}</Heading>}
         {description && <Description>{description}</Description>}
-        <ThreeColumnContainer>
-          {cards.map((card, i) => (
-            <Column key={i}>
-              <Card href={card.url}>
-                <span className="imageContainer" css={imageContainerCss}>
-                  <img src={card.imageSrc} alt="" css={imageCss} />
-                </span>
-                <span className="title">{card.title}</span>
-                <p className="description">{card.description}</p>
-                {linkText && (
-                  <span className="link">
-                    <span>{linkText}</span>
-                    <ArrowRightIcon className="icon" />
-                  </span>
-                )}
-              </Card>
-            </Column>
-          ))}
-        </ThreeColumnContainer>
       </ContentWithPaddingXl>
       <DecoratorBlob />
     </Container>
