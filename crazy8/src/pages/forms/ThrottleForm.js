@@ -30,7 +30,7 @@ const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform
 const SvgDotPattern2 = tw(SvgDotPatternIcon)`absolute bottom-0 left-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-green-500 fill-current w-24`
 
 const FormContainer = styled.div`
-  ${tw`p-10 sm:p-12 md:p-16 bg-blue-500 text-gray-100 rounded-lg relative`}
+  ${tw`p-10 sm:p-12 md:p-16 bg-green-500 text-green-800 rounded-lg relative`}
   form {
     ${tw`mt-4`}
   }
@@ -38,7 +38,7 @@ const FormContainer = styled.div`
     ${tw`text-3xl sm:text-4xl font-bold`}
   }
   input,textarea {
-    ${tw`w-full bg-transparent text-gray-100 text-base font-medium tracking-wide border-b-2 py-2 text-blue-800 hocus:border-blue-800 focus:outline-none transition duration-200`};
+    ${tw`w-full bg-transparent text-green-100 text-base font-medium tracking-wide border-b-2 py-2 text-green-800 hocus:border-green-800 focus:outline-none transition duration-200`};
 
     ::placeholder {
       ${tw`text-white`}
@@ -139,7 +139,7 @@ export default () => {
               <FormContainer css={gradientBg2green}>
                 <div tw="mx-auto max-w-4xl">
                   <h2 style={{
-                    color: "white",
+                    color: "#b0ffd7",
                     textAlign: "center"
                   }}>Color Scheme</h2>
                   <form>
@@ -178,7 +178,7 @@ export default () => {
               <FormContainer css={gradientBg2green}>
                 <div tw="mx-auto max-w-4xl">
                   <h2 style={{
-                    color: "white",
+                    color: "#b0ffd7",
                     textAlign: "center"
                   }}>CyphenBoard</h2>
                   <form>
@@ -214,7 +214,7 @@ export default () => {
           <FormContainer css={gradientBg2green}>
             <div tw="mx-auto max-w-4xl">
               <h2 style={{
-                color: "white",
+                color: "#b0ffd7",
                 textAlign: "center"
               }}>Logo Design</h2>
               <form>
@@ -253,7 +253,7 @@ export default () => {
             <FormContainer css={gradientBg2green}>
               <div tw="mx-auto max-w-4xl">
                 <h2 style={{
-                  color: "white",
+                  color: "#b0ffd7",
                   textAlign: "center"
                 }}>Branding</h2>
                 <form>
@@ -292,7 +292,7 @@ export default () => {
               <FormContainer css={gradientBg2green}>
                 <div tw="mx-auto max-w-4xl">
                   <h2 style={{
-                    color: "white",
+                    color: "#b0ffd7",
                     textAlign: "center"
                   }}>Animated Video</h2>
                   <form>
@@ -315,7 +315,7 @@ export default () => {
           <FormContainer css={gradientBg2green}>
             <div tw="mx-auto max-w-4xl">
               <h2 style={{
-                color: "white",
+                color: "#b0ffd7",
                 textAlign: "center"
               }}>Content</h2>
               <form>
