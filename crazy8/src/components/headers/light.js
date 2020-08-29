@@ -31,7 +31,7 @@ export const NavLink = tw.a`
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
   px-8 py-3 rounded bg-blue-800 text-blue-100
-  hocus:bg-blue-100 hocus:text-blue-100 focus:shadow-outline
+  hocus:bg-blue-500 focus:shadow-outline
   border-b-0
 `;
 
@@ -67,7 +67,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
       <NavLink href="/#">Work</NavLink>
       <NavLink href="/pricing">Pricing</NavLink>
       <NavLink href="/contact">Contact Us</NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} style={{ cursor: "pointer" }} onClick={() => window.open("/userinfo")}>Order Now</PrimaryLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} style={{ cursor: "pointer", color: "white" }} onClick={() => window.open("/userinfo")}>Order Now</PrimaryLink>
     </NavLinks>
   ];
 
