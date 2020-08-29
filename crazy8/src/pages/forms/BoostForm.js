@@ -5,8 +5,8 @@ import styled from "styled-components";
 import axios from "axios";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
-import Header from "components/headers/light";
-import Footer from "components/footers/MiniCenteredFooter";
+import Header from "components/headers/lightBoost";
+import Footer from "components/footers/MiniCenteredFooterBoost";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { ContentWithPaddingXl } from "components/misc/Layouts.js";
 import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg"
@@ -25,13 +25,13 @@ const InputContainer = tw.div`relative py-5 mt-6`;
 const Label = tw.label`absolute top-0 left-0 tracking-wide font-semibold text-sm`;
 const Input = tw.input``;
 const TextArea = tw.textarea`h-24 sm:h-full resize-none`;
-const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-blue-800 text-blue-100 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-blue-200 hover:text-blue-800 hocus:-translate-y-px hocus:shadow-xl`;
+const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-blue-500 text-blue-100 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-blue-200 hover:text-blue-800 hocus:-translate-y-px hocus:shadow-xl`;
 
 const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-blue-500 fill-current w-24`
 const SvgDotPattern2 = tw(SvgDotPatternIcon)`absolute bottom-0 left-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-blue-500 fill-current w-24`
 
 const FormContainer = styled.div`
-  ${tw`p-10 sm:p-12 md:p-16 bg-blue-500 text-gray-100 rounded-lg relative`}
+  ${tw`p-10 sm:p-12 md:p-16 bg-blue-500 text-blue-800 rounded-lg relative`}
   form {
     ${tw`mt-4`}
   }
@@ -39,7 +39,7 @@ const FormContainer = styled.div`
     ${tw`text-3xl sm:text-4xl font-bold`}
   }
   input,textarea {
-    ${tw`w-full bg-transparent text-gray-100 text-base font-medium tracking-wide border-b-2 py-2 text-blue-800 hocus:border-blue-800 focus:outline-none transition duration-200`};
+    ${tw`w-full bg-transparent text-blue-100 text-base font-medium tracking-wide border-b-2 py-2 text-blue-100 hocus:border-blue-500 focus:outline-none transition duration-200`};
 
     ::placeholder {
       ${tw`text-white`}
@@ -126,7 +126,7 @@ export default () => {
               <FormContainer css={gradientBgblue}>
                 <div tw="mx-auto max-w-4xl">
                   <h2 style={{
-                    color: "white",
+                    color: "#c9edff",
                     textAlign: "center"
                   }}>Color Scheme</h2>
                   <form>
@@ -162,10 +162,10 @@ export default () => {
         <Content>
         <Container>
         <Content>
-          <FormContainer css={gradientBg2blue}>
+          <FormContainer css={gradientBgblue}>
             <div tw="mx-auto max-w-4xl">
               <h2 style={{
-                color: "white",
+                color: "#c9edff",
                 textAlign: "center"
               }}>Logo Design</h2>
               <form>
@@ -201,10 +201,10 @@ export default () => {
         <Content>
             <Container>
           <Content>
-            <FormContainer css={gradientBg3blue}>
+            <FormContainer css={gradientBgblue}>
               <div tw="mx-auto max-w-4xl">
                 <h2 style={{
-                  color: "white",
+                  color: "#c9edff",
                   textAlign: "center"
                 }}>Branding</h2>
                 <form>
@@ -240,10 +240,10 @@ export default () => {
         <Content>
         <Container>
         <Content>
-          <FormContainer css={gradientBg4blue}>
+          <FormContainer css={gradientBgblue}>
             <div tw="mx-auto max-w-4xl">
               <h2 style={{
-                color: "white",
+                color: "#c9edff",
                 textAlign: "center"
               }}>Content</h2>
               <form>
@@ -276,7 +276,8 @@ export default () => {
           <div>
           <div style={{
             display: "flex",
-            justifyContent: "center"
+            justifyContent: "center",
+            marginTop: "2%"
           }}>
               <SubmitButton type="submit" onClick={handleSubmit}>Continue</SubmitButton>
           </div>
