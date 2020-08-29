@@ -11,7 +11,7 @@ import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7
 
 const HeaderContainer = tw.div`w-full flex flex-col items-center`;
 const Subheading = tw(SubheadingBase)`mb-4 text-blue-500`;
-const Heading = tw(SectionHeading)`w-full text-blue-700`;
+const Heading = tw(SectionHeading)`w-full text-blue-800`;
 const Description = tw(SectionDescription)`w-full text-center text-blue-400`;
 
 const PlanDurationSwitcher = tw.div`block w-full max-w-xs sm:inline-block sm:w-auto border-2 rounded-full px-1 py-1 mt-8`;
@@ -34,19 +34,19 @@ const Plan = styled.div`
 const PlanHeader = styled.div`
   ${tw`flex flex-col leading-relaxed py-8 -mx-8 bg-gray-100 rounded-t-lg`}
   .name {
-    ${tw`font-bold text-xl`}
+    ${tw`font-bold text-xl text-blue-800`}
   }
   .price {
-    ${tw`font-bold text-4xl sm:text-5xl my-1`}
+    ${tw`font-bold text-4xl sm:text-5xl my-1 text-blue-500`}
   }
   .slash {
-    ${tw`text-xl text-gray-500`}
+    ${tw`text-xl text-blue-800`}
   }
   .duration {
-    ${tw`lowercase text-gray-500 font-medium tracking-widest`}
+    ${tw`lowercase text-blue-400 font-medium tracking-widest`}
   }
   .mainFeature {
-    ${tw`text-gray-500 text-sm font-medium tracking-wide`}
+    ${tw`text-blue-600 text-sm font-medium tracking-wide`}
   }
 `;
 const PlanFeatures = styled.div`
@@ -58,7 +58,7 @@ const PlanFeatures = styled.div`
 
 const PlanAction = tw.div`px-4 pb-8`;
 const BuyNowButton = styled(PrimaryButtonBase)`
-  ${tw`rounded-full tracking-wider py-4 w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline bg-blue-700 text-blue-100 hocus:bg-blue-400 hocus:text-blue-700`}
+  ${tw`rounded-full tracking-wider py-4 w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline bg-blue-800 text-blue-100 hocus:bg-blue-500 hocus:text-blue-100`}
 `;
 
 const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
@@ -113,7 +113,7 @@ export default ({
       <ContentWithPaddingXl>
         <HeaderContainer>
           {subheading && <Subheading>{subheading}</Subheading>}
-          <Heading style={{color: "#0F5AD1"}}>{heading}</Heading>
+          <Heading>{heading}</Heading>
           {description && <Description>{description}</Description>}
         </HeaderContainer>
         <PlansContainer>
