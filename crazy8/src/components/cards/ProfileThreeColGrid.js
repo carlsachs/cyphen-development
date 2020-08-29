@@ -14,9 +14,9 @@ import Carl from "../../images/profile.jpg";
 import Will from "../../images/Professional.jpg"
 
 const HeadingContainer = tw.div``
-const Heading = tw(SectionHeading)``
-const Subheading = tw(SubheadingBase)`text-center mb-3`
-const Description = tw(SectionDescription)`mx-auto text-center`
+const Heading = tw(SectionHeading)`text-blue-800`
+const Subheading = tw(SubheadingBase)`text-center mb-3 text-blue-500`
+const Description = tw(SectionDescription)`mx-auto text-center text-blue-600`
 
 const Cards = tw.div`flex flex-wrap flex-row justify-center sm:max-w-2xl lg:max-w-5xl mx-auto`
 const Card = tw.div`mt-24 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center`
@@ -30,7 +30,7 @@ const CardContent = styled.div`
     ${tw`uppercase font-bold tracking-widest text-xs text-primary-500`}
   }
   .name {
-    ${tw`mt-1 text-xl font-medium text-gray-900`}
+    ${tw`mt-1 text-xl font-medium text-blue-800`}
   9
 `
 
