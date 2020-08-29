@@ -4,10 +4,10 @@ import tw from "twin.macro"; //eslint-disable-line
 import styled from "styled-components";
 import axios from "axios";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import AnimationRevealPage from "helpers/AnimationRevealPage.js";
-import Header from "components/headers/lightGreen";
-import Footer from "components/footers/MiniCenteredFooterGreen";
-import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
+import AnimationRevealPage from "functions/AnimationRevealPage.js";
+import Header from "components/headers/headerThrottle";
+import Footer from "components/footers/FooterThrottle";
+import { SectionHeading, Subheading as SubheadingBase } from "components/basic/Headings.js";
 import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg"
 
 const Container = tw.div`relative`;

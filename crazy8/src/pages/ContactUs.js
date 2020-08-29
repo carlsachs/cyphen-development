@@ -1,11 +1,11 @@
 import React from "react";
 import tw from "twin.macro"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
-import AnimationRevealPage from "helpers/AnimationRevealPage.js";
+import AnimationRevealPage from "functions/AnimationRevealPage.js";
 
-import Header from "components/headers/light";
-import Top from "components/forms/TwoColContactUsWithIllustrationFullForm";
-import Footer from "components/footers/MiniCenteredFooter";
+import Header from "components/headers/headerInnerPages";
+import Top from "components/contactus/ContactUsForm";
+import Footer from "components/footers/MainFooter";
 
 export default () => {
 

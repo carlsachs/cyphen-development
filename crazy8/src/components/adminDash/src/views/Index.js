@@ -9,7 +9,7 @@ import { Line, Bar } from "react-chartjs-2";
 
 import "../assets/scss/argon-dashboard-react.scss";
 
-import Header2 from "components/headers/light";
+import Header2 from "components/headers/header";
 // reactstrap components
 import {
   Button,
