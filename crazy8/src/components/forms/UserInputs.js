@@ -115,24 +115,6 @@ export default () => {
                     <Label htmlFor="phone-input">Your Phone Number</Label>
                     <Input id="phone-input" type="tel" name="phone" onChange={handleChange} placeholder="Phone (Optional)" />
                   </InputContainer>
-                  <InputContainer>
-                  <div>
-                    <Label htmlFor="terms-input" style={{
-                      width: "100%",
-                      textAlign: "center"
-                    }}>By continuing, you acknowledge you have Read and Accept the Terms of Agreement</Label>
-                  </div>
-                  </InputContainer>
-                  <div style={{
-                    display: "flex",
-                    justifyContent: "center"
-                  }}>
-                  <div style={{
-                    width: "35%"
-                  }}>
-                    <SubmitButton type="submit" value="Submit" onClick={handleSubmit}>Continue</SubmitButton>
-                  </div>
-                  </div>
                 </Column>
                 <Column>
                 <div style={{
@@ -189,6 +171,24 @@ export default () => {
                     </Box1>
                   </div>
                 </Column>
+                <InputContainer>
+                <div>
+                  <Label htmlFor="terms-input" style={{
+                    width: "100%",
+                    textAlign: "center"
+                  }}>By continuing, you acknowledge you have Read and Accept the Terms of Agreement</Label>
+                </div>
+                </InputContainer>
+                <div style={{
+                  display: "flex",
+                  justifyContent: "center"
+                }}>
+                <div style={{
+                  width: "35%"
+                }}>
+                  <SubmitButton type="submit" value="Submit" onClick={handleSubmit}>Continue</SubmitButton>
+                </div>
+                </div>
               </TwoColumn>
             </form>
           </div>
