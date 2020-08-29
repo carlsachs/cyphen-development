@@ -2,7 +2,7 @@ import React from "react";
 import tw from "twin.macro"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "functions/AnimationRevealPage.js";
-import Header from "components/headers/header";
+import Header from "components/headers/headerNoOrder";
 import Top from "pages/forms/UserInputs";
 import Footer from "components/footers/MainFooter";
 import { SectionHeading, Subheading as SubheadingBase } from "components/basic/Headings.js";

@@ -97,7 +97,7 @@ export default ({
       duration: "Monthly",
       mainFeature: "Features",
       features: ["Quickbooks", "Budgeting", "General Finance Processes", "Finance Statement Compilation"],
-      url: "/"
+      url: "#"
       
     },
     {
@@ -107,7 +107,7 @@ export default ({
       mainFeature: "Features",
       features: ["3 Revisions / Month", "Code Refactoring", "24/7 Assistance", "50% off 1 Additional Page / Month"],
       featured: true,
-      url: "/"
+      url: "#"
     },
     {
       name: "Marketing Consultation",
@@ -115,7 +115,7 @@ export default ({
       duration: "Monthly",
       mainFeature: "Features",
       features: ["Facebook Advertising", "Social Media Management", "SEO Consultation", "24/7 Assistance"],
-      url: "/"
+      url: "#"
     },
   ];
 

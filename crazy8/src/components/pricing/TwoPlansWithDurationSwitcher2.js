@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -81,19 +82,23 @@ export default ({
     }
   ]
 }) => {
+
+  let history = useHistory();
+
   const defaultPlans = [
     {
       name: "JumpStart",
       durationPrices: ["$149", "$149"],
       mainFeature: "1 Day Delivery",
-      features: ["1 Page", "Full Source Code", "Content Upload", "1 Month Free Support", "1 Form Max"]
+      features: ["1 Page", "Full Source Code", "Content Upload", "1 Month Free Support", "1 Form Max"],
+      featured: false
     },
     {
       name: "Boost",
       durationPrices: ["$549", "$549"],
       mainFeature: "3 Day Delivery",
       features: ["5 Pages", "Full Source Code", "Free Logo", "Custom Graphics", "Content Upload", "3 Months Free Support", "Unlimited Forms"],
-      featured: true
+      featured: false
     },
     {
       name: "Throttle",
@@ -130,7 +135,7 @@ export default ({
                 ))}
               </PlanFeatures>
               <PlanAction>
-                <BuyNowButton>{primaryButtonText}</BuyNowButton>
+                <BuyNowButton onClick={() => history.push("/userinfo")}>{primaryButtonText}</BuyNowButton>
               </PlanAction>
             </Plan>
           ))}

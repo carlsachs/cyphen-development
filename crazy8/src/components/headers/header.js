@@ -70,7 +70,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
       <NavLink href="/#">Work</NavLink>
       <NavLink href="/pricing">Pricing</NavLink>
       <NavLink href="/contact">Contact Us</NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} style={{ cursor: "pointer", color: "white" }} onClick={() => history.push("/pricing")}>Order Now</PrimaryLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} style={{ cursor: "pointer", color: "white" }} onClick={() => history.push("/userinfo")}>Order Now</PrimaryLink>
     </NavLinks>
   ];
 
