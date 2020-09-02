@@ -3,7 +3,7 @@ import tw from "twin.macro"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "functions/AnimationRevealPage.js";
 import Header from "components/headers/headerNoOrder";
-import Top from "pages/forms/UserInputs";
+import Top from "pages/forms/UserInputsLogin";
 import Footer from "components/footers/MainFooter";
 import { SectionHeading, Subheading as SubheadingBase } from "components/basic/Headings.js";
 
@@ -22,8 +22,8 @@ export default () => {
         <Header />
         <HeaderContainer>
             <Subheading>Step 1</Subheading>
-            <Heading>Help Us Get to Know Our New Partner</Heading>
-            <Description>Your data is secure, will not be shared with anyone, and is solely for the purpose of getting to know you and tracking your order!</Description>
+            <Heading>Login</Heading>
+            <Description>Welcome Back!  We're Glad to Have You!</Description>
         </HeaderContainer>
         <Top />
         <Footer />

@@ -16,7 +16,8 @@ import StepTwo from "./pages/OrderFormStepTwo.js";
 import JumpstartForm from "./pages/forms/JumpstartForm.js";
 import BoostForm from "./pages/forms/BoostForm.js";
 import ThrottleForm from "./pages/forms/ThrottleForm.js";
-import UserForm from "./pages/forms/UserForm.js";
+import Register from "./pages/forms/UserFormRegister.js";
+import Login from "./pages/forms/UserFormLogin";
 
 export default function App() {
 
@@ -47,8 +48,11 @@ export default function App() {
         <Route exact path="/additional">
           <StepTwo />
         </Route>
-        <Route exact path="/userinfo">
-          <UserForm />
+        <Route exact path="/register">
+          <Register />
+        </Route>
+        <Route exact path="/login">
+          <Login />
         </Route>
         <Route exact path="/jumpstart">
           <JumpstartForm />

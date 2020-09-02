@@ -63,6 +63,7 @@ export default () => {
   const [userData, setUserData] = useState({
     name: "",
     email: "",
+    password: "",
     phone: "",
     emailPref: false,
     phonePref: false,
@@ -79,8 +80,9 @@ export default () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`https://cyphen-main.herokuapp.com/api/form/orders`, userData)
+    axios.post(`https://cyphen-main.herokuapp.com/api/users/register`, userData)
     .then(res => {
+      alert("success")
       window.localStorage.setItem('userEmail', userData.email)
       // setTimeout(() => {
       //   history.push("/order")
@@ -111,6 +113,10 @@ export default () => {
                     <Label htmlFor="email-input">Your Email Address</Label>
                     <Input id="email-input" type="email" name="email" onChange={handleChange} placeholder="E.g. john@mail.com" />
                   </InputContainer>
+                  <InputContainer>
+                  <Label htmlFor="password-input">Password</Label>
+                  <Input id="password-input" type="pass" name="password" onChange={handleChange} placeholder="Enter Password" />
+                </InputContainer>
                   <InputContainer tw="flex-1">
                     <Label htmlFor="phone-input">Your Phone Number</Label>
                     <Input id="phone-input" type="tel" name="phone" onChange={handleChange} placeholder="Phone (Optional)" />

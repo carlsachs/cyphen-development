@@ -135,7 +135,7 @@ export default ({
                 ))}
               </PlanFeatures>
               <PlanAction>
-                <BuyNowButton onClick={() => history.push("/userinfo")}>{primaryButtonText}</BuyNowButton>
+                <BuyNowButton onClick={() => history.push("/register")}>{primaryButtonText}</BuyNowButton>
               </PlanAction>
             </Plan>
           ))}

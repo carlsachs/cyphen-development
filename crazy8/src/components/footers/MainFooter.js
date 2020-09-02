@@ -71,14 +71,13 @@ export default (roundedHeaderButton = false) => {
         <Row>
           <LogoContainer>
             <LogoImg src={logo} />
-            <LogoText onClick="#order">Cyphen</LogoText>
+            <LogoText onClick="/">Cyphen</LogoText>
           </LogoContainer>
           <LinksContainer>
             <Link href="/">Home</Link>
             <Link href="/team">Team</Link>
             <Link href="#">Work</Link>
-            <Link href="#">Pricing</Link>
-            <Link href="#">Consultation</Link>
+            <Link href="/pricing">Pricing</Link>
             <Link href="/contact">Contact Us</Link>
           </LinksContainer>
           <SocialLinksContainer>
@@ -88,7 +87,7 @@ export default (roundedHeaderButton = false) => {
             <SocialLink href="https://twitter.com">
               <TwitterIcon />
             </SocialLink>
-            <SocialLink href="https://linkedin.com">
+            <SocialLink href="https://www.linkedin.com/company/cyphen-development">
               <LinkedinIcon />
             </SocialLink>
           </SocialLinksContainer>
