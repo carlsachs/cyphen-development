@@ -8,7 +8,6 @@ import AnimationRevealPage from "functions/AnimationRevealPage.js";
 import Header from "components/headers/headerJumpstart";
 import Footer from "components/footers/FooterJumpstart";
 import { SectionHeading, Subheading as SubheadingBase } from "components/basic/Headings.js";
-import { ContentWithPaddingXl } from "components/basic/Layouts.js";
 import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg"
 
 const Container = tw.div`relative`;
@@ -70,13 +69,15 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
       scheme: "",
       blacklistColors: "",
       content: "",
+      picture: "",
+      logoScheme: "",
       brandName: "",
       brandSlogan: "",
       brandDescription: "",
-      comments: "",
-      logoLink: "",
       addedContent: "",
+      comments: "",
       extra: "",
+      userId: window.localStorage.getItem("id")
     })
 
     const handleChange = (e) => {
@@ -203,11 +204,11 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
                   <Column>
                     <InputContainer>
                       <Label htmlFor="logo-input">Logo</Label>
-                      <Input id="logo-input" type="text" name="logoLink" onChange={handleChange} placeholder="Link to Logo" />
+                      <Input id="logo-input" type="text" name="logoScheme" onChange={handleChange} placeholder="Link to Logo" />
                     </InputContainer>
                     <InputContainer>
                       <Label htmlFor="pictures-input">Pictures</Label>
-                      <Input id="pictures-input" type="text" name="pictures" onChange={handleChange} placeholder="Ex: Link/Upload pictures here" />
+                      <Input id="pictures-input" type="text" name="picture" onChange={handleChange} placeholder="Ex: Link/Upload pictures here" />
                     </InputContainer>
                     <InputContainer tw="flex-1">
                       <Label htmlFor="other-input">Other Content Upload</Label>

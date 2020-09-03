@@ -78,6 +78,8 @@ export default () => {
     axios.post(`https://cyphen-main.herokuapp.com/api/users/login`, userLogin)
     .then(res => {
       alert("success")
+      window.localStorage.setItem("id", res.data.id)
+      console.log(res.data)
       setTimeout(() => {
         history.push("/order")
         }, 1000)

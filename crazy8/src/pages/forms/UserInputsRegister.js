@@ -83,14 +83,12 @@ export default () => {
     axios.post(`https://cyphen-main.herokuapp.com/api/users/register`, userData)
     .then(res => {
       alert("success")
-      window.localStorage.setItem('userEmail', userData.email)
-      // setTimeout(() => {
-      //   history.push("/order")
-      //   }, 1000)
     })
     .catch(err => {
       console.log(err)
-      alert("Uh Oh! Something went wrong.  If the issue persists, email us as cyphensupport@protonmail.com.")
+      setTimeout(() => {
+        history.push("/login")
+        }, 1000)
     })
   }
 
