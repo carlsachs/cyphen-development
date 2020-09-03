@@ -77,7 +77,7 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
       addedContent: "",
       comments: "",
       extra: "",
-      userId: window.localStorage.getItem("id")
+      user_id: window.localStorage.getItem("id")
     })
 
     const handleChange = (e) => {
@@ -126,21 +126,21 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
                       <Column>
                         <InputContainer>
                           <Label htmlFor="colors-input">Colors (Hex Values)</Label>
-                          <Input id="colors-input" type="text" name="colors" onChange={handleChange} placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
+                          <Input id="colors" type="text" name="colors" onChange={handleChange} placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
                         </InputContainer>
                         <InputContainer>
                           <Label htmlFor="scheme-input">Light Vs. Dark Scheme</Label>
-                          <Input id="scheme-input" type="text" name="scheme" onChange={handleChange} placeholder="Ex: Light Scheme" />
+                          <Input id="scheme" type="text" name="scheme" onChange={handleChange} placeholder="Ex: Light Scheme" />
                         </InputContainer>
                         <InputContainer tw="flex-1">
                           <Label htmlFor="blacklist-input">Blacklisted Colors</Label>
-                          <Input id="blacklist-input" type="text" name="blacklistColors" onChange={handleChange} placeholder="Ex: No Red" />
+                          <Input id="blacklistColors" type="text" name="blacklistColors" onChange={handleChange} placeholder="Ex: No Red" />
                         </InputContainer>
                       </Column>
                       <Column>
                         <InputContainer tw="flex-1">
-                          <Label htmlFor="blacklist-input">Anything else related to color/scheme?</Label>
-                          <TextArea id="blacklist-input" type="text" name="content" onChange={handleChange} placeholder="Ex: Make sure all the buttons start off as the secondary color, then switch to the primary color on hover." />
+                          <Label htmlFor="content-input">Anything else related to color/scheme?</Label>
+                          <TextArea id="content" type="text" name="content" onChange={handleChange} placeholder="Ex: Make sure all the buttons start off as the secondary color, then switch to the primary color on hover." />
                         </InputContainer>
                       </Column>
                     </TwoColumn>
@@ -165,21 +165,21 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
                     <Column>
                       <InputContainer>
                         <Label htmlFor="brandName-input">Brand Name</Label>
-                        <Input id="brandName-input" type="text" name="brandName" onChange={handleChange} placeholder="Ex: Cyphen Development" />
+                        <Input id="brandName" type="text" name="brandName" onChange={handleChange} placeholder="Ex: Cyphen Development" />
                       </InputContainer>
                       <InputContainer>
                         <Label htmlFor="slogan-input">Brand Slogan</Label>
-                        <Input id="slogan-input" type="text" name="brandSlogan" onChange={handleChange} placeholder="Ex: The Professional Look You Deserve" />
+                        <Input id="brandSlogan" type="text" name="brandSlogan" onChange={handleChange} placeholder="Ex: The Professional Look You Deserve" />
                       </InputContainer>
                       <InputContainer tw="flex-1">
                         <Label htmlFor="summary-input">Brand Summary</Label>
-                        <TextArea id="summary-input" type="text" name="brandDescription" onChange={handleChange} placeholder="Ex: We use the most modern technologies to produce web applications delivering efficient and secure business interfaces to clients around the world." />
+                        <TextArea id="brandDescription" type="text" name="brandDescription" onChange={handleChange} placeholder="Ex: We use the most modern technologies to produce web applications delivering efficient and secure business interfaces to clients around the world." />
                       </InputContainer>
                     </Column>
                     <Column>
                       <InputContainer tw="flex-1">
-                        <Label htmlFor="blacklist-input">Anything else related to your brand?</Label>
-                        <TextArea id="blacklist-input" type="text" name="comments" onChange={handleChange} placeholder="Ex: Our brand takes pride in a simple, modern look.  Please implement that feel into our interface." />
+                        <Label htmlFor="comments-input">Anything else related to your brand?</Label>
+                        <TextArea id="comments" type="text" name="comments" onChange={handleChange} placeholder="Ex: Our brand takes pride in a simple, modern look.  Please implement that feel into our interface." />
                       </InputContainer>
                     </Column>
                   </TwoColumn>
@@ -204,15 +204,15 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
                   <Column>
                     <InputContainer>
                       <Label htmlFor="logo-input">Logo</Label>
-                      <Input id="logo-input" type="text" name="logoScheme" onChange={handleChange} placeholder="Link to Logo" />
+                      <Input id="logoScheme" type="text" name="logoScheme" onChange={handleChange} placeholder="Link to Logo" />
                     </InputContainer>
                     <InputContainer>
-                      <Label htmlFor="pictures-input">Pictures</Label>
-                      <Input id="pictures-input" type="text" name="picture" onChange={handleChange} placeholder="Ex: Link/Upload pictures here" />
+                      <Label htmlFor="picture-input">Pictures</Label>
+                      <Input id="picture" type="text" name="picture" onChange={handleChange} placeholder="Ex: Link/Upload pictures here" />
                     </InputContainer>
                     <InputContainer tw="flex-1">
-                      <Label htmlFor="other-input">Other Content Upload</Label>
-                      <TextArea id="other-input" type="text" name="addedContent" onChange={handleChange} placeholder="Ex: Link to other content" />
+                      <Label htmlFor="addedContent-input">Other Content Upload</Label>
+                      <TextArea id="addedContent" type="text" name="addedContent" onChange={handleChange} placeholder="Ex: Link to other content" />
                     </InputContainer>
                   </Column>
                   <Column>
