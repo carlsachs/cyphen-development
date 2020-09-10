@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -8,6 +9,7 @@ import { PrimaryButton as PrimaryButtonBase } from "components/basic/Buttons.js"
 import { Container, ContentWithPaddingXl } from "components/basic/Layouts.js";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-6.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
+import Pricing from "../../pages/Pricing";
 
 const HeaderContainer = tw.div`w-full flex flex-col items-center`;
 const Subheading = tw(SubheadingBase)`mb-4 text-blue-500`;
@@ -81,6 +83,9 @@ export default ({
     }
   ]
 }) => {
+
+  let history = useHistory();
+  
   const defaultPlans = [
     {
       name: "JumpStart",
@@ -136,7 +141,7 @@ export default ({
                 ))}
               </PlanFeatures>
               <PlanAction>
-                <BuyNowButton>{primaryButtonText}</BuyNowButton>
+                <BuyNowButton onClick={() => history.push("/pricing")}>{primaryButtonText}</BuyNowButton>
               </PlanAction>
             </Plan>
           ))}

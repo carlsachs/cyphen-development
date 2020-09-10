@@ -274,7 +274,7 @@ export default () => {
             justifyContent: "center",
             marginTop: "2%"
           }}>
-              <SubmitButton type="submit" onClick={handleSubmit}>Continue</SubmitButton>
+              <SubmitButton type="submit" onClick={handleSubmit, window.open("https://checkout.square.site/buy/OQFSQ3J4A2FW5TYR4ETPFWKF")}>Continue</SubmitButton>
           </div>
           </div>
         </Content>

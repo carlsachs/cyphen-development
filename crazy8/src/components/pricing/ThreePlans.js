@@ -94,7 +94,7 @@ export default ({
   const defaultPlans = [
     {
       name: "Jumpstart",
-      price: "$149",
+      price: "$199",
       duration: "2 Day Delivery",
       mainFeature: "Suited for Single-Page Apps",
       features: ["1 Page", "1 Form", "Content Upload", "1 Month Free Dev Support"],
@@ -103,7 +103,7 @@ export default ({
     },
     {
       name: "Throttle",
-      price: "$1349",
+      price: "$2149",
       duration: "14 Day Delivery",
       mainFeature: "Suited for Complex Websites",
       features: ["15 Pages", "CyphenBoard", "Free Logo/Graphics", "Free 30s Business Animated Video"],
@@ -112,7 +112,7 @@ export default ({
     },
     {
       name: "Boost",
-      price: "$549",
+      price: "$799",
       duration: "7 Day Delivery",
       mainFeature: "Suited for Startups",
       features: ["5 Pages", "Free Logo/Graphics", "Unlimited Forms", "3 Months Dev Support"],
