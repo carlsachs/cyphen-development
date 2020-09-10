@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import tw from "twin.macro"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "functions/AnimationRevealPage.js";
@@ -23,6 +24,7 @@ export default () => {
         <HeaderContainer>
             <Subheading>Step 1</Subheading>
             <Heading>Register</Heading>
+            <Subheading>Already have an account? <Link to="/login">Login</Link></Subheading>
             <Description>Your data is secure, will not be shared with anyone, and is solely for the purpose of getting to know you and tracking your order!</Description>
         </HeaderContainer>
         <Top />

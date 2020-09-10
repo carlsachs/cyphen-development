@@ -10,10 +10,7 @@ import Header from "components/headers/headerJumpstart";
 import Footer from "components/footers/FooterJumpstart";
 import { SectionHeading, Subheading as SubheadingBase } from "components/basic/Headings.js";
 import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg"
-import { loadStripe } from '@stripe/stripe-js';
-import JumpstartCheckout from "components/payment/JumpstartCheckout";
-// stripe
-import {useStripe, useElements, CardElement} from '@stripe/react-stripe-js';
+
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
@@ -102,7 +99,7 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
       .then(res => {
         alert("post successful")
         setTimeout(() => {
-          history.push("/additional")
+          history.push("https://checkout.square.site/buy/AE4ZOF5B6VBSPC3JJD7HMWXG")
           }, 1000)
       })
       .catch(err => {
@@ -245,14 +242,11 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
                 display: "flex",
                 justifyContent: "center",
               }}>
-                <SubmitButton role="link" onClick={handleSubmit, window.open("https://checkout.square.site/buy/6RUXDYLDNVQKOCZACGVBSOEB")}>Checkout</SubmitButton>
+                <SubmitButton role="link" onClick={handleSubmit}>Checkout</SubmitButton>
               </div>
           </div>
         </Content>
       </Container>
-      <Content>
-          <JumpstartCheckout />
-      </Content>
         </Content>
         <Footer />
     </AnimationRevealPage>
