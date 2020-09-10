@@ -99,8 +99,8 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
       .then(res => {
         alert("post successful")
         setTimeout(() => {
-          history.push("https://checkout.square.site/buy/AE4ZOF5B6VBSPC3JJD7HMWXG")
-          }, 1000)
+          window.open("https://checkout.square.site/buy/AE4ZOF5B6VBSPC3JJD7HMWXG")
+          }, 300)
       })
       .catch(err => {
         alert("posting error")
