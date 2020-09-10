@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { useHistory } from "react-router-dom";
+import ReactDOM from 'react-dom';
 import tw from "twin.macro"; //eslint-disable-line
 import styled from "styled-components";
 import axios from "axios";
@@ -9,6 +10,10 @@ import Header from "components/headers/headerJumpstart";
 import Footer from "components/footers/FooterJumpstart";
 import { SectionHeading, Subheading as SubheadingBase } from "components/basic/Headings.js";
 import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg"
+import { loadStripe } from '@stripe/stripe-js';
+import JumpstartCheckout from "components/payment/JumpstartCheckout";
+// stripe
+import {useStripe, useElements, CardElement} from '@stripe/react-stripe-js';
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
@@ -79,6 +84,9 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
       extra: "",
       user_id: window.localStorage.getItem("id")
     })
+    const [email, setEmail] = useState({
+      email: ""
+    })
 
     const handleChange = (e) => {
       e.preventDefault();
@@ -101,6 +109,7 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
         alert("posting error")
       })
     }
+  
 
     return (
 
@@ -236,11 +245,14 @@ background: linear-gradient(90deg, rgba(139,62,218,0.9094012605042017) 0%, rgba(
                 display: "flex",
                 justifyContent: "center",
               }}>
-                <SubmitButton type="submit" onClick={handleSubmit}>Continue</SubmitButton>
+                <SubmitButton role="link" onClick={handleSubmit, window.open("https://checkout.square.site/buy/6RUXDYLDNVQKOCZACGVBSOEB")}>Checkout</SubmitButton>
               </div>
           </div>
         </Content>
       </Container>
+      <Content>
+          <JumpstartCheckout />
+      </Content>
         </Content>
         <Footer />
     </AnimationRevealPage>

@@ -85,6 +85,7 @@ export default () => {
       brandSlogan: "",
       brandDescription: "",
       addedContent: "",
+      contentExtra: "",
       comments: "",
       extra: "",
       user_id: window.localStorage.getItem("id")

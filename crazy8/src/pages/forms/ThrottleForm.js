@@ -82,23 +82,27 @@ export default () => {
     let history = useHistory();
 
     const [throttle, setThrottle] = useState({
-      colors: "",
+      color: "",
       scheme: "",
       blacklistColors: "",
       content: "",
-      brandName: "",
-      brandSlogan: "",
-      brandDescription: "",
-      comments: "",
+      pictures: "",
       logoScheme: "",
       logoColor: "",
       logoIdea: "",
-      addedContent: "",
-      extra: "",
+      brandName: "",
+      brandSlogan: "",
+      brandDescription: "",
       cyphenBoardColor: "",
+      cyphenScheme: "",
+      blacklistColorsBoard: "",
       adminUsername: "",
       adminTempPassword: "",
       animationConcept: "",
+      addedContent: "",
+      comments: "",
+      extra: "",
+      user_id: window.localStorage.getItem("id")
     })
 
     const handleChange = (e) => {
@@ -147,7 +151,7 @@ export default () => {
                       <Column>
                         <InputContainer>
                           <Label htmlFor="colors-input">Colors (Hex Values)</Label>
-                          <Input id="colors-input" type="text" name="colors" onChange={handleChange} placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
+                          <Input id="colors-input" type="text" name="color" onChange={handleChange} placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
                         </InputContainer>
                         <InputContainer>
                           <Label htmlFor="scheme-input">Light Vs. Dark Scheme</Label>
@@ -198,7 +202,14 @@ export default () => {
                         </InputContainer>
                       </Column>
                       <Column>
-                        
+                      <InputContainer tw="flex-1">
+                        <Label htmlFor="blacklist-input">Admin Username</Label>
+                        <Input id="blacklist-input" type="text" name="adminUsername" onChange={handleChange} placeholder="Username" />
+                      </InputContainer>
+                      <InputContainer tw="flex-1">
+                        <Label htmlFor="blacklist-input">Blacklisted Colors</Label>
+                        <Input id="blacklist-input" type="text" name="adminTempPassword" onChange={handleChange} placeholder="This is your temporary password?" />
+                      </InputContainer>
                       </Column>
                     </TwoColumn>
                   </form>

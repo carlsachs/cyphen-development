@@ -3,6 +3,9 @@ import "styles/globalStyles.css";
 import React from "react";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
+import {loadStripe} from '@stripe/stripe-js';
+import {Elements} from '@stripe/react-stripe-js';
+
 import LandingPage from "pages/LandingPage.js";
 import Contact from "pages/ContactUs";
 
@@ -20,6 +23,9 @@ import Register from "./pages/forms/UserFormRegister.js";
 import Login from "./pages/forms/UserFormLogin";
 
 export default function App() {
+
+  const stripePromise = loadStripe('pk_test_51HKzDHEcVyNtCHEW4SzW2thg3LOVBUJOdrdHniqfEJPL4RyaUgI94YpSSeBXjazqy49kjIS5scvqZu1Ai1GVnGMK003ADuPohG');
+
 
   return (
     <Router>
@@ -55,7 +61,9 @@ export default function App() {
           <Login />
         </Route>
         <Route exact path="/jumpstart">
+
           <JumpstartForm />
+
         </Route>
         <Route exact path="/boost">
           <BoostForm />
