@@ -73,7 +73,7 @@ export default ({
   heading = "Ex Post Facto Plans",
   description = "We belive that just passing you source code and calling it good is criminal.  We provide two packages, based on length of support and marketing after-the-fact.",
   plans = null,
-  primaryButtonText = "Add To Cart",
+  primaryButtonText = "Purchase",
   planDurations = [
     {
       text: "Month",
@@ -99,12 +99,12 @@ export default ({
       mainFeature: "Monthly Marketing",
       features: ["Facebook Advertising", "Instagram Advertisements", "SEO Marketing", "24/7 Assistance", "Social Media Consultation"]
     },
-    {
-      name: "Financial Consulatation",
-      durationPrices: ["Varies", "Varies"],
-      mainFeature: "Monthly Financial Consultation",
-      features: ["Quickbooks Consultation", "Budgeting", "General Finance Processes", "Procedure Manuals", "Financial Statement Compilation", "Data Entry", "Microsoft Excel"]
-    }
+    // {
+    //   name: "Financial Consulatation",
+    //   durationPrices: ["Varies", "Varies"],
+    //   mainFeature: "Monthly Financial Consultation",
+    //   features: ["Quickbooks Consultation", "Budgeting", "General Finance Processes", "Procedure Manuals", "Financial Statement Compilation", "Data Entry", "Microsoft Excel"]
+    // }
   ];
 
   if (!plans) plans = defaultPlans;

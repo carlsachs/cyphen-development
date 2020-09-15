@@ -22,7 +22,7 @@ export default () => {
       <Header />
       <Features
         subheading={<Subheading>Pricing</Subheading>}
-        heading="Three Core Packages"
+        heading="Core Packages"
         description="Our web development services come in three core packages, with additional services, support, and features available upon request.  If you don't see something you need, message us!"
         cards={[
           {
