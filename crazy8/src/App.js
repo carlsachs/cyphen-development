@@ -61,9 +61,7 @@ export default function App() {
           <Login />
         </Route>
         <Route exact path="/jumpstart">
-
           <JumpstartForm />
-
         </Route>
         <Route exact path="/boost">
           <BoostForm />

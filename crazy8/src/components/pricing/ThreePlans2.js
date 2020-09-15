@@ -91,15 +91,15 @@ export default ({
   primaryButtonText = "Add"
 }) => {
   const defaultPlans = [
-    {
-      name: "Financial Consulting",
-      price: "Varies",
-      duration: "Monthly",
-      mainFeature: "Features",
-      features: ["Quickbooks", "Budgeting", "General Finance Processes", "Finance Statement Compilation"],
-      url: "#"
+    // {
+    //   name: "Financial Consulting",
+    //   price: "Varies",
+    //   duration: "Monthly",
+    //   mainFeature: "Features",
+    //   features: ["Quickbooks", "Budgeting", "General Finance Processes", "Finance Statement Compilation"],
+    //   url: "#"
       
-    },
+    // },
     {
       name: "Developer Support",
       price: "$199",

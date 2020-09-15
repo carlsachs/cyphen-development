@@ -119,7 +119,7 @@ export default () => {
       .then(res => {
         alert("post successful")
         setTimeout(() => {
-          history.push("/additional")
+          window.open("https://checkout.square.site/buy/2OGVQC6KPQWYIMAPCIGPEQ7Z")
           }, 1000)
       })
       .catch(err => {
@@ -360,7 +360,7 @@ export default () => {
             display: "flex",
             justifyContent: "center"
           }}>
-              <SubmitButton type="submit" onClick={handleSubmit, window.open("https://checkout.square.site/buy/2OGVQC6KPQWYIMAPCIGPEQ7Z")}>Continue</SubmitButton>
+              <SubmitButton type="submit" onClick={handleSubmit}>Continue</SubmitButton>
           </div>
         </Content>
       </Container>

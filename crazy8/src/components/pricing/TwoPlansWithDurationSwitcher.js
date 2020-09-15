@@ -89,20 +89,20 @@ export default ({
   const defaultPlans = [
     {
       name: "JumpStart",
-      durationPrices: ["$149", "$149"],
+      durationPrices: ["$199", "$199"],
       mainFeature: "2 Day Delivery",
       features: ["1 Page", "Full Source Code", "Content Upload", "1 Month Free Dev Support", "1 Form Max"]
     },
     {
       name: "Boost",
-      durationPrices: ["$549", "$549"],
+      durationPrices: ["$799", "$799"],
       mainFeature: "7 Day Delivery",
       features: ["5 Pages", "Full Source Code", "Free Logo", "Custom Graphics", "Content Upload", "1 Month Free Support", "1 Month Free Marketing", "Unlimited Forms"],
       featured: true
     },
     {
       name: "Throttle",
-      durationPrices: ["$1349", "$1349"],
+      durationPrices: ["$2149", "$2149"],
       mainFeature: "14 Day Delivery",
       features: ["15 Pages", "Cyphen Admin Dashboard", "Full Source Code", "Free Business Animated Video", "Free Logo", "Custom Graphics", "Content Upload", "1 Year Free Dev Support", "3 Months Free Marketing", "Unlimited Forms"],
       featured: true
