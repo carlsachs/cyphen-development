@@ -88,16 +88,18 @@ export default ({
   const defaultPlans = [
     {
         name: "Developer Support",
-        durationPrices: ["$199", "$1499"],
+        price: "$199",
         mainFeature: "Monthly Developer Support",
         features: ["3 Revisions Per Month", "Code Refactoring", "Add 1 Page/Mo 50% OFF", "24/7 Assistance", "Feature Additions", "API Updates", "YEARLY: Unlimited Revisions"],
-        featured: true
+        featured: true,
+        link: "https://checkout.square.site/buy/ALYERZRKKNPRFINLDYBR6UPC"
     },
     {
       name: "Marketing Consulatation",
-      durationPrices: ["$149", "$1250"],
+      price: "$249",
       mainFeature: "Monthly Marketing",
-      features: ["Facebook Advertising", "Instagram Advertisements", "SEO Marketing", "24/7 Assistance", "Social Media Consultation"]
+      features: ["Facebook Advertising", "Instagram Advertisements", "SEO Marketing", "24/7 Assistance", "Social Media Consultation"],
+      link: "https://checkout.square.site/buy/WUSQHB6B5XSCC5OITCD7N3OA"
     },
     // {
     //   name: "Financial Consulatation",
@@ -129,7 +131,7 @@ export default ({
             <Plan key={index} featured={plan.featured}>
               <PlanHeader>
                 <span className="priceAndDuration">
-                  <span className="price">{plan.durationPrices[activeDurationIndex]}</span>
+                  <span className="price">{plan.price}</span>
                   <span className="slash"> / </span>
                   <span className="duration">{planDurations[activeDurationIndex].text}</span>
                 </span>
@@ -144,7 +146,7 @@ export default ({
                 ))}
               </PlanFeatures>
               <PlanAction>
-                <BuyNowButton>{primaryButtonText}</BuyNowButton>
+                <BuyNowButton onClick={() => window.open(plan.link)}>{primaryButtonText}</BuyNowButton>
               </PlanAction>
             </Plan>
           ))}

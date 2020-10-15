@@ -5,8 +5,8 @@ import styled from "styled-components"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
 import Header from "components/headers/headerInnerPages.js";
 import Footer from "components/footers/MainFooter.js";
-import Pricing from "components/pricing/TwoPlansWithDurationSwitcher2";
-import PricingLength from "components/pricing/TwoPlansWithDurationSwitcherTime2";
+import Pricing from "components/pricing/PlansTwo";
+import PricingLength from "components/pricing/ExtrasThree";
 import Features from "components/brokenUpComps/ThreeCol.js";
 import Features2 from "components/brokenUpComps/ThreeCol2.js";
 import TeamCardGrid from "components/cards/MeetTheTeam.js";

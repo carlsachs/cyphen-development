@@ -1,8 +1,11 @@
 {
-  "name": "treact",
-  "version": "0.1.0",
+  "name": "Cyphen",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^1.9.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -25,6 +28,7 @@
     "react-slick": "^0.25.2",
     "reactstrap": "^8.5.1",
     "slick-carousel": "^1.8.1",
+    "stripe": "^8.89.0",
     "styled-components": "^5.0.1",
     "tailwindcss": "^1.2.0",
     "twin.macro": "^1.0.0-alpha.7",
