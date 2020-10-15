@@ -87,25 +87,25 @@ export default ({
         },
       ],
     },
-    {
-      imageSrc: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=2.95&w=512&h=512&q=80",
-      position: "Financial Advisor",
-      name: "Kirsten Wolfe",
-      links: [
-        {
-          url: "https://twitter.com",
-          icon: TwitterIcon,
-        },
-        {
-          url: "https://linkedin.com",
-          icon: LinkedinIcon,
-        },
-        {
-          url: "https://github.com",
-          icon: GithubIcon,
-        },
-      ],
-    }
+    // {
+    //   imageSrc: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=2.95&w=512&h=512&q=80",
+    //   position: "Financial Advisor",
+    //   name: "Kirsten Wolfe",
+    //   links: [
+    //     {
+    //       url: "https://twitter.com",
+    //       icon: TwitterIcon,
+    //     },
+    //     {
+    //       url: "https://linkedin.com",
+    //       icon: LinkedinIcon,
+    //     },
+    //     {
+    //       url: "https://github.com",
+    //       icon: GithubIcon,
+    //     },
+    //   ],
+    // }
   ]
 }) => {
   return (

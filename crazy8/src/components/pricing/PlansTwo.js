@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -11,7 +12,7 @@ import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7
 
 const HeaderContainer = tw.div`w-full flex flex-col items-center`;
 const Subheading = tw(SubheadingBase)`mb-4 text-blue-500`;
-const Heading = tw(SectionHeading)`w-full text-blue-800`;
+const Heading = tw(SectionHeading)`w-full text-blue-700`;
 const Description = tw(SectionDescription)`w-full text-center text-blue-400`;
 
 const PlanDurationSwitcher = tw.div`block w-full max-w-xs sm:inline-block sm:w-auto border-2 rounded-full px-1 py-1 mt-8`;
@@ -58,7 +59,7 @@ const PlanFeatures = styled.div`
 
 const PlanAction = tw.div`px-4 pb-8`;
 const BuyNowButton = styled(PrimaryButtonBase)`
-  ${tw`rounded-full tracking-wider py-4 w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline bg-blue-800 text-blue-100 hocus:bg-blue-500 hocus:text-blue-100`}
+  ${tw`rounded-full tracking-wider py-4 w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline bg-blue-700 text-blue-100 hocus:bg-blue-400 hocus:text-blue-700`}
 `;
 
 const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
@@ -69,9 +70,6 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 `;
 
 export default ({
-  subheading = "Package Pricing",
-  heading = "MVP Plans.",
-  description = "We think that when ordering through us, you leave satisfied, and continue business with us in coming months, forming a business relationship.",
   plans = null,
   primaryButtonText = "Get Started",
   planDurations = [
@@ -81,25 +79,29 @@ export default ({
     }
   ]
 }) => {
+
+  let history = useHistory();
+
   const defaultPlans = [
     {
       name: "JumpStart",
-      durationPrices: ["$149", "$149"],
-      mainFeature: "2 Day Delivery",
-      features: ["1 Page", "Full Source Code", "Content Upload", "1 Month Free Dev Support", "1 Form Max"]
+      durationPrices: ["$199", "$199"],
+      mainFeature: "1 Day Delivery",
+      features: ["1 Page", "Full Source Code", "Content Upload", "1 Month Free Support", "1 Form Max"],
+      featured: false
     },
     {
       name: "Boost",
-      durationPrices: ["$549", "$549"],
-      mainFeature: "7 Day Delivery",
-      features: ["5 Pages", "Full Source Code", "Free Logo", "Custom Graphics", "Content Upload", "1 Month Free Support", "1 Month Free Marketing", "Unlimited Forms"],
-      featured: true
+      durationPrices: ["$799", "$799"],
+      mainFeature: "3 Day Delivery",
+      features: ["5 Pages", "Full Source Code", "Free Logo", "Custom Graphics", "Content Upload", "3 Months Free Support", "Unlimited Forms"],
+      featured: false
     },
     {
       name: "Throttle",
-      durationPrices: ["$1349", "$1349"],
-      mainFeature: "14 Day Delivery",
-      features: ["15 Pages", "Cyphen Admin Dashboard", "Full Source Code", "Free Business Animated Video", "Free Logo", "Custom Graphics", "Content Upload", "1 Year Free Dev Support", "3 Months Free Marketing", "Unlimited Forms"],
+      durationPrices: ["$2149", "$2149"],
+      mainFeature: "7 Day Delivery",
+      features: ["15 Pages", "Cyphen Admin Dashboard", "Full Source Code", "Free Business Animated Video", "Free Logo", "Custom Graphics", "Content Upload", "1 Year Dev Support"],
       featured: true
     }
   ];
@@ -110,12 +112,6 @@ export default ({
 
   return (
     <Container>
-      <ContentWithPaddingXl>
-        <HeaderContainer>
-          {subheading && <Subheading>{subheading}</Subheading>}
-          <Heading>{heading}</Heading>
-          {description && <Description>{description}</Description>}
-        </HeaderContainer>
         <PlansContainer>
           {plans.map((plan, index) => (
             <Plan key={index} featured={plan.featured}>
@@ -136,12 +132,11 @@ export default ({
                 ))}
               </PlanFeatures>
               <PlanAction>
-                <BuyNowButton>{primaryButtonText}</BuyNowButton>
+                <BuyNowButton onClick={() => history.push("/register")}>{primaryButtonText}</BuyNowButton>
               </PlanAction>
             </Plan>
           ))}
         </PlansContainer>
-      </ContentWithPaddingXl>
       <DecoratorBlob1 />
       <DecoratorBlob2 />
     </Container>

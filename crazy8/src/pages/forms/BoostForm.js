@@ -77,15 +77,18 @@ export default () => {
       scheme: "",
       blacklistColors: "",
       content: "",
-      brandName: "",
-      brandSlogan: "",
-      brandDescription: "",
-      comments: "",
+      pictures: "",
       logoScheme: "",
       logoColor: "",
       logoIdea: "",
+      brandName: "",
+      brandSlogan: "",
+      brandDescription: "",
       addedContent: "",
+      contentExtra: "",
+      comments: "",
       extra: "",
+      user_id: window.localStorage.getItem("id")
     })
 
     const handleChange = (e) => {
@@ -134,21 +137,21 @@ export default () => {
                       <Column>
                         <InputContainer>
                           <Label htmlFor="colors-input">Colors (Hex Values)</Label>
-                          <Input id="colors-input" type="text" name="colors" onChange={handleChange} placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
+                          <Input id="colors" type="text" name="colors" onChange={handleChange} placeholder="Ex: Primary: #1C7ED4, Secondary: #6CB5F5" />
                         </InputContainer>
                         <InputContainer>
                           <Label htmlFor="scheme-input">Light Vs. Dark Scheme</Label>
-                          <Input id="scheme-input" type="text" name="scheme" onChange={handleChange} placeholder="Ex: Light Scheme" />
+                          <Input id="scheme" type="text" name="scheme" onChange={handleChange} placeholder="Ex: Light Scheme" />
                         </InputContainer>
                         <InputContainer tw="flex-1">
                           <Label htmlFor="blacklist-input">Blacklisted Colors</Label>
-                          <Input id="blacklist-input" type="text" name="blacklistColors" onChange={handleChange} placeholder="Ex: No Red" />
+                          <Input id="blacklistColors" type="text" name="blacklistColors" onChange={handleChange} placeholder="Ex: No Red" />
                         </InputContainer>
                       </Column>
                       <Column>
                         <InputContainer tw="flex-1">
                           <Label htmlFor="blacklist-input">Anything else related to color/scheme?</Label>
-                          <TextArea id="blacklist-input" type="text" name="content" onChange={handleChange} placeholder="Ex: Make sure all the buttons start off as the secondary color, then switch to the primary color on hover." />
+                          <TextArea id="content" type="text" name="content" onChange={handleChange} placeholder="Ex: Make sure all the buttons start off as the secondary color, then switch to the primary color on hover." />
                         </InputContainer>
                       </Column>
                     </TwoColumn>
@@ -169,28 +172,20 @@ export default () => {
                 textAlign: "center"
               }}>Logo Design</h2>
               <form>
-                <TwoColumn>
                   <Column>
                     <InputContainer>
                       <Label htmlFor="idea-input">Logo Idea</Label>
-                      <TextArea id="idea-input" type="text" name="logoIdea" onChange={handleChange} placeholder="Ex: I want two 'C' letter joined in some way." />
+                      <TextArea id="logoIdea" type="text" name="logoIdea" onChange={handleChange} placeholder="Ex: I want two 'C' letter joined in some way." />
                     </InputContainer>
                     <InputContainer>
                       <Label htmlFor="logoScheme-input">Light Vs. Dark Scheme</Label>
-                      <Input id="logoScheme-input" type="text" name="logoScheme" onChange={handleChange} placeholder="Ex: Dark Scheme" />
+                      <Input id="logoScheme" type="text" name="logoScheme" onChange={handleChange} placeholder="Ex: Dark Scheme" />
                     </InputContainer>
                     <InputContainer tw="flex-1">
                       <Label htmlFor="logoColor-input">Blacklisted Colors</Label>
-                      <Input id="logoColor-input" type="text" name="logoColor" onChange={handleChange} placeholder="Ex: No Red" />
+                      <Input id="logoColor" type="text" name="logoColor" onChange={handleChange} placeholder="Ex: No Red" />
                     </InputContainer>
                   </Column>
-                  <Column>
-                    <InputContainer tw="flex-1">
-                      <Label htmlFor="blacklist-input">Anything else related to color/scheme?</Label>
-                      <TextArea id="blacklist-input" type="text" name="content" onChange={handleChange} placeholder="Ex: Make sure all the buttons start off as the secondary color, then switch to the primary color on hover." />
-                    </InputContainer>
-                  </Column>
-                </TwoColumn>
               </form>
             </div>
             <SvgDotPattern1 />
@@ -226,7 +221,7 @@ export default () => {
                     <Column>
                       <InputContainer tw="flex-1">
                         <Label htmlFor="blacklist-input">Anything else related to your brand?</Label>
-                        <TextArea id="blacklist-input" type="text" name="comments" onChange={handleChange} placeholder="Ex: Our brand takes pride in a simple, modern look.  Please implement that feel into our interface." />
+                        <TextArea id="comments" type="text" name="comments" onChange={handleChange} placeholder="Ex: Our brand takes pride in a simple, modern look.  Please implement that feel into our interface." />
                       </InputContainer>
                     </Column>
                   </TwoColumn>
@@ -251,21 +246,21 @@ export default () => {
                   <Column>
                     <InputContainer>
                       <Label htmlFor="logo-input">Logo</Label>
-                      <Input id="logo-input" type="text" name="logoLink" onChange={handleChange} placeholder="Link to Logo" />
+                      <Input id="logoScheme" type="text" name="logoScheme" onChange={handleChange} placeholder="Link to Logo" />
                     </InputContainer>
                     <InputContainer>
                       <Label htmlFor="pictures-input">Pictures</Label>
-                      <Input id="pictures-input" type="text" name="pictures" onChange={handleChange} placeholder="Ex: Link/Upload pictures here" />
+                      <Input id="pictures" type="text" name="pictures" onChange={handleChange} placeholder="Ex: Link/Upload pictures here" />
                     </InputContainer>
                     <InputContainer tw="flex-1">
                       <Label htmlFor="other-input">Other Content Upload</Label>
-                      <TextArea id="other-input" type="text" name="addedContent" onChange={handleChange} placeholder="Ex: Link to other content" />
+                      <TextArea id="addedContent" type="text" name="addedContent" onChange={handleChange} placeholder="Ex: Link to other content" />
                     </InputContainer>
                   </Column>
                   <Column>
                     <InputContainer tw="flex-1">
                       <Label htmlFor="-input">Anything else related to your content?</Label>
-                      <TextArea id="-input" type="text" name="extra" onChange={handleChange} placeholder="Ex: I prefer to have picture 1 and 3 on separate pages." />
+                      <TextArea id="extra" type="text" name="extra" onChange={handleChange} placeholder="Ex: I prefer to have picture 1 and 3 on separate pages." />
                     </InputContainer>
                   </Column>
                 </TwoColumn>
@@ -279,7 +274,7 @@ export default () => {
             justifyContent: "center",
             marginTop: "2%"
           }}>
-              <SubmitButton type="submit" onClick={handleSubmit}>Continue</SubmitButton>
+              <SubmitButton type="submit" onClick={handleSubmit, window.open("https://checkout.square.site/buy/OQFSQ3J4A2FW5TYR4ETPFWKF")}>Continue</SubmitButton>
           </div>
           </div>
         </Content>

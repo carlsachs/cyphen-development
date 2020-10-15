@@ -60,31 +60,29 @@ export default () => {
   let history = useHistory();
 
   //setting state for user form
-  const [userData, setUserData] = useState({
-    name: "",
+  const [userLogin, setUserLogin] = useState({
     email: "",
-    phone: "",
-    emailPref: false,
-    phonePref: false,
-    accept: true
+    password: ""
   });
 
   const handleChange = (e) => {
     e.preventDefault();
-    setUserData({
-      ...userData,
+    setUserLogin({
+      ...userLogin,
       [e.target.name]: e.target.value
     })
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`https://cyphen-main.herokuapp.com/api/form/orders`, userData)
+    axios.post(`https://cyphen-main.herokuapp.com/api/users/login`, userLogin)
     .then(res => {
-      window.localStorage.setItem('userEmail', userData.email)
-      // setTimeout(() => {
-      //   history.push("/order")
-      //   }, 1000)
+      alert("success")
+      window.localStorage.setItem("id", res.data.id)
+      console.log(res.data)
+      setTimeout(() => {
+        history.push("/order")
+        }, 1000)
     })
     .catch(err => {
       console.log(err)
@@ -99,89 +97,26 @@ export default () => {
           <div tw="mx-auto max-w-4xl">
             <h2 style={{
               color: "white"
-            }}>Your Information</h2>
+            }}>Credentials</h2>
             <form onSubmit={handleSubmit}>
               <TwoColumn>
                 <Column>
                   <InputContainer>
-                    <Label htmlFor="name-input">Your Name</Label>
-                    <Input id="name-input" type="text" name="name" onChange={handleChange} placeholder="Ex: Jane " />
-                  </InputContainer>
-                  <InputContainer>
-                    <Label htmlFor="email-input">Your Email Address</Label>
+                    <Label htmlFor="email-input">Email Address</Label>
                     <Input id="email-input" type="email" name="email" onChange={handleChange} placeholder="E.g. john@mail.com" />
                   </InputContainer>
-                  <InputContainer tw="flex-1">
-                    <Label htmlFor="phone-input">Your Phone Number</Label>
-                    <Input id="phone-input" type="tel" name="phone" onChange={handleChange} placeholder="Phone (Optional)" />
+                  <InputContainer>
+                  <Label htmlFor="password-input">Password</Label>
+                  <Input id="password-input" type="password" name="password" onChange={handleChange} placeholder="Enter Password" />
                   </InputContainer>
+
                 </Column>
                 <Column>
-                <div style={{
-                  justifyContent: "center"
-                }}>
-                  <div style={{
-                    marginLeft: "4%"
-                  }}>
-                    <h2 style={{
-                      color: "white",
-                    }}>Preferred Method</h2>
-                    <h3 style={{
-                      color: "white"
-                    }}>Of Contact</h3>
-                  </div>
-                    <Box2 onClick={() => setUserData({...userData, emailPref: true, phonePref: false})} style={{
-                      border: "1px solid white",
-                      borderRadius: "10px",
-                      height: "100px",
-                      width: "100%",
-                      marginTop: "5%",
-                      marginBottom: "5%",
-                    }}>
-                    <div style={{
-                      display: "flex",
-                      justifyContent: "center",
-                    }}>
-                      <EmailIcon style={{
-                        height: "50px",
-                        width: "50px",
-                        fill: "white",
-                        marginTop: "6.5%"
-                      }}/>
-                    </div>
-                    </Box2>
 
-                    <Box1 onClick={() => setUserData({...userData, phonePref: true, emailPref: false})} style={{
-                      border: "1px solid white",
-                      borderRadius: "10px",
-                      height: "100px",
-                      width: "100%",
-                    }}>
-                    <div style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      marginTop: "6.5%"
-                    }}>
-                    <PhoneIcon style={{
-                      height: "50px",
-                      width: "50px",
-                      fill: "white"
-                    }}/>
-                      </div>
-                    </Box1>
-                  </div>
                 </Column>
               </TwoColumn>
             </form>
             <div>
-            <InputContainer>
-            <div>
-              <Label htmlFor="terms-input" style={{
-                width: "100%",
-                textAlign: "center"
-              }}>By continuing, you acknowledge you have Read and Accept the Terms of Agreement</Label>
-            </div>
-            </InputContainer>
             <div style={{
               display: "flex",
               justifyContent: "center"

@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -8,6 +9,7 @@ import { PrimaryButton as PrimaryButtonBase } from "components/basic/Buttons.js"
 import { Container, ContentWithPaddingXl } from "components/basic/Layouts.js";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-6.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
+import Pricing from "../../pages/Pricing";
 
 const HeaderContainer = tw.div`w-full flex flex-col items-center`;
 const Subheading = tw(SubheadingBase)`mb-4 text-blue-500`;
@@ -69,41 +71,41 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 `;
 
 export default ({
-  subheading = "Time-Based Plan Pricing",
-  heading = "Ex Post Facto Plans",
-  description = "We belive that just passing you source code and calling it good is criminal.  We provide two packages, based on length of support and marketing after-the-fact.",
+  subheading = "Package Pricing",
+  heading = "MVP Plans.",
+  description = "We think that when ordering through us, you leave satisfied, and continue business with us in coming months, forming a business relationship.",
   plans = null,
-  primaryButtonText = "Add To Cart",
+  primaryButtonText = "Get Started",
   planDurations = [
     {
-      text: "Month",
-      switcherText: "Monthly",
-    },
-    {
-      text: "Year",
-      switcherText: "Yearly",
+      text: "Job",
+      switcherText: "Plans",
     }
   ]
 }) => {
+
+  let history = useHistory();
+  
   const defaultPlans = [
     {
-        name: "Developer Support",
-        durationPrices: ["$199", "$1499"],
-        mainFeature: "Monthly Developer Support",
-        features: ["3 Revisions Per Month", "Code Refactoring", "Add 1 Page/Mo 50% OFF", "24/7 Assistance", "Feature Additions", "API Updates", "YEARLY: Unlimited Revisions"],
-        featured: true
+      name: "JumpStart",
+      durationPrices: ["$199", "$199"],
+      mainFeature: "2 Day Delivery",
+      features: ["1 Page", "Full Source Code", "Content Upload", "1 Month Free Dev Support", "1 Form Max"]
     },
     {
-      name: "Marketing Consulatation",
-      durationPrices: ["$149", "$1250"],
-      mainFeature: "Monthly Marketing",
-      features: ["Facebook Advertising", "Instagram Advertisements", "SEO Marketing", "24/7 Assistance", "Social Media Consultation"]
+      name: "Boost",
+      durationPrices: ["$799", "$799"],
+      mainFeature: "7 Day Delivery",
+      features: ["5 Pages", "Full Source Code", "Free Logo", "Custom Graphics", "Content Upload", "1 Month Free Support", "1 Month Free Marketing", "Unlimited Forms"],
+      featured: true
     },
     {
-      name: "Financial Consulatation",
-      durationPrices: ["Varies", "Varies"],
-      mainFeature: "Monthly Financial Consultation",
-      features: ["Quickbooks Consultation", "Budgeting", "General Finance Processes", "Procedure Manuals", "Financial Statement Compilation", "Data Entry", "Microsoft Excel"]
+      name: "Throttle",
+      durationPrices: ["$2149", "$2149"],
+      mainFeature: "14 Day Delivery",
+      features: ["15 Pages", "Cyphen Admin Dashboard", "Full Source Code", "Free Business Animated Video", "Free Logo", "Custom Graphics", "Content Upload", "1 Year Free Dev Support", "3 Months Free Marketing", "Unlimited Forms"],
+      featured: true
     }
   ];
 
@@ -118,11 +120,6 @@ export default ({
           {subheading && <Subheading>{subheading}</Subheading>}
           <Heading>{heading}</Heading>
           {description && <Description>{description}</Description>}
-        <PlanDurationSwitcher>
-          {planDurations.map((planDuration, index) => (
-            <SwitchButton active={activeDurationIndex === index} key={index} onClick={() => setActiveDurationIndex(index)}>{planDuration.switcherText}</SwitchButton>
-          ))}
-        </PlanDurationSwitcher>
         </HeaderContainer>
         <PlansContainer>
           {plans.map((plan, index) => (
@@ -144,7 +141,7 @@ export default ({
                 ))}
               </PlanFeatures>
               <PlanAction>
-                <BuyNowButton>{primaryButtonText}</BuyNowButton>
+                <BuyNowButton onClick={() => history.push("/pricing")}>{primaryButtonText}</BuyNowButton>
               </PlanAction>
             </Plan>
           ))}

@@ -99,12 +99,12 @@ export default ({
       mainFeature: "Monthly Marketing",
       features: ["Facebook Advertising", "Instagram Advertisements", "SEO Marketing", "24/7 Assistance", "Social Media Consultation"]
     },
-    {
-      name: "Financial Consulatation",
-      durationPrices: ["Varies", "Varies"],
-      mainFeature: "Monthly Financial Consultation",
-      features: ["Quickbooks Consultation", "Budgeting", "General Finance Processes", "Procedure Manuals", "Financial Statement Compilation", "Data Entry", "Microsoft Excel"]
-    }
+    // {
+    //   name: "Financial Consulatation",
+    //   durationPrices: ["Varies", "Varies"],
+    //   mainFeature: "Monthly Financial Consultation",
+    //   features: ["Quickbooks Consultation", "Budgeting", "General Finance Processes", "Procedure Manuals", "Financial Statement Compilation", "Data Entry", "Microsoft Excel"]
+    // }
   ];
 
   if (!plans) plans = defaultPlans;
@@ -132,9 +132,6 @@ export default ({
                   </span>
                 ))}
               </PlanFeatures>
-              <PlanAction>
-                <BuyNowButton>{primaryButtonText}</BuyNowButton>
-              </PlanAction>
             </Plan>
           ))}
         </PlansContainer>

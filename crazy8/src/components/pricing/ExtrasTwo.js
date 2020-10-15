@@ -11,7 +11,7 @@ import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7
 
 const HeaderContainer = tw.div`w-full flex flex-col items-center`;
 const Subheading = tw(SubheadingBase)`mb-4 text-blue-500`;
-const Heading = tw(SectionHeading)`w-full text-blue-700`;
+const Heading = tw(SectionHeading)`w-full text-blue-800`;
 const Description = tw(SectionDescription)`w-full text-center text-blue-400`;
 
 const PlanDurationSwitcher = tw.div`block w-full max-w-xs sm:inline-block sm:w-auto border-2 rounded-full px-1 py-1 mt-8`;
@@ -58,7 +58,7 @@ const PlanFeatures = styled.div`
 
 const PlanAction = tw.div`px-4 pb-8`;
 const BuyNowButton = styled(PrimaryButtonBase)`
-  ${tw`rounded-full tracking-wider py-4 w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline bg-blue-700 text-blue-100 hocus:bg-blue-400 hocus:text-blue-700`}
+  ${tw`rounded-full tracking-wider py-4 w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline bg-blue-800 text-blue-100 hocus:bg-blue-500 hocus:text-blue-100`}
 `;
 
 const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
@@ -69,39 +69,44 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 `;
 
 export default ({
-  subheading = "",
-  heading = "Base",
-  description = "",
+  subheading = "Time-Based Plan Pricing",
+  heading = "Ex Post Facto Plans",
+  description = "We belive that just passing you source code and calling it good is criminal.  We provide two packages, based on length of support and marketing after-the-fact.",
   plans = null,
-  primaryButtonText = "Get Started",
+  primaryButtonText = "Purchase",
   planDurations = [
     {
-      text: "Job",
-      switcherText: "Plans",
+      text: "Month",
+      switcherText: "Monthly",
+    },
+    {
+      text: "Year",
+      switcherText: "Yearly",
     }
   ]
 }) => {
   const defaultPlans = [
     {
-      name: "JumpStart",
-      durationPrices: ["$149", "$149"],
-      mainFeature: "1 Day Delivery",
-      features: ["1 Page", "Full Source Code", "Content Upload", "1 Month Free Support", "1 Form Max"]
+        name: "Developer Support",
+        price: "$199",
+        mainFeature: "Monthly Developer Support",
+        features: ["3 Revisions Per Month", "Code Refactoring", "Add 1 Page/Mo 50% OFF", "24/7 Assistance", "Feature Additions", "API Updates", "YEARLY: Unlimited Revisions"],
+        featured: true,
+        link: "https://checkout.square.site/buy/ALYERZRKKNPRFINLDYBR6UPC"
     },
     {
-      name: "Boost",
-      durationPrices: ["$549", "$549"],
-      mainFeature: "3 Day Delivery",
-      features: ["5 Pages", "Full Source Code", "Free Logo", "Custom Graphics", "Content Upload", "3 Months Free Support", "Unlimited Forms"],
-      featured: true
+      name: "Marketing Consulatation",
+      price: "$249",
+      mainFeature: "Monthly Marketing",
+      features: ["Facebook Advertising", "Instagram Advertisements", "SEO Marketing", "24/7 Assistance", "Social Media Consultation"],
+      link: "https://checkout.square.site/buy/WUSQHB6B5XSCC5OITCD7N3OA"
     },
-    {
-      name: "Throttle",
-      durationPrices: ["$1349", "$1349"],
-      mainFeature: "7 Day Delivery",
-      features: ["15 Pages", "Cyphen Admin Dashboard", "Full Source Code", "Free Business Animated Video", "Free Logo", "Custom Graphics", "Content Upload", "1 Year Dev Support"],
-      featured: true
-    }
+    // {
+    //   name: "Financial Consulatation",
+    //   durationPrices: ["Varies", "Varies"],
+    //   mainFeature: "Monthly Financial Consultation",
+    //   features: ["Quickbooks Consultation", "Budgeting", "General Finance Processes", "Procedure Manuals", "Financial Statement Compilation", "Data Entry", "Microsoft Excel"]
+    // }
   ];
 
   if (!plans) plans = defaultPlans;
@@ -110,12 +115,23 @@ export default ({
 
   return (
     <Container>
+      <ContentWithPaddingXl>
+        <HeaderContainer>
+          {subheading && <Subheading>{subheading}</Subheading>}
+          <Heading>{heading}</Heading>
+          {description && <Description>{description}</Description>}
+        <PlanDurationSwitcher>
+          {planDurations.map((planDuration, index) => (
+            <SwitchButton active={activeDurationIndex === index} key={index} onClick={() => setActiveDurationIndex(index)}>{planDuration.switcherText}</SwitchButton>
+          ))}
+        </PlanDurationSwitcher>
+        </HeaderContainer>
         <PlansContainer>
           {plans.map((plan, index) => (
             <Plan key={index} featured={plan.featured}>
               <PlanHeader>
                 <span className="priceAndDuration">
-                  <span className="price">{plan.durationPrices[activeDurationIndex]}</span>
+                  <span className="price">{plan.price}</span>
                   <span className="slash"> / </span>
                   <span className="duration">{planDurations[activeDurationIndex].text}</span>
                 </span>
@@ -130,11 +146,12 @@ export default ({
                 ))}
               </PlanFeatures>
               <PlanAction>
-                <BuyNowButton>{primaryButtonText}</BuyNowButton>
+                <BuyNowButton onClick={() => window.open(plan.link)}>{primaryButtonText}</BuyNowButton>
               </PlanAction>
             </Plan>
           ))}
         </PlansContainer>
+      </ContentWithPaddingXl>
       <DecoratorBlob1 />
       <DecoratorBlob2 />
     </Container>

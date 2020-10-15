@@ -91,15 +91,15 @@ export default ({
   primaryButtonText = "Add"
 }) => {
   const defaultPlans = [
-    {
-      name: "Financial Consulting",
-      price: "Varies",
-      duration: "Monthly",
-      mainFeature: "Features",
-      features: ["Quickbooks", "Budgeting", "General Finance Processes", "Finance Statement Compilation"],
-      url: "/"
+    // {
+    //   name: "Financial Consulting",
+    //   price: "Varies",
+    //   duration: "Monthly",
+    //   mainFeature: "Features",
+    //   features: ["Quickbooks", "Budgeting", "General Finance Processes", "Finance Statement Compilation"],
+    //   url: "#"
       
-    },
+    // },
     {
       name: "Developer Support",
       price: "$199",
@@ -107,15 +107,15 @@ export default ({
       mainFeature: "Features",
       features: ["3 Revisions / Month", "Code Refactoring", "24/7 Assistance", "50% off 1 Additional Page / Month"],
       featured: true,
-      url: "/"
+      url: "https://checkout.square.site/pay/83edfbba-f8a0-45ab-be21-9d5073509212"
     },
     {
       name: "Marketing Consultation",
-      price: "$149",
+      price: "$249",
       duration: "Monthly",
       mainFeature: "Features",
       features: ["Facebook Advertising", "Social Media Management", "SEO Consultation", "24/7 Assistance"],
-      url: "/"
+      url: "https://checkout.square.site/pay/4a3273dd-d7be-4e61-93bb-77ea7c07201b"
     },
   ];
 

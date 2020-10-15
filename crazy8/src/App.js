@@ -3,6 +3,9 @@ import "styles/globalStyles.css";
 import React from "react";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
+import {loadStripe} from '@stripe/stripe-js';
+import {Elements} from '@stripe/react-stripe-js';
+
 import LandingPage from "pages/LandingPage.js";
 import Contact from "pages/ContactUs";
 
@@ -16,9 +19,13 @@ import StepTwo from "./pages/OrderFormStepTwo.js";
 import JumpstartForm from "./pages/forms/JumpstartForm.js";
 import BoostForm from "./pages/forms/BoostForm.js";
 import ThrottleForm from "./pages/forms/ThrottleForm.js";
-import UserForm from "./pages/forms/UserForm.js";
+import Register from "./pages/forms/UserFormRegister.js";
+import Login from "./pages/forms/UserFormLogin";
 
 export default function App() {
+
+  const stripePromise = loadStripe('pk_test_51HKzDHEcVyNtCHEW4SzW2thg3LOVBUJOdrdHniqfEJPL4RyaUgI94YpSSeBXjazqy49kjIS5scvqZu1Ai1GVnGMK003ADuPohG');
+
 
   return (
     <Router>
@@ -47,8 +54,11 @@ export default function App() {
         <Route exact path="/additional">
           <StepTwo />
         </Route>
-        <Route exact path="/userinfo">
-          <UserForm />
+        <Route exact path="/register">
+          <Register />
+        </Route>
+        <Route exact path="/login">
+          <Login />
         </Route>
         <Route exact path="/jumpstart">
           <JumpstartForm />

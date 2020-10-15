@@ -7,7 +7,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 
 import useAnimatedNavToggler from "../../functions/useAnimatedNavToggler.js";
 
-import logo from "../../images/logolightblue.png";
+import logo from "../../images/logo.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
@@ -20,9 +20,6 @@ const Header = tw.header`
 
 export const NavLinks = tw.div`inline-block`;
 
-/* hocus: stands for "on hover or focus"
- * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
- */
 export const NavLink = tw.a`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
@@ -66,11 +63,11 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
   const defaultLinks = [
     <NavLinks key={1}>
+      <NavLink href="/">Home</NavLink>
       <NavLink href="/team">Team</NavLink>
       <NavLink href="/#">Work</NavLink>
       <NavLink href="/pricing">Pricing</NavLink>
       <NavLink href="/contact">Contact Us</NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} style={{ cursor: "pointer", color: "white" }} onClick={() => history.push("/register")}>Order Now</PrimaryLink>
     </NavLinks>
   ];
 
