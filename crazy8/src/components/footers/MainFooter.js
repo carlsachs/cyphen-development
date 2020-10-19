@@ -76,18 +76,17 @@ export default (roundedHeaderButton = false) => {
           <LinksContainer>
             <Link href="/">Home</Link>
             <Link href="/team">Team</Link>
-            <Link href="#">Work</Link>
             <Link href="/pricing">Pricing</Link>
             <Link href="/contact">Contact Us</Link>
           </LinksContainer>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
+            <SocialLink target="_blank" href="https://facebook.com">
               <FacebookIcon />
             </SocialLink>
-            <SocialLink href="https://twitter.com">
+            <SocialLink target="_blank" href="https://twitter.com">
               <TwitterIcon />
             </SocialLink>
-            <SocialLink href="https://www.linkedin.com/company/cyphen-development">
+            <SocialLink target="_blank" href="https://www.linkedin.com/company/cyphen-development">
               <LinkedinIcon />
             </SocialLink>
           </SocialLinksContainer>

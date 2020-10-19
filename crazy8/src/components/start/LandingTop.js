@@ -72,9 +72,6 @@ export default () => {
       <NavLink href="/team">
         Team
       </NavLink>
-      <NavLink href="#">
-        Work
-      </NavLink>
       <NavLink href="/pricing">
         Pricing
       </NavLink>
